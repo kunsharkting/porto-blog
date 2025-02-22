@@ -1,0 +1,185 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/fond_blog.jpeg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* Pour que l'image couvre tout l'écran */
+    background-position: center; /* Pour centrer l'image */
+    background-attachment: fixed;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    position: relative;
+}
+
+@font-face {
+    font-family: 'Copperplate';
+    src: url('copperplate/OPTICopperplate.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:10; /* Pour que le header soit au-dessus du contenu */
+    color: rgb(161, 131, 84);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-family: 'Copperplate', serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7), /* Ombre décalée à droite et en bas */
+        -2px -2px 4px rgba(0, 0, 0, 0.7); /* Ombre décalée à gauche et en haut */
+}   
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Masquer les liens par défaut */
+    display: none;
+    flex-direction: column; /* Empiler les liens verticalement */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #d8c6b7;
+    color: black;
+    width: 150px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100px; /* Définit la largeur du carré blanc */
+    right: 40px; /* Ajuster la position droite du menu */
+    height: auto; /* Définit la hauteur du carré en fonction du contenu */
+    text-align: left;
+}
+
+.nav-links li {
+    margin-bottom: 10px;
+}
+
+.nav-links a {
+    font-family: 'Copperplate', serif;
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: rgb(161, 131, 84); /* Bleu au survol */
+}
+
+.active {
+    font-weight: normal;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    margin-right: 30px; /* Ajuster la marge droite pour le positionnement */
+    position: relative;
+    z-index: 10;
+}
+
+.hamburger::before { /* On utilise un pseudo-élément ::before pour créer le carré */
+    content: ""; /* On ne veut pas de contenu dans le carré */
+    display: block;
+    width: 40px; /* Largeur du carré */
+    height: 40px; /* Hauteur du carré */
+    border-radius: 25%; /* On arrondi les coins du carré */
+    background-color: rgb(216, 198, 183, 0.4); /* On met un fond blanc transparent */
+    border: 2px solid rgb(161, 131, 84); /* Ajoute un contour de 2px */
+    position: absolute; /* On positionne le carré en absolu */
+    top: 40%; /* On le centre verticalement */
+    left: 50%; /* On le centre horizontalement */
+    transform: translate(-50%, -50%); /* On ajuste le centrage */
+    z-index: -1; /* On le place derrière les barres */
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: rgb(161, 131, 84);
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.hamburger.active + .nav-links {
+    display: flex; /* Afficher les liens lorsque le menu est actif */
+}
+
+main {
+    padding: 20px;
+    margin-top: 60px; /* Espace pour le header */
+}
+
+/* Le bandeau */
+.banner {
+    position: absolute; /* On positionne le bandeau en absolu par rapport au body */
+    left: -2%; /* On le centre horizontalement */
+    top: 1500%;
+    width: 100%; /* Largeur du bandeau */
+    height: 1000px;
+    padding: 20px;
+    background-color: rgba(216, 198, 183, 0.9); /* Fond blanc semi-transparent */
+    text-align: center;
+    z-index: 1; /* On le place au-dessus de l'image de fond */
+}
+
+/* Style du texte du bandeau */
+.banner h1, .banner h3 {
+    color: #333; /* Couleur du texte */
+}
+
+/* Masquer le bandeau initialement */
+.banner {
+    opacity: 0; /* On rend le bandeau transparent */
+    transition: opacity 1s ease; /* On ajoute une transition pour l'opacité */
+}
+
+/* Afficher le bandeau après un certain temps */
+.banner.show {
+    opacity: 1; /* On rend le bandeau opaque */
+}
+
+.nav-links li a.active {
+    font-weight: bold;
+    color: rgb(161, 131, 84);
+}
