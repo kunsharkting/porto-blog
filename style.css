@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/fond_blog.jpeg'); /* Remplacez par le chemin de votre image */
+    background-image: url('images/background_nuit.jpg'); /* Remplacez par le chemin de votre image */
     background-size: cover; /* Pour que l'image couvre tout l'écran */
     background-position: center; /* Pour centrer l'image */
     background-attachment: fixed;
