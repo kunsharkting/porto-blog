@@ -23,3 +23,16 @@ window.addEventListener('load', () => {
       banner.classList.add('show');
   }, 1000); // Afficher le bandeau après 1 seconde
 });
+
+// Animation du titre flottant
+window.addEventListener("scroll", () => {
+  const title = document.querySelector(".floating-title");
+  let scrollY = window.scrollY;
+
+  // Déplace le titre vers le haut en fonction du scroll
+  title.style.transform = `translate(-50%, calc(-50% - ${scrollY * 1}px))`;
+
+  // Effet de disparition progressive
+  let opacity = Math.max(1 - scrollY / 300, 0);
+  title.style.opacity = opacity;
+});
