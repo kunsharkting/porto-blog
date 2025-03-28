@@ -1,5 +1,5 @@
 body {
-    font-family: 'Fried-chicken', serif;
+    font-family: 'Howdy-bird', sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('images/porto-photo-nuit-douro-blog-article.png'); /* Remplacez par le chemin de votre image */
@@ -12,28 +12,21 @@ body {
 
 @font-face {
     font-family: 'Copperplate';
-    src: url('copperplate/OPTICopperplate.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Friend-chicken';
-    src: url('fried-chicken-belina-studio/Fried-Chicken.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Red-rocket';
-    src: url('red-rocket/redrocket.ttf') format('truetype');
+    src: url('fonts/copperplate/OPTICopperplate.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Shuttle-x';
-    src: url('shuttle-x/SHUTTLE-X.ttf') format('truetype');
+    src: url('fonts/shuttle-x/SHUTTLE-X.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Howdy-bird';
+    src: url('fonts/howdy_bird/Howdy\ Bird.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -48,7 +41,7 @@ header {
     left: 0;
     width: 100%;
     z-index:10; /* Pour que le header soit au-dessus du contenu */
-    color: rgb(255, 200, 82);
+    color: rgb(239, 126, 13);
 }
 
 body::before {
@@ -118,11 +111,11 @@ nav {
     font-family: 'shuttle-x', serif;
     font-size: 17px;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 200, 82);
 }
 
 .nav-links a:hover {
-    color: rgb(255, 200, 82); /* Bleu au survol */
+    color: rgb(80, 41, 5); /* Bleu au survol */
 }
 
 .active {
@@ -144,7 +137,7 @@ nav {
     height: 40px; /* Hauteur du carré */
     border-radius: 25%; /* On arrondi les coins du carré */
     background-color: rgba(0, 0, 0, 0.3); /* On met un fond blanc transparent */
-    border: 2px solid rgb(255, 200, 82); /* Ajoute un contour de 2px */
+    border: 2px solid rgb(239, 126, 13); /* Ajoute un contour de 2px */
     position: absolute; /* On positionne le carré en absolu */
     top: 40%; /* On le centre verticalement */
     left: 50%; /* On le centre horizontalement */
@@ -157,7 +150,7 @@ nav {
     width: 25px;
     height: 3px;
     margin-bottom: 5px;
-    background-color: rgb(255, 200, 82);
+    background-color: rgb(239, 126, 13);
     transition: transform 0.3s ease;
 }
 
@@ -192,14 +185,14 @@ main {
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgba(111, 111, 111, 1); /* Fond blanc semi-transparent */
+    background-color: rgba(80, 41, 5, 0.7); /* Fond blanc semi-transparent */
     text-align: center;
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
 
 /* Style du texte du bandeau */
 .banner h1, .banner h3 {
-    color: white; /* Couleur du texte */
+    color: rgb(194, 194, 194); /* Couleur du texte */
 }
 
 /* Masquer le bandeau initialement */
@@ -215,7 +208,7 @@ main {
 
 .nav-links li a.active {
     font-weight: bold;
-    color: rgb(220, 205, 104);
+    color: rgb(80, 41, 5);
 }
 
 /* Conteneur du titre flottant */
@@ -233,7 +226,7 @@ main {
 /* Style du titre */
 .floating-title {
     font-family: 'shuttle-x', serif;
-    color: rgb(239, 126, 13);
+    color: rgb(255, 200, 82);
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     position: fixed;
