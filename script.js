@@ -24,6 +24,27 @@ window.addEventListener('load', () => {
   }, 1000); // Afficher le bandeau après 1 seconde
 });
 
+window.addEventListener('load', () => {
+  const banner1 = document.querySelector('.banner1');
+  setTimeout(() => {
+      banner1.classList.add('show');
+  }, 1000); // Afficher le bandeau après 1 seconde
+});
+
+window.addEventListener('load', () => {
+  const banner2 = document.querySelector('.banner2');
+  setTimeout(() => {
+      banner2.classList.add('show');
+  }, 1000); // Afficher le bandeau après 1 seconde
+});
+
+window.addEventListener('load', () => {
+  const banner3 = document.querySelector('.banner3');
+  setTimeout(() => {
+      banner3.classList.add('show');
+  }, 1000); // Afficher le bandeau après 1 seconde
+});
+
 // Animation du titre flottant
 window.addEventListener("scroll", () => {
   const title = document.querySelector(".floating-title");
