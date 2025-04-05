@@ -461,6 +461,7 @@ main {
     background-image: url('images/route.png'); /* Remplacez par le chemin de votre image */
     background-repeat: repeat-x; /* Répète l'image horizontalement */
     z-index: 999;
+    perspective: 1000px; /* Permet les effets 3D */
 }
 
 /* Voiture */
@@ -474,7 +475,8 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1000;
-    transition: transform 0.1s linear; /* Transition fluide pour le mouvement */
+    transition: transform 0.4s linear; /* Transition fluide pour le mouvement */
+    transform-style: preserve-3d;
 }
 
 /* Boost */
@@ -497,4 +499,32 @@ main {
 
 .boost.inactive {
     animation: boostDisappear 0.3s forwards; /* Animation de disparition */
+}
+
+/* Animation complète style half-flip */
+.car.half-flip {
+    animation: halfFlip 0.8s forwards;
+}
+  
+  
+.car.reset-flip {
+    animation: resetFlip 0.8s forwards;
+}
+  
+@keyframes halfFlip {
+    0% {
+        transform: rotateX(0deg) scaleX(1);
+    }
+    100% {
+        transform: rotateX(360deg) scaleX(-1);
+    }
+}
+  
+@keyframes resetFlip {
+    0% {
+        transform: rotateX(0deg) scaleX(-1);
+    }
+    100% {
+        transform: rotateX(-360deg) scaleX(1);
+    }
 }

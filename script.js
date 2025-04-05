@@ -68,30 +68,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const boost = document.querySelector(".boost");
 
   let lastScrollY = window.scrollY;
-  let isScrolling; // Variable pour détecter l'arrêt du défilement
+  let isScrolling;
+  let flipped = false;
 
   window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercentage = scrollY / maxScroll;
 
-      // Déplacer la voiture en fonction du défilement
       const windowWidth = window.innerWidth;
-      const carPosition = scrollPercentage * (windowWidth - 60); // 60 = largeur de la voiture
-      car.style.transform = `translateX(${carPosition}px)`;
+      const carPosition = scrollPercentage * (windowWidth - car.offsetWidth);
+      car.style.left = `${carPosition}px`;
 
-      // Afficher le boost pendant le défilement
+      if (scrollY < lastScrollY && !flipped) {
+          car.classList.remove("reset-flip");
+          car.classList.add("half-flip");
+          flipped = true;
+      } else if (scrollY > lastScrollY && flipped) {
+          car.classList.remove("half-flip");
+          car.classList.add("reset-flip");
+          flipped = false;
+      }
+
       boost.classList.add("active");
       boost.classList.remove("inactive");
 
-      // Réinitialiser le timer à chaque défilement
       clearTimeout(isScrolling);
       isScrolling = setTimeout(() => {
-          // Arrêter le boost après un délai si le défilement s'arrête
           boost.classList.add("inactive");
           boost.classList.remove("active");
-      }, 200); // Délai de 200ms après l'arrêt du défilement
+      }, 200);
 
       lastScrollY = scrollY;
   });
 });
+
