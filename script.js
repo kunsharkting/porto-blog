@@ -17,32 +17,37 @@ document.addEventListener('click', (event) => {
   }
 });
 
-window.addEventListener('load', () => {
-  const banner = document.querySelector('.banner');
-  setTimeout(() => {
-      banner.classList.add('show');
-  }, 1000); // Afficher le bandeau après 1 seconde
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const banners = document.querySelectorAll(".banner, .banner1, .banner2, .banner3");
 
-window.addEventListener('load', () => {
-  const banner1 = document.querySelector('.banner1');
-  setTimeout(() => {
-      banner1.classList.add('show');
-  }, 1000); // Afficher le bandeau après 1 seconde
-});
+  window.addEventListener("scroll", () => {
+    const viewportHeight = window.innerHeight;
 
-window.addEventListener('load', () => {
-  const banner2 = document.querySelector('.banner2');
-  setTimeout(() => {
-      banner2.classList.add('show');
-  }, 1000); // Afficher le bandeau après 1 seconde
-});
+    banners.forEach((banner, index) => {
+      const bannerTop = banner.getBoundingClientRect().top;
+      const bannerBottom = banner.getBoundingClientRect().bottom;
 
-window.addEventListener('load', () => {
-  const banner3 = document.querySelector('.banner3');
-  setTimeout(() => {
-      banner3.classList.add('show');
-  }, 1000); // Afficher le bandeau après 1 seconde
+      // Affiche la bannière si elle est visible dans le viewport
+      if (bannerTop < viewportHeight * 0.7 && bannerBottom > viewportHeight * 0.3) {
+        if (index % 2 === 0) {
+          banner.classList.add("right"); // Animation pour arriver du côté droit
+          banner.classList.remove("hide-right");
+        } else {
+          banner.classList.add("left"); // Animation pour arriver du côté gauche
+          banner.classList.remove("hide-left");
+        }
+      } else {
+        // Cache la bannière si elle quitte le viewport (plus tôt)
+        if (index % 2 === 0) {
+          banner.classList.add("hide-right");
+          banner.classList.remove("right");
+        } else {
+          banner.classList.add("hide-left");
+          banner.classList.remove("left");
+        }
+      }
+    });
+  });
 });
 
 // Animation du titre flottant
@@ -56,4 +61,21 @@ window.addEventListener("scroll", () => {
   // Effet de disparition progressive
   let opacity = Math.max(1 - scrollY / 300, 0);
   title.style.opacity = opacity;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const walkingMan = document.querySelector(".walking-man");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY; // Position actuelle du scroll
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight; // Scroll maximum
+    const scrollPercentage = scrollY / maxScroll; // Pourcentage de progression sur la page
+
+    // Calculer la position du bonhomme (de gauche à droite)
+    const windowWidth = window.innerWidth;
+    const manPosition = scrollPercentage * (windowWidth - 50); // 50 = largeur du bonhomme
+
+    // Déplacer le bonhomme
+    walkingMan.style.transform = `translateX(${manPosition}px)`;
+  });
 });

@@ -31,6 +31,51 @@ body {
     font-style: normal;
 }
 
+/* Animation pour l'apparition des bannières */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
 header {
     padding: 15px;
     display: flex;
@@ -130,8 +175,6 @@ nav {
     z-index: 10;
 }
 
-
-
 .hamburger span {
     display: block;
     width: 25px;
@@ -163,13 +206,13 @@ main {
 }
 
 /* Le bandeau */
-.banner {
-    position: relative; /* On positionne le bandeau en absolu par rapport au body */
+.banner, .banner2 {
+    position: relative;
     left: 10%;
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
-    margin-top: 600px;
-    margin-bottom: 10px;
+    margin-top: 25%;
+    margin-bottom: 30px;
     height: auto;
     padding: 20px;
     border-radius: 20px;
@@ -178,28 +221,37 @@ main {
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
 
+.banner {
+    margin-top: 600px; /* Espace au-dessus du bandeau */
+}
+
 /* Style du texte du bandeau */
-.banner h1, .banner h3 {
+.banner h1, .banner h3, .banner2 h1, .banner2 h3 {
+    margin-right: 5%; /* Augmente la marge à droite */
     color: rgb(194, 194, 194); /* Couleur du texte */
 }
 
 /* Masquer le bandeau initialement */
-.banner {
+.banner, .banner2 {
     opacity: 0; /* On rend le bandeau transparent */
-    transition: opacity 1s ease; /* On ajoute une transition pour l'opacité */
+    transition: opacity 0.5s ease; /* On ajoute une transition pour l'opacité */
 }
 
 /* Afficher le bandeau après un certain temps */
-.banner.show {
-    opacity: 1; /* On rend le bandeau opaque */
+.banner.right, .banner2.right {
+    animation: slideInRight 1s forwards;
 }
 
-.banner1 {
-    position: relative; /* On positionne le bandeau en absolu par rapport au body */
+.banner.hide-right, .banner2.hide-right {
+    animation: slideOutRight 1s forwards;
+}
+
+.banner1, .banner3 {
+    position: relative;
     right: 10%;
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
-    margin-top: 300px;
+    margin-top: 25%;
     margin-bottom: 30px;
     height: auto;
     padding: 20px;
@@ -210,80 +262,24 @@ main {
 }
 
 /* Style du texte du bandeau */
-.banner1 h1, .banner1 h3 {
+.banner1 h1, .banner1 h3, .banner3 h1, .banner3 h3 {
+    margin-left: 5%; /* Augmente la marge à droite */
     color: rgb(194, 194, 194); /* Couleur du texte */
 }
 
 /* Masquer le bandeau initialement */
-.banner1 {
+.banner1, .banner3 {
     opacity: 0; /* On rend le bandeau transparent */
-    transition: opacity 1s ease; /* On ajoute une transition pour l'opacité */
+    transition: opacity 0.5s ease; /* On ajoute une transition pour l'opacité */
 }
 
 /* Afficher le bandeau après un certain temps */
-.banner1.show {
-    opacity: 1; /* On rend le bandeau opaque */
+.banner1.left, .banner3.left {
+    animation: slideInLeft 1s forwards;
 }
 
-.banner2 {
-    position: relative; /* On positionne le bandeau en absolu par rapport au body */
-    left: 10%;
-    width: 90%; /* Largeur du bandeau */
-    margin: 0 auto;
-    margin-top: 300px;
-    margin-bottom: 30px;
-    height: auto;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: rgba(80, 41, 5, 1); /* Fond blanc semi-transparent */
-    text-align: left;
-    z-index: 1; /* On le place au-dessus de l'image de fond */
-}
-
-/* Style du texte du bandeau */
-.banner2 h1, .banner2 h3 {
-    color: rgb(194, 194, 194); /* Couleur du texte */
-}
-
-/* Masquer le bandeau initialement */
-.banner2 {
-    opacity: 0; /* On rend le bandeau transparent */
-    transition: opacity 1s ease; /* On ajoute une transition pour l'opacité */
-}
-
-/* Afficher le bandeau après un certain temps */
-.banner2.show {
-    opacity: 1; /* On rend le bandeau opaque */
-}
-
-.banner3 {
-    position: relative; /* On positionne le bandeau en absolu par rapport au body */
-    width: 90%; /* Largeur du bandeau */
-    margin: 0 auto;
-    margin-top: 75px;
-    margin-bottom: 30px;
-    height: auto;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: rgba(80, 41, 5, 0.7); /* Fond blanc semi-transparent */
-    text-align: center;
-    z-index: 1; /* On le place au-dessus de l'image de fond */
-}
-
-/* Style du texte du bandeau */
-.banner3 h1, .banner3 h3 {
-    color: rgb(194, 194, 194); /* Couleur du texte */
-}
-
-/* Masquer le bandeau initialement */
-.banner3 {
-    opacity: 0; /* On rend le bandeau transparent */
-    transition: opacity 1s ease; /* On ajoute une transition pour l'opacité */
-}
-
-/* Afficher le bandeau après un certain temps */
-.banner3.show {
-    opacity: 1; /* On rend le bandeau opaque */
+.banner1.hide-left, .banner3.hide-left {
+    animation: slideOutLeft 1s forwards;
 }
 
 .nav-links li a.active {
@@ -318,4 +314,57 @@ main {
     white-space: nowrap;
     text-align: center;
     z-index: 5;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    bottom: 50px;
+    margin-top: 10%;
+    width: 100%;
+    background-color: rgba(80, 41, 5, 1); /* Couleur de fond */
+    color: rgb(255, 255, 255); /* Couleur du texte */
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Howdy-bird', sans-serif;
+    font-size: 16px;
+    z-index: 998;
+}
+
+/* Logo Instagram */
+.instagram-logo {
+    width: 30px; /* Taille du logo */
+    height: 30px;
+    margin-top: 10px;
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.instagram-logo:hover {
+    transform: scale(1.2); /* Agrandit légèrement le logo au survol */
+}
+
+/* Sol en brique */
+.brick-floor {
+    position: fixed;
+    bottom: 0; /* Positionné tout en bas de la page */
+    left: 0;
+    width: 100%; /* Prend toute la largeur de la page */
+    height: 50px; /* Hauteur du sol */
+    background-image: url('images/sol-briques.png'); /* Remplacez par l'image de votre sol en brique */
+    background-size: 100px 100px; /* Ajuste l'image pour couvrir toute la largeur */
+    background-repeat: repeat-x; /* Répète l'image horizontalement */
+    z-index: 999; /* Juste en dessous du bonhomme */
+}
+
+.walking-man {
+    position: fixed;
+    bottom: 20px; /* Positionné en bas de la page */
+    left: 0; /* Commence à gauche */
+    width: 50px; /* Taille du bonhomme */
+    height: 50px;
+    background-image: url('images/PandaIPI.gif'); /* Remplacez par l'image de votre bonhomme */
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1000; /* Toujours au-dessus des autres éléments */
+    transition: transform 0.1s linear; /* Transition fluide */
 }
