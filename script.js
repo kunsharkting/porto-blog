@@ -64,18 +64,34 @@ window.addEventListener("scroll", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const walkingMan = document.querySelector(".walking-man");
+  const car = document.querySelector(".car");
+  const boost = document.querySelector(".boost");
+
+  let lastScrollY = window.scrollY;
+  let isScrolling; // Variable pour détecter l'arrêt du défilement
 
   window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY; // Position actuelle du scroll
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight; // Scroll maximum
-    const scrollPercentage = scrollY / maxScroll; // Pourcentage de progression sur la page
+      const scrollY = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = scrollY / maxScroll;
 
-    // Calculer la position du bonhomme (de gauche à droite)
-    const windowWidth = window.innerWidth;
-    const manPosition = scrollPercentage * (windowWidth - 50); // 50 = largeur du bonhomme
+      // Déplacer la voiture en fonction du défilement
+      const windowWidth = window.innerWidth;
+      const carPosition = scrollPercentage * (windowWidth - 60); // 60 = largeur de la voiture
+      car.style.transform = `translateX(${carPosition}px)`;
 
-    // Déplacer le bonhomme
-    walkingMan.style.transform = `translateX(${manPosition}px)`;
+      // Afficher le boost pendant le défilement
+      boost.classList.add("active");
+      boost.classList.remove("inactive");
+
+      // Réinitialiser le timer à chaque défilement
+      clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+          // Arrêter le boost après un délai si le défilement s'arrête
+          boost.classList.add("inactive");
+          boost.classList.remove("active");
+      }, 200); // Délai de 200ms après l'arrêt du défilement
+
+      lastScrollY = scrollY;
   });
 });

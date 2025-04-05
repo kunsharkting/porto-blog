@@ -76,6 +76,28 @@ body {
     }
 }
 
+@keyframes boostAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5); /* Le boost commence petit */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Le boost atteint sa taille normale */
+    }
+}
+
+@keyframes boostDisappear {
+    from {
+        opacity: 1;
+        transform: scale(1); /* Le boost est visible */
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.5); /* Le boost devient petit avant de disparaître */
+    }
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 14px; /* Réduisez la taille de la police pour les petits écrans */
@@ -430,27 +452,49 @@ main {
     transform: scale(1.2); /* Agrandit légèrement le logo au survol */
 }
 
-/* Sol en brique */
-.brick-floor {
+/* Route */
+.road {
     position: fixed;
-    bottom: 0; /* Positionné tout en bas de la page */
-    left: 0;
-    width: 100%; /* Prend toute la largeur de la page */
-    height: 68px; /* Hauteur du sol */
-    background-image: url('images/route.png'); /* Remplacez par l'image de votre sol en brique */
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-image: url('images/route.png'); /* Remplacez par le chemin de votre image */
     background-repeat: repeat-x; /* Répète l'image horizontalement */
-    z-index: 999; /* Juste en dessous du bonhomme */
+    z-index: 999;
 }
 
-.walking-man {
-    position: fixed;
-    bottom: 20px; /* Positionné en bas de la page */
+/* Voiture */
+.car {
+    position: absolute;
+    bottom: 10px; /* Position sur la route */
     left: 0; /* Commence à gauche */
-    width: 125px; /* Taille du bonhomme */
-    height: 10%;
-    background-image: url('images/octane.png'); /* Remplacez par l'image de votre bonhomme */
+    width: 10%;
+    height: 100px;
+    background-image: url('images/octane.png'); /* Image de la voiture */
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 1000; /* Toujours au-dessus des autres éléments */
-    transition: transform 0.1s linear; /* Transition fluide */
+    z-index: 1000;
+    transition: transform 0.1s linear; /* Transition fluide pour le mouvement */
+}
+
+/* Boost */
+.boost {
+    position: absolute;
+    bottom: 35px;
+    left: -55px; /* Derrière la voiture */
+    width: 70px;
+    height: 40px;
+    background-image: url('images/boost.png'); /* Image du boost */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.2s ease; /* Transition pour l'apparition/disparition */
+}
+
+.boost.active {
+    animation: boostAppear 0.3s forwards; /* Animation d'apparition */
+}
+
+.boost.inactive {
+    animation: boostDisappear 0.3s forwards; /* Animation de disparition */
 }
