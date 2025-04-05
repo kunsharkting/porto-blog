@@ -436,9 +436,8 @@ main {
     bottom: 0; /* Positionné tout en bas de la page */
     left: 0;
     width: 100%; /* Prend toute la largeur de la page */
-    height: 50px; /* Hauteur du sol */
-    background-image: url('images/sol-briques.png'); /* Remplacez par l'image de votre sol en brique */
-    background-size: 100px 100px; /* Ajuste l'image pour couvrir toute la largeur */
+    height: 68px; /* Hauteur du sol */
+    background-image: url('images/route.png'); /* Remplacez par l'image de votre sol en brique */
     background-repeat: repeat-x; /* Répète l'image horizontalement */
     z-index: 999; /* Juste en dessous du bonhomme */
 }
@@ -447,9 +446,9 @@ main {
     position: fixed;
     bottom: 20px; /* Positionné en bas de la page */
     left: 0; /* Commence à gauche */
-    width: 50px; /* Taille du bonhomme */
-    height: 50px;
-    background-image: url('images/PandaIPI.gif'); /* Remplacez par l'image de votre bonhomme */
+    width: 125px; /* Taille du bonhomme */
+    height: 10%;
+    background-image: url('images/octane.png'); /* Remplacez par l'image de votre bonhomme */
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1000; /* Toujours au-dessus des autres éléments */
