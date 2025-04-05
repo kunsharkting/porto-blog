@@ -305,6 +305,10 @@ main {
     font-size: 30px; /* Taille de la police */
 }
 
+.banner p, .banner2 p {
+    font-size: 140%; /* Taille de la police */
+}
+
 /* Masquer le bandeau initialement */
 .banner, .banner2 {
     opacity: 0; /* On rend le bandeau transparent */
@@ -344,6 +348,10 @@ main {
 .banner1 h3, .banner3 h3 {
     font-family: 'BM-Army', sans-serif !important;
     font-size: 30px; /* Taille de la police */
+}
+
+.banner1 p, .banner3 p {
+    font-size: 140%; /* Taille de la police */
 }
 
 /* Masquer le bandeau initialement */
