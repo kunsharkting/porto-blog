@@ -130,20 +130,7 @@ nav {
     z-index: 10;
 }
 
-.hamburger::before { /* On utilise un pseudo-élément ::before pour créer le carré */
-    content: ""; /* On ne veut pas de contenu dans le carré */
-    display: block;
-    width: 40px; /* Largeur du carré */
-    height: 40px; /* Hauteur du carré */
-    border-radius: 25%; /* On arrondi les coins du carré */
-    background-color: rgba(0, 0, 0, 0.3); /* On met un fond blanc transparent */
-    border: 2px solid rgb(239, 126, 13); /* Ajoute un contour de 2px */
-    position: absolute; /* On positionne le carré en absolu */
-    top: 40%; /* On le centre verticalement */
-    left: 50%; /* On le centre horizontalement */
-    transform: translate(-50%, -50%); /* On ajuste le centrage */
-    z-index: -1; /* On le place derrière les barres */
-}
+
 
 .hamburger span {
     display: block;
@@ -178,15 +165,16 @@ main {
 /* Le bandeau */
 .banner {
     position: relative; /* On positionne le bandeau en absolu par rapport au body */
+    left: 10%;
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
     margin-top: 600px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgba(80, 41, 5, 0.7); /* Fond blanc semi-transparent */
-    text-align: center;
+    background-color: rgba(80, 41, 5, 1); /* Fond blanc semi-transparent */
+    text-align: left;
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
 
@@ -208,15 +196,16 @@ main {
 
 .banner1 {
     position: relative; /* On positionne le bandeau en absolu par rapport au body */
+    right: 10%;
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
-    margin-top: 600px;
+    margin-top: 300px;
     margin-bottom: 30px;
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgba(80, 41, 5, 0.7); /* Fond blanc semi-transparent */
-    text-align: center;
+    background-color: rgba(80, 41, 5, 1); /* Fond blanc semi-transparent */
+    text-align: right;
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
 
@@ -238,15 +227,16 @@ main {
 
 .banner2 {
     position: relative; /* On positionne le bandeau en absolu par rapport au body */
+    left: 10%;
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
-    margin-top: 600px;
+    margin-top: 300px;
     margin-bottom: 30px;
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgba(80, 41, 5, 0.7); /* Fond blanc semi-transparent */
-    text-align: center;
+    background-color: rgba(80, 41, 5, 1); /* Fond blanc semi-transparent */
+    text-align: left;
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
 
@@ -270,7 +260,7 @@ main {
     position: relative; /* On positionne le bandeau en absolu par rapport au body */
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
-    margin-top: 600px;
+    margin-top: 75px;
     margin-bottom: 30px;
     height: auto;
     padding: 20px;
