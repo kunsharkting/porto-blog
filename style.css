@@ -1,5 +1,5 @@
 body {
-    font-family: 'Howdy-bird', sans-serif;
+    font-family: 'PT-Tempesta-Seven', sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('images/porto-photo-nuit-douro-blog-article.png'); /* Remplacez par le chemin de votre image */
@@ -11,22 +11,22 @@ body {
 }
 
 @font-face {
-    font-family: 'Copperplate';
-    src: url('fonts/copperplate/OPTICopperplate.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Shuttle-x';
-    src: url('fonts/shuttle-x/SHUTTLE-X.ttf') format('truetype');
+    src: url('fonts/header/SHUTTLE-X.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Howdy-bird';
-    src: url('fonts/howdy_bird/Howdy\ Bird.otf') format('truetype');
+    font-family: 'PF-Tempesta-Seven';
+    src: url('fonts/paragraphes/pf_tempesta_seven.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BM-Army';
+    src: url('fonts/sous-titres/BMarmy.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -112,7 +112,7 @@ body::before {
 }
 
 .logo span {
-    font-family: 'shuttle-x', serif;
+    font-family: 'Shuttle-x';
     font-size: 30px;
     font-weight: bold;
     text-shadow: 
@@ -153,7 +153,7 @@ nav {
 }
 
 .nav-links a {
-    font-family: 'shuttle-x', serif;
+    font-family: 'Shuttle-x', serif;
     font-size: 17px;
     text-decoration: none;
     color: rgb(255, 200, 82);
@@ -226,9 +226,14 @@ main {
 }
 
 /* Style du texte du bandeau */
-.banner h1, .banner h3, .banner2 h1, .banner2 h3 {
+.banner p, .banner h3, .banner2 p, .banner2 h3 {
     margin-right: 5%; /* Augmente la marge à droite */
     color: rgb(194, 194, 194); /* Couleur du texte */
+}
+
+.banner h3, .banner2 h3 {
+    font-family: 'BM-Army', serif;
+    font-size: 30px; /* Taille de la police */
 }
 
 /* Masquer le bandeau initialement */
@@ -262,9 +267,14 @@ main {
 }
 
 /* Style du texte du bandeau */
-.banner1 h1, .banner1 h3, .banner3 h1, .banner3 h3 {
+.banner1 p, .banner1 h3, .banner3 p, .banner3 h3 {
     margin-left: 5%; /* Augmente la marge à droite */
     color: rgb(194, 194, 194); /* Couleur du texte */
+}
+
+.banner1 h3, .banner3 h3 {
+    font-family: 'BM-Army', serif;
+    font-size: 30px; /* Taille de la police */
 }
 
 /* Masquer le bandeau initialement */
@@ -301,7 +311,7 @@ main {
 
 /* Style du titre */
 .floating-title {
-    font-family: 'Shuttle-x', serif;
+    font-family: 'Shuttle-x';
     color: rgb(255, 200, 82);
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
