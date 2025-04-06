@@ -102,4 +102,3 @@ document.addEventListener("DOMContentLoaded", () => {
       lastScrollY = scrollY;
   });
 });
-
