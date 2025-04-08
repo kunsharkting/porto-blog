@@ -308,12 +308,8 @@ main {
     padding: 20px;
     border-radius: 20px;
     background-color: rgba(80, 41, 5, 1); /* Fond blanc semi-transparent */
-    text-align: left;
+    text-align: justify;
     z-index: 1; /* On le place au-dessus de l'image de fond */
-}
-
-.banner {
-    margin-top: 600px; /* Espace au-dessus du bandeau */
 }
 
 /* Style du texte du bandeau */
@@ -357,7 +353,7 @@ main {
     padding: 20px;
     border-radius: 20px;
     background-color: rgba(80, 41, 5, 1); /* Fond blanc semi-transparent */
-    text-align: right;
+    text-align: justify;
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
 
@@ -389,6 +385,28 @@ main {
 
 .banner1.hide-left, .banner3.hide-left {
     animation: slideOutLeft 1s forwards;
+}
+
+body.index-page .banner,
+body.index-page .banner1,
+body.index-page .banner2,
+body.index-page .banner3 {
+    position: relative;
+    margin: 0 auto; /* Centre horizontalement */
+    text-align: justify; /* Centre le texte à l'intérieur */
+    left: 0; /* Réinitialise les décalages gauche/droite */
+    transform: none; /* Supprime les transformations */
+    opacity: 1; /* Assure que les bannières sont visibles */
+    margin-top: 25%;
+    margin-bottom: 30px;
+}
+
+body.index-page .banner {
+    margin-top: 600px;
+}
+
+.banner {
+    margin-top: 600px; /* Espace au-dessus du bandeau */
 }
 
 .nav-links li a.active {
