@@ -1,5 +1,5 @@
 body {
-    font-family: 'PT-Tempesta-Seven', sans-serif !important;
+    font-family: 'RetroCompute', sans-serif !important;
     margin: 0;
     padding: 0;
     background-image: url('images/porto-photo-nuit-douro-blog-article.png'); /* Remplacez par le chemin de votre image */
@@ -18,15 +18,15 @@ body {
 }
 
 @font-face {
-    font-family: 'PF-Tempesta-Seven';
-    src: url('fonts/paragraphes/pf_tempesta_seven.woff2') format('woff2');
+    font-family: 'RetroCompute';
+    src: url('fonts/paragraphes/retro-compute/Retrocompute.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'BM-Army';
-    src: url('fonts/sous-titres/BMarmy.woff2') format('woff2');
+    font-family: 'NothamDemo';
+    src: url('fonts/sous-titres/nothan/NOTHANDEMORegular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -319,7 +319,7 @@ main {
 }
 
 .banner h3, .banner2 h3 {
-    font-family: 'BM-Army', sans-serif !important;
+    font-family: 'NothamDemo', sans-serif !important;
     font-size: 30px; /* Taille de la police */
 }
 
@@ -364,7 +364,7 @@ main {
 }
 
 .banner1 h3, .banner3 h3 {
-    font-family: 'BM-Army', sans-serif !important;
+    font-family: 'NothamDemo', sans-serif !important;
     font-size: 30px; /* Taille de la police */
 }
 
@@ -409,9 +409,47 @@ body.index-page .banner {
     margin-top: 600px; /* Espace au-dessus du bandeau */
 }
 
+/* Style général pour les images des bannières */
+.banner-image {
+    width: 25%; /* Largeur de l'image */
+    height: 100%; /* Conserve les proportions */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 10px; /* Espacement autour de l'image */
+    object-fit: cover; /* Ajuste l'image pour remplir l'espace */
+}
+
+/* Images à gauche (banner et banner2) */
+.banner img {
+    float: left; /* Positionne l'image à gauche */
+    margin-right: 20px; /* Espace entre l'image et le texte */
+}
+
+/* Images à droite (banner1) */
+.banner1 img {
+    width: 30%; /* Largeur de l'image */
+    height: 40%; /* Conserve les proportions */
+    float: right; /* Positionne l'image à droite */
+    margin-left: 20px; /* Espace entre l'image et le texte */
+    margin-right: 0;
+}
+
+.banner2 img {
+    width: 40%; /* Largeur de l'image */
+    height: 40%; /* Conserve les proportions */
+    float: left; /* Positionne l'image à gauche */
+    margin-right: 20px; /* Espace entre l'image et le texte */
+
+}
+
 .nav-links li a.active {
     font-weight: bold;
     color: rgb(80, 41, 5);
+}
+
+.members-link a {
+    color: rgb(194, 41, 5); /* Couleur du lien */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold; /* Met le lien en gras */
 }
 
 /* Conteneur du titre flottant */
@@ -488,7 +526,7 @@ body.index-page .banner {
     bottom: 10px; /* Position sur la route */
     left: 0; /* Commence à gauche */
     width: 10%;
-    height: 100px;
+    height: 175%;
     background-image: url('images/octane.png'); /* Image de la voiture */
     background-size: cover;
     background-repeat: no-repeat;
