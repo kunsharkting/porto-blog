@@ -467,6 +467,13 @@ body.membres-page .banner-image {
     border-radius: 10px;
 }
 
+body.membres-page .banner,
+body.membres-page .banner1,
+body.membres-page .banner2,
+body.membres-page .banner3 {
+    min-height: 250px; /* Ajuste la valeur selon la hauteur désirée */
+}
+
 .members-link a {
     color: rgb(194, 41, 5); /* Couleur du lien */
     text-decoration: none; /* Supprime le soulignement par défaut */
