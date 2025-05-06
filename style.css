@@ -798,6 +798,15 @@ body.membres-page .banner3 {
         font-size: 13px;
         padding: 10px 0;
         margin-top: 30px;
+        position: fixed;
+        left: 30vw;      /* Décale le footer vers la droite */
+        right: 0;
+        bottom: 10px;    /* Plus bas sur l'écran */
+        width: 60vw;     /* Ajuste la largeur pour ne pas dépasser */
+        background-color: white;
+        border-radius: 10px;
+        z-index: 998;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
     /* Adaptation de la route, voiture et boost pour mobile */
