@@ -298,8 +298,6 @@ main {
 
 /* Le bandeau */
 .banner, .banner2 {
-    position: relative;
-    left: 10%;
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
     margin-top: 25%;
@@ -343,8 +341,6 @@ main {
 }
 
 .banner1, .banner3 {
-    position: relative;
-    right: 10%;
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
     margin-top: 25%;
@@ -387,18 +383,35 @@ main {
     animation: slideOutLeft 1s forwards;
 }
 
+body:not(.index-page) .banner,
+body:not(.index-page) .banner2 {
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+
+body:not(.index-page) .banner1,
+body:not(.index-page) .banner3 {
+    position: relative;
+    right: 10%;
+    width: 80%;
+}
+
 body.index-page .banner,
 body.index-page .banner1,
 body.index-page .banner2,
 body.index-page .banner3 {
     position: relative;
-    margin: 0 auto; /* Centre horizontalement */
-    text-align: justify; /* Centre le texte à l'intérieur */
-    left: 0; /* Réinitialise les décalages gauche/droite */
-    transform: none; /* Supprime les transformations */
-    opacity: 1; /* Assure que les bannières sont visibles */
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none;
+    opacity: 1;
     margin-top: 25%;
     margin-bottom: 30px;
+    width: 90%;
+    text-align: justify;
 }
 
 body.index-page .banner {
@@ -411,8 +424,8 @@ body.index-page .banner {
 
 /* Style général pour les images des bannières */
 .banner-image {
-    width: 25%; /* Largeur de l'image */
-    height: 100%; /* Conserve les proportions */
+    width: 15%; /* Largeur de l'image */
+    height: 50%; /* Conserve les proportions */
     border-radius: 10px; /* Coins arrondis */
     margin: 10px; /* Espacement autour de l'image */
     object-fit: cover; /* Ajuste l'image pour remplir l'espace */
