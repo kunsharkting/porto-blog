@@ -31,129 +31,6 @@ body {
     font-style: normal;
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 15px;
-        padding: 0;
-        margin: 0;
-        background-size: cover;
-        background-attachment: scroll;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 8px;
-        position: static;
-    }
-
-    .logo img {
-        width: 36px;
-        height: 36px;
-    }
-
-    .logo span {
-        font-size: 20px;
-    }
-
-    .nav-links {
-        width: 100vw;
-        right: 0;
-        left: 0;
-        top: 50px;
-        border-radius: 0;
-        box-shadow: none;
-        padding: 10px 0;
-        background: white;
-        position: absolute;
-    }
-
-    .nav-links li {
-        margin-bottom: 8px;
-    }
-
-    .nav-links a {
-        font-size: 16px;
-        padding: 10px 0;
-        display: block;
-        text-align: center;
-    }
-
-    .hamburger {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .title-container, .floating-title {
-        position: static !important;
-        transform: none !important;
-        font-size: 2rem !important;
-        margin: 20px 0 10px 0;
-        white-space: normal;
-    }
-
-    main {
-        padding: 10px;
-        margin-top: 0;
-    }
-
-    .banner, .banner1, .banner2, .banner3 {
-        width: 98vw !important;
-        min-width: 0;
-        margin: 20px auto 20px auto !important;
-        padding: 10px !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        border-radius: 10px;
-        box-sizing: border-box;
-        min-height: unset;
-    }
-
-    .banner-image {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        max-height: 250px !important;
-        margin: 0 0 10px 0 !important;
-        object-fit: cover;
-        display: block;
-    }
-
-    .banner-text, .banner1 .banner-text, .banner2 .banner-text, .banner3 .banner-text {
-        margin: 0 !important;
-        padding: 0 !important;
-        text-align: left !important;
-    }
-
-    .footer {
-        font-size: 13px;
-        padding: 10px 0;
-        margin-top: 30px;
-    }
-
-    /* Adaptation de la route, voiture et boost pour mobile */
-    .road {
-        height: 40px;
-        background-size: 50px 50px;
-    }
-
-    .car {
-        width: 60px;
-        height: 40px;
-        bottom: 5px;
-        left: 0;
-        background-size: contain;
-    }
-
-    .boost {
-        width: 40px;
-        height: 20px;
-        bottom: 15px;
-        left: -30px;
-        background-size: contain;
-    }
-}
-
 /* Animation pour l'apparition des bannières */
 @keyframes slideInLeft {
     from {
@@ -575,13 +452,34 @@ body.membres-page .banner3 {
     bottom: 50px;
     margin-top: 10%;
     width: 100%;
-    background-color: black; /* Couleur de fond */
+    background-color: grey; /* Couleur de fond */
     color: white; /* Couleur du texte */
     text-align: center;
     padding: 20px 0;
     font-family: 'Howdy-bird', sans-serif;
     font-size: 16px;
     z-index: 998;
+}
+
+.footer-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;      /* Centre le contenu */
+    gap: 30px;                    /* Espace entre images et texte */
+    max-width: 600px;             /* Largeur maximale du footer */
+    margin: 0 auto;               /* Centre le footer-flex */
+    width: 100%;
+    padding: 0 16px;
+}
+
+.footer-image {
+    width: 15%;
+    height: auto;
+}
+
+.footer-text {
+    flex: 1;
+    text-align: center;
 }
 
 /* Route */
@@ -797,17 +695,40 @@ body.membres-page .banner3 {
     .footer {
         font-size: 15px;
         padding: 15px 0;
-        background: black;
-        position: fixed;
+        background: grey;
+        position: relative;
         left: 0;
         right: 0;
         bottom: 38px;
         width: 100vw;
         margin: 0;
         border-radius: 0;
-        z-index: 1001;
+        z-index: 998;
         box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
         text-align: center;
+    }
+    
+    .footer-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        max-width: 60vw;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .footer-image {
+        width: 50px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .footer-text {
+        flex: 1;
+        text-align: center;
+        font-size: 13px;
     }
 
     .banner:last-of-type,
