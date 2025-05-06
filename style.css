@@ -223,70 +223,131 @@ body {
 
 @media (max-width: 768px) {
     body {
-        font-size: 14px; /* Réduisez la taille de la police pour les petits écrans */
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+        background-size: cover;
+        background-attachment: scroll;
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    main {
+        padding: 10px;
+        margin-top: 0;
+        box-sizing: border-box;
+        width: 100vw;
+        max-width: 100vw;
     }
 
     header {
-        flex-direction: column; /* Empile les éléments du header verticalement */
+        flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 8px;
+        position: static;
     }
 
     .logo img {
-        width: 40px; /* Réduisez la taille du logo */
-        height: 40px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo span {
+        font-size: 20px;
     }
 
     .nav-links {
-        display: none; /* Cache le menu par défaut */
-        flex-direction: column; /* Affiche les liens verticalement */
-        position: absolute;
-        top: 60px;
+        width: 100vw;
         right: 0;
-        background-color: black;
-        width: 100%;
-        padding: 10px 0;
+        left: 0;
+        top: 50px;
         border-radius: 0;
         box-shadow: none;
+        padding: 10px 0;
+        background: white;
+        position: absolute;
     }
 
-    .nav-links.active {
-        display: flex; /* Affiche le menu lorsqu'il est actif */
+    .nav-links li {
+        margin-bottom: 8px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 0;
+        display: block;
+        text-align: center;
     }
 
     .hamburger {
-        display: block; /* Affiche le bouton hamburger sur mobile */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .title-container, .floating-title {
+        position: static !important;
+        transform: none !important;
+        font-size: 2rem !important;
+        margin: 20px 0 10px 0;
+        white-space: normal;
     }
 
     .banner, .banner1, .banner2, .banner3 {
-        width: 95%; /* Augmente la largeur pour occuper plus d'espace sur mobile */
-        margin-top: 10%; /* Réduisez les marges pour économiser de l'espace */
-        padding: 15px; /* Réduisez le padding */
+        width: 100vw !important;
+        min-width: 0;
+        margin: 20px 0 !important;
+        padding: 10px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        border-radius: 10px;
+        box-sizing: border-box;
+        min-height: unset;
+        left: 0 !important;
+        right: 0 !important;
     }
 
-    .floating-title {
-        font-size: 2rem; /* Réduisez la taille du titre flottant */
+    .banner-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 250px !important;
+        margin: 0 0 10px 0 !important;
+        object-fit: cover;
+        display: block;
+    }
+
+    .banner-text, .banner1 .banner-text, .banner2 .banner-text, .banner3 .banner-text {
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: left !important;
     }
 
     .footer {
-        font-size: 12px; /* Réduisez la taille du texte dans le footer */
+        font-size: 13px;
         padding: 10px 0;
+        margin-top: 30px;
     }
 
-    .instagram-logo {
-        width: 25px; /* Réduisez la taille du logo Instagram */
-        height: 25px;
-    }
-
-    .brick-floor {
-        height: 40px; /* Réduisez la hauteur du sol en brique */
-        background-size: 50px 50px; /* Ajustez la taille des briques */
-    }
-
-    .walking-man {
-        width: 40px; /* Réduisez la taille du bonhomme */
+    /* Adaptation de la route, voiture et boost pour mobile */
+    .road {
         height: 40px;
-        bottom: 15px; /* Ajustez sa position */
+        background-size: 50px 50px;
+    }
+
+    .car {
+        width: 60px;
+        height: 40px;
+        bottom: 5px;
+        left: 0;
+        background-size: contain;
+    }
+
+    .boost {
+        width: 40px;
+        height: 20px;
+        bottom: 15px;
+        left: -30px;
+        background-size: contain;
     }
 }
 
@@ -594,7 +655,7 @@ body.membres-page .banner,
 body.membres-page .banner1,
 body.membres-page .banner2,
 body.membres-page .banner3 {
-    min-height: 250px; /* Ajuste la valeur selon la hauteur désirée */
+    min-height: 300px; /* Ajuste la valeur selon la hauteur désirée */
 }
 
 .members-link a {
