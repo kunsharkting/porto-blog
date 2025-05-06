@@ -796,17 +796,25 @@ body.membres-page .banner3 {
 
     .footer {
         font-size: 13px;
-        padding: 10px 0;
-        margin-top: 30px;
+        padding: 15px 0;
+        background: white;
         position: fixed;
-        left: 30vw;      /* Décale le footer vers la droite */
+        left: 0;
         right: 0;
-        bottom: 10px;    /* Plus bas sur l'écran */
-        width: 60vw;     /* Ajuste la largeur pour ne pas dépasser */
-        background-color: white;
-        border-radius: 10px;
-        z-index: 998;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        bottom: 0;
+        width: 100vw;
+        margin: 0;
+        border-radius: 0;
+        z-index: 1001;
+        box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+
+    .banner:last-of-type,
+    .banner1:last-of-type,
+    .banner2:last-of-type,
+    .banner3:last-of-type {
+        margin-bottom: 150px !important; /* Ajuste selon la hauteur de ton footer */
     }
 
     /* Adaptation de la route, voiture et boost pour mobile */
