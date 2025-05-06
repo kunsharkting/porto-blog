@@ -120,7 +120,7 @@ body {
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: rgba(80, 41, 5, 1);
+        background-color: black;
         width: 100%;
         padding: 10px 0;
         border-radius: 0;
@@ -177,7 +177,7 @@ header {
     left: 0;
     width: 100%;
     z-index:10; /* Pour que le header soit au-dessus du contenu */
-    color: rgb(239, 126, 13);
+    color: white;
 }
 
 body::before {
@@ -227,8 +227,8 @@ nav {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: rgb(111, 111, 111);
-    color: rgb(230, 218, 191);
+    background-color: white;
+    color: black;
     width: 150px;
     padding: 20px;
     border-radius: 20px;
@@ -247,11 +247,11 @@ nav {
     font-family: 'Shuttle-x', serif;
     font-size: 17px;
     text-decoration: none;
-    color: rgb(255, 200, 82);
+    color: black;
 }
 
 .nav-links a:hover {
-    color: rgb(80, 41, 5); /* Bleu au survol */
+    color: red; /* Bleu au survol */
 }
 
 .active {
@@ -271,7 +271,7 @@ nav {
     width: 25px;
     height: 3px;
     margin-bottom: 5px;
-    background-color: rgb(239, 126, 13);
+    background-color: white;
     transition: transform 0.3s ease;
 }
 
@@ -305,7 +305,7 @@ main {
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgba(80, 41, 5, 1); /* Fond blanc semi-transparent */
+    background-color: white; /* Fond blanc semi-transparent */
     text-align: justify;
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
@@ -313,7 +313,7 @@ main {
 /* Style du texte du bandeau */
 .banner p, .banner h3, .banner2 p, .banner2 h3 {
     margin-right: 5%; /* Augmente la marge à droite */
-    color: rgb(194, 194, 194); /* Couleur du texte */
+    color: black; /* Couleur du texte */
 }
 
 .banner h3, .banner2 h3 {
@@ -348,7 +348,7 @@ main {
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgba(80, 41, 5, 1); /* Fond blanc semi-transparent */
+    background-color: white; /* Fond blanc semi-transparent */
     text-align: justify;
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
@@ -356,7 +356,7 @@ main {
 /* Style du texte du bandeau */
 .banner1 p, .banner1 h3, .banner3 p, .banner3 h3 {
     margin-left: 5%; /* Augmente la marge à droite */
-    color: rgb(194, 194, 194); /* Couleur du texte */
+    color: black; /* Couleur du texte */
 }
 
 .banner1 h3, .banner3 h3 {
@@ -456,10 +456,16 @@ body.index-page .banner {
 
 .nav-links li a.active {
     font-weight: bold;
-    color: rgb(80, 41, 5);
+    color: red;
 }
 
 .members-link a {
+    color: rgb(194, 41, 5); /* Couleur du lien */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold; /* Met le lien en gras */
+}
+
+.IT-link a {
     color: rgb(194, 41, 5); /* Couleur du lien */
     text-decoration: none; /* Supprime le soulignement par défaut */
     font-weight: bold; /* Met le lien en gras */
@@ -480,7 +486,7 @@ body.index-page .banner {
 /* Style du titre */
 .floating-title {
     font-family: 'Shuttle-x';
-    color: rgb(255, 200, 82);
+    color: white;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     position: fixed;
@@ -500,8 +506,8 @@ body.index-page .banner {
     bottom: 50px;
     margin-top: 10%;
     width: 100%;
-    background-color: rgba(80, 41, 5, 1); /* Couleur de fond */
-    color: rgb(255, 255, 255); /* Couleur du texte */
+    background-color: white; /* Couleur de fond */
+    color: black; /* Couleur du texte */
     text-align: center;
     padding: 20px 0;
     font-family: 'Howdy-bird', sans-serif;
