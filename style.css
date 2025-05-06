@@ -575,8 +575,8 @@ body.membres-page .banner3 {
     bottom: 50px;
     margin-top: 10%;
     width: 100%;
-    background-color: white; /* Couleur de fond */
-    color: black; /* Couleur du texte */
+    background-color: black; /* Couleur de fond */
+    color: white; /* Couleur du texte */
     text-align: center;
     padding: 20px 0;
     font-family: 'Howdy-bird', sans-serif;
@@ -795,13 +795,13 @@ body.membres-page .banner3 {
     }
 
     .footer {
-        font-size: 13px;
+        font-size: 15px;
         padding: 15px 0;
-        background: white;
+        background: black;
         position: fixed;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 38px;
         width: 100vw;
         margin: 0;
         border-radius: 0;
@@ -814,7 +814,7 @@ body.membres-page .banner3 {
     .banner1:last-of-type,
     .banner2:last-of-type,
     .banner3:last-of-type {
-        margin-bottom: 150px !important; /* Ajuste selon la hauteur de ton footer */
+        margin-bottom: 200px !important; /* Ajuste selon la hauteur de ton footer */
     }
 
     /* Adaptation de la route, voiture et boost pour mobile */
