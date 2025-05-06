@@ -812,8 +812,8 @@ body.membres-page .banner3 {
     }
 
     .car {
-        width: 26px;
-        height: 15px;
+        width: 60px;
+        height: 35px;
         bottom: 2px;
         left: 6px;
         background-size: contain;
@@ -822,8 +822,8 @@ body.membres-page .banner3 {
     }
 
     .boost {
-        width: 10px;
-        height: 5px;
+        width: 24px;
+        height: 12px;
         bottom: 4px;
         left: -8px;
         background-size: contain;
