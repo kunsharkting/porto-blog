@@ -102,3 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
       lastScrollY = scrollY;
   });
 });
+
+window.addEventListener('load', function() {
+  setTimeout(function() {
+      document.getElementById('loader').classList.add('hide');
+  }, 1700); // 1200 ms = 1,2 secondes, ajuste à ta convenance
+});
