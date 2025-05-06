@@ -131,8 +131,26 @@ body {
         margin-top: 30px;
     }
 
-    .road, .car, .boost {
-        display: none !important;
+    /* Adaptation de la route, voiture et boost pour mobile */
+    .road {
+        height: 40px;
+        background-size: 50px 50px;
+    }
+
+    .car {
+        width: 60px;
+        height: 40px;
+        bottom: 5px;
+        left: 0;
+        background-size: contain;
+    }
+
+    .boost {
+        width: 40px;
+        height: 20px;
+        bottom: 15px;
+        left: -30px;
+        background-size: contain;
     }
 }
 
