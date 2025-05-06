@@ -330,22 +330,23 @@ body {
 
     /* Adaptation de la route, voiture et boost pour mobile */
     .road {
-        height: 40px;
+        height: 55px;
         background-size: 50px 50px;
     }
 
     .car {
         width: 60px;
         height: 40px;
-        bottom: 5px;
-        left: 0;
+        bottom: 8px;
+        left: 10px;
         background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .boost {
         width: 40px;
         height: 20px;
-        bottom: 15px;
+        bottom: 18px;
         left: -30px;
         background-size: contain;
     }
