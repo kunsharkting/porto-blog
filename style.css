@@ -350,7 +350,7 @@ body.index-page .banner {
 }
 
 .banner {
-    margin-top: 600px; /* Espace au-dessus du bandeau */
+    margin-top: 600px;
 }
 
 /* Style général pour les images des bannières */
@@ -383,6 +383,48 @@ body.index-page .banner {
     float: left; /* Positionne l'image à gauche */
     margin-right: 20px; /* Espace entre l'image et le texte */
 
+}
+
+body.blog-page .banner,
+body.blog-page .banner1,
+body.blog-page .banner2,
+body.blog-page .banner3 {
+    display: flex;
+    align-items: stretch;
+    width: 90%;
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    text-align: justify;
+    z-index: 1;
+    box-sizing: border-box;
+    height: auto;
+    min-height: unset;
+}
+
+body.blog-page .banner-image {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+body.blog-page .banner-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body.blog-page .banner {
+    margin-top: 600px;
 }
 
 .nav-links li a.active {
