@@ -324,7 +324,7 @@ body:not(.index-page) .banner2 {
 body:not(.index-page) .banner1,
 body:not(.index-page) .banner3 {
     position: relative;
-    right: 10%;
+    right: 7%;
     width: 80%;
 }
 
@@ -414,6 +414,12 @@ body.blog-page .banner-image {
     margin-bottom: 0;
     flex-shrink: 0;
     align-self: flex-start;
+}
+
+body.blog-page .banner-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* espace entre les images */
 }
 
 body.blog-page .banner-text {
@@ -733,6 +739,43 @@ body.membres-page .banner3 {
         padding: 0 !important;
         text-align: left !important;
     }
+
+    body.blog-page .banner,
+    body.blog-page .banner1,
+    body.blog-page .banner2,
+    body.blog-page .banner3 {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 96vw !important;
+        padding: 10px !important;
+        margin: 20px auto !important;
+    }
+    
+    body.blog-page .banner-images {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    body.blog-page .banner-image {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: auto !important;
+        margin: 0 0 10px 0 !important;
+        object-fit: cover;
+        display: block;
+    }
+
+    body.blog-page .banner-text {
+        width: 100%;
+        text-align: left;
+        padding: 0 5vw;
+        font-size: 1rem;
+    }
+
+
 
     .footer {
         font-size: 15px;
