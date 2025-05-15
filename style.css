@@ -2,7 +2,7 @@ body {
     font-family: 'RetroCompute', sans-serif !important;
     margin: 0;
     padding: 0;
-    background-image: url('images/bg_blog.gif'); /* Remplacez par le chemin de votre image */
+    background-image: url('images/bg_porto.jpeg'); /* Remplacez par le chemin de votre image */
     background-size: cover; /* Pour que l'image couvre tout l'écran */
     background-position: center; /* Pour centrer l'image */
     background-attachment: fixed;
