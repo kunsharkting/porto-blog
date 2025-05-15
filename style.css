@@ -429,8 +429,25 @@ body.blog-page .banner-text {
     justify-content: center;
 }
 
+body.blog-page .banner1,
+body.blog-page .banner3 {
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-right: 0 !important;
+}
+
 body.blog-page .banner {
     margin-top: 600px;
+    margin-bottom: 15%;
+}
+
+body.blog-page .enlarge-image img {
+    cursor: zoom-in;
+    transition: box-shadow 0.2s;
+}
+
+body.blog-page .enlarge-image img:hover {
+    box-shadow: 0 0 10px 2px #888;
 }
 
 .nav-links li a.active {
@@ -631,6 +648,35 @@ body.membres-page .banner3 {
 #loader.hide {
     opacity: 0;
     pointer-events: none;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    z-index: 9998;
+}
+#lightbox img {
+    cursor: zoom-out;
+}
+
+#lightbox-x {
+    position: fixed;
+    top: 24px;
+    right: 48px;
+    z-index: 10000;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+#lightbox-x:hover {
+    color: #ff5555;
 }
 
 @media (max-width: 768px) {

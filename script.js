@@ -108,3 +108,21 @@ window.addEventListener('load', function() {
       document.getElementById('loader').classList.add('hide');
   }, 1200); // 1200 ms = 1,2 secondes, ajuste à ta convenance
 });
+
+document.querySelectorAll('.enlarge-image .banner-image').forEach(img => {
+    img.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('lightbox-img').src = this.src;
+        document.getElementById('lightbox').style.display = 'block';
+    });
+});
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target.id === 'lightbox' || e.target.id === 'lightbox-close') {
+        this.style.display = 'none';
+        document.getElementById('lightbox-img').src = '';
+    }
+});
+document.getElementById('lightbox-x').addEventListener('click', function() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.getElementById('lightbox-img').src = '';
+});
