@@ -109,20 +109,47 @@ window.addEventListener('load', function() {
   }, 1200); // 1200 ms = 1,2 secondes, ajuste à ta convenance
 });
 
+// Pour les images
 document.querySelectorAll('.enlarge-image .banner-image').forEach(img => {
     img.addEventListener('click', function(e) {
         e.preventDefault();
         document.getElementById('lightbox-img').src = this.src;
+        document.getElementById('lightbox-img').style.display = 'block';
+        document.getElementById('lightbox-video').style.display = 'none';
         document.getElementById('lightbox').style.display = 'block';
     });
 });
+
+// Pour les vidéos
+document.querySelectorAll('.enlarge-video').forEach(video => {
+    video.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('lightbox-img').style.display = 'none';
+        var videoSrc = this.querySelector('source').src || this.src;
+        document.getElementById('lightbox-video-src').src = videoSrc;
+        document.getElementById('lightbox-video').load();
+        document.getElementById('lightbox-video').style.display = 'block';
+        document.getElementById('lightbox').style.display = 'block';
+    });
+});
+
+// Fermer le lightbox
 document.getElementById('lightbox').addEventListener('click', function(e) {
     if (e.target.id === 'lightbox' || e.target.id === 'lightbox-close') {
         this.style.display = 'none';
         document.getElementById('lightbox-img').src = '';
+        document.getElementById('lightbox-video').pause();
+        document.getElementById('lightbox-video-src').src = '';
+        document.getElementById('lightbox-video').load();
+        document.getElementById('lightbox-video').style.display = 'none';
     }
 });
+
 document.getElementById('lightbox-x').addEventListener('click', function() {
     document.getElementById('lightbox').style.display = 'none';
     document.getElementById('lightbox-img').src = '';
+    document.getElementById('lightbox-video').pause();
+    document.getElementById('lightbox-video-src').src = '';
+    document.getElementById('lightbox-video').load();
+    document.getElementById('lightbox-video').style.display = 'none';
 });

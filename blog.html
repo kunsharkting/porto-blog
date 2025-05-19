@@ -237,9 +237,10 @@
                 <a href="images/day7/grp_neonia.JPG" class="enlarge-image">
                     <img src="images/day7/grp_neonia.JPG" alt="Day 3" class="banner-image" loading="lazy">
                 </a>
-                <a href="images/day7/neon_neonia.JPG" class="enlarge-image">
-                    <img src="images/day7/neon_neonia.JPG" alt="Day 3" class="banner-image" loading="lazy">
-                </a>
+                <video class="banner-image enlarge-video" controls poster="images/day7/miniature_video.jpg" width="180">
+                    <source src="videos/jour7.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo HTML5.
+                </video>
                 <a href="images/day7/grp_neonia.JPG" class="enlarge-image">
                     <img src="images/day7/grp_neonia.JPG" alt="Day 3" class="banner-image" loading="lazy">
                 </a>
@@ -251,8 +252,11 @@
                 </a>
             </div>
             <div class="banner-text">
-                <h3>Day 7 – Free Time in Porto</h3>
-                <p>We had free time to explore Porto’s shops, cafes, and beautiful streets.</p>
+                <h3>Day 7 – Roaring engines and a ride through Braga</h3>
+                <p>On our seventh day, we were up bright and early to attend a stage of the famous Rally of Portugal, part of the World Rally Championship. We went to see the Paredes special stage, and the atmosphere was absolutely electric. The cars sped by at incredible speeds, drifting through corners and kicking up huge clouds of dust with every turn. It was loud, chaotic… and completely breathtaking. Watching these drivers push the limits of control and precision in such extreme conditions was truly unforgettable.</p>
+                <p>In the evening, we switched gears and headed to Braga, a charming city north of Porto. Johan and I explored it on electric scooters—a fun and efficient way to see the town’s iconic landmarks. From historic monuments to lively squares lit up at night, the city had a magical vibe that made the ride feel almost cinematic.</p>
+                <p>One especially memorable moment: while riding up to the Miradouro do Monte do Picoto to enjoy the panoramic view, the rear wheel of Johan’s scooter locked up. He had to push it all the way uphill by hand. Hilarious for us… a bit less for him!</p>
+                <p>A day packed with adrenaline in the morning and relaxed adventure in the evening—just the kind of balance that makes this trip so special.</p>
             </div>
         </div>
         <!-- Day 8 -->
@@ -391,6 +395,10 @@
     <span id="lightbox-close" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9998;"></span>
     <button id="lightbox-x" aria-label="Fermer" style="position:fixed;top:24px;right:48px;z-index:10000;background:none;border:none;font-size:2.5rem;color:white;cursor:pointer;line-height:1;">&times;</button>
     <img id="lightbox-img" src="" alt="Agrandissement" style="max-width:90vw;max-height:90vh;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:9999;border-radius:12px;box-shadow:0 0 30px #000a;">
+    <video id="lightbox-video" controls style="max-width:90vw;max-height:90vh;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:9999;border-radius:12px;box-shadow:0 0 30px #000a;display:none;">
+        <source id="lightbox-video-src" src="" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
 </div>
 
     <script src="script.js"></script>

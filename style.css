@@ -403,6 +403,14 @@ body.blog-page .banner3 {
     min-height: unset;
 }
 
+.banner-image video,
+video.banner-image {
+    width: 180px;
+    border-radius: 10px;
+    display: block;
+    margin: 0;
+}
+
 body.blog-page .banner1,
 body.blog-page .banner2,
 body.blog-page .banner3 {
