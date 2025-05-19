@@ -130,6 +130,7 @@ document.querySelectorAll('.enlarge-video').forEach(video => {
         document.getElementById('lightbox-video').load();
         document.getElementById('lightbox-video').style.display = 'block';
         document.getElementById('lightbox').style.display = 'block';
+        document.getElementById('lightbox-video').play(); // Lancement automatique
     });
 });
 

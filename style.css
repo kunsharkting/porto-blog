@@ -2,12 +2,12 @@ body {
     font-family: 'RetroCompute', sans-serif !important;
     margin: 0;
     padding: 0;
-    background-image: url('images/bg_porto.jpeg'); /* Remplacez par le chemin de votre image */
-    background-size: cover; /* Pour que l'image couvre tout l'écran */
-    background-position: center; /* Pour centrer l'image */
-    background-attachment: fixed;
     overflow-x: hidden; /* Empêche le défilement horizontal */
     position: relative;
+}
+
+body::before {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 @font-face {
@@ -411,6 +411,24 @@ video.banner-image {
     margin: 0;
 }
 
+body.blog-page .enlarge-video {
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+body.blog-page .enlarge-video:hover {
+    box-shadow: 0 0 10px 2px #888;
+    transform: scale(1.04);
+}
+
+body.blog-page .enlarge-image .banner-image {
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+body.blog-page .enlarge-image .banner-image:hover {
+    box-shadow: 0 0 10px 2px #888;
+    transform: scale(1.04);
+}
+
 body.blog-page .banner1,
 body.blog-page .banner2,
 body.blog-page .banner3 {
@@ -454,15 +472,6 @@ body.blog-page .banner3 {
 body.blog-page .banner {
     margin-top: 600px;
     margin-bottom: 15%;
-}
-
-body.blog-page .enlarge-image img {
-    cursor: zoom-in;
-    transition: box-shadow 0.2s;
-}
-
-body.blog-page .enlarge-image img:hover {
-    box-shadow: 0 0 10px 2px #888;
 }
 
 body.blog-page .banner .banner-images {
@@ -709,6 +718,19 @@ body.membres-page .banner3 {
 }
 #lightbox-x:hover {
     color: #ff5555;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    pointer-events: none; /* Pour ne pas bloquer les clics */
 }
 
 @media (max-width: 768px) {
