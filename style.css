@@ -606,7 +606,7 @@ body.membres-page .banner3 {
     bottom: 10px; /* Position sur la route */
     left: 0; /* Commence à gauche */
     width: 10%;
-    height: 175%;
+    height: 200%;
     background-image: url('images/octane.png'); /* Image de la voiture */
     background-size: cover;
     background-repeat: no-repeat;
