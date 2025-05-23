@@ -108,7 +108,7 @@ header {
     left: 0;
     width: 100%;
     z-index:10; /* Pour que le header soit au-dessus du contenu */
-    color: white;
+    color: rgb(149, 138, 57);
 }
 
 body::before {
@@ -158,8 +158,8 @@ nav {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: white;
-    color: black;
+    background-color: rgb(209, 189, 142);
+    color: rgb(0, 70, 28);
     width: 150px;
     padding: 20px;
     border-radius: 20px;
@@ -178,11 +178,11 @@ nav {
     font-family: 'Shuttle-x', serif;
     font-size: 17px;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 70, 28);
 }
 
 .nav-links a:hover {
-    color: red; /* Bleu au survol */
+    color: rgb(255, 72, 72); /* Bleu au survol */
 }
 
 .active {
@@ -202,7 +202,7 @@ nav {
     width: 25px;
     height: 3px;
     margin-bottom: 5px;
-    background-color: white;
+    background-color: rgb(149, 138, 57);
     transition: transform 0.3s ease;
 }
 
@@ -236,15 +236,20 @@ main {
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: white; /* Fond blanc semi-transparent */
+    background-color: rgb(209, 189, 142); /* Fond blanc semi-transparent */
     text-align: justify;
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
 
 /* Style du texte du bandeau */
-.banner p, .banner h3, .banner2 p, .banner2 h3 {
+.banner p, .banner2 p {
     margin-right: 5%; /* Augmente la marge à droite */
-    color: black; /* Couleur du texte */
+    color: rgb(0, 70, 28); /* Couleur du texte */
+}
+
+.banner h3, .banner2 h3 {
+    margin-right: 5%; /* Augmente la marge à droite */
+    color: rgb(91, 0, 0); /* Couleur du texte */
 }
 
 .banner h3, .banner2 h3 {
@@ -279,15 +284,20 @@ main {
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: white; /* Fond blanc semi-transparent */
+    background-color: rgb(209, 189, 142); /* Fond blanc semi-transparent */
     text-align: justify;
     z-index: 1; /* On le place au-dessus de l'image de fond */
 }
 
 /* Style du texte du bandeau */
-.banner1 p, .banner1 h3, .banner3 p, .banner3 h3 {
+.banner1 p, .banner3 p {
     margin-left: 5%; /* Augmente la marge à droite */
-    color: black; /* Couleur du texte */
+    color: rgb(0, 70, 28); /* Couleur du texte */
+}
+
+.banner1 h3, .banner3 h3 {
+    margin-left: 5%; /* Augmente la marge à droite */
+    color: rgb(91, 0, 0); /* Couleur du texte */
 }
 
 .banner1 h3, .banner3 h3 {
@@ -395,7 +405,7 @@ body.blog-page .banner3 {
     margin: 0 auto 30px auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: white;
+    background-color: rgb(209, 189, 142);
     text-align: justify;
     z-index: 1;
     box-sizing: border-box;
@@ -493,7 +503,7 @@ body.blog-page .banner .banner-image {
 
 .nav-links li a.active {
     font-weight: bold;
-    color: red;
+    color: rgb(144, 0, 0);
 }
 
 /* Redimensionne uniquement les images des bannières sur la page membres */
@@ -512,13 +522,13 @@ body.membres-page .banner3 {
 }
 
 .members-link a {
-    color: rgb(194, 41, 5); /* Couleur du lien */
+    color: rgb(144, 0, 0); /* Couleur du lien */
     text-decoration: none; /* Supprime le soulignement par défaut */
     font-weight: bold; /* Met le lien en gras */
 }
 
 .IT-link a {
-    color: rgb(194, 41, 5); /* Couleur du lien */
+    color: rgb(144, 0, 0); /* Couleur du lien */
     text-decoration: none; /* Supprime le soulignement par défaut */
     font-weight: bold; /* Met le lien en gras */
 }
@@ -538,7 +548,7 @@ body.membres-page .banner3 {
 /* Style du titre */
 .floating-title {
     font-family: 'Shuttle-x';
-    color: white;
+    color: rgb(149, 138, 57);
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     position: fixed;
@@ -558,8 +568,8 @@ body.membres-page .banner3 {
     bottom: 50px;
     margin-top: 10%;
     width: 100%;
-    background-color: grey; /* Couleur de fond */
-    color: white; /* Couleur du texte */
+    background-color: rgb(60, 30, 0); /* Couleur de fond */
+    color: rgb(149, 149, 149); /* Couleur du texte */
     text-align: center;
     padding: 20px 0;
     font-family: 'Howdy-bird', sans-serif;
