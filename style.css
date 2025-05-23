@@ -594,7 +594,7 @@ body.membres-page .banner3 {
     bottom: 0;
     width: 100%;
     height: 60px;
-    background-image: url('images/route.png'); /* Remplacez par le chemin de votre image */
+    background-image: url('images/design/route.png'); /* Remplacez par le chemin de votre image */
     background-repeat: repeat-x; /* Répète l'image horizontalement */
     z-index: 999;
     perspective: 1000px; /* Permet les effets 3D */
@@ -607,7 +607,7 @@ body.membres-page .banner3 {
     left: 0; /* Commence à gauche */
     width: 10%;
     height: 200%;
-    background-image: url('images/octane.png'); /* Image de la voiture */
+    background-image: url('images/design/octane.png'); /* Image de la voiture */
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1000;
@@ -622,7 +622,7 @@ body.membres-page .banner3 {
     left: -55px; /* Derrière la voiture */
     width: 70px;
     height: 40px;
-    background-image: url('images/boost.png'); /* Image du boost */
+    background-image: url('images/design/boost.png'); /* Image du boost */
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0; /* Caché par défaut */
