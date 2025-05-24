@@ -1450,3 +1450,23 @@ body:not(.ballon-active) .map-container:hover {
         display: block !important;
     }
 }
+
+#map-fullscreen-btn {
+    background: rgb(0, 70, 28);      /* Couleur de fond verte */
+    color: rgb(179, 179, 179);              /* Couleur du texte blanche */
+    border: 2px solid rgb(179, 179, 179);/* Bordure verte foncée */
+}
+#map-fullscreen-btn:hover {
+    background: rgb(155, 255, 101);      /* Fond plus foncé au survol */
+    color: rgb(0, 70, 28);
+}
+
+#map-exit-fullscreen-btn {
+    background: rgb(91, 0, 0);           /* Fond rouge foncé */
+    color: rgb(179, 179, 179);                   /* Texte blanc */
+    border: 2px solid rgb(179, 179, 179);     /* Bordure rouge clair */
+}
+#map-exit-fullscreen-btn:hover {
+    background: rgb(255, 72, 72);           /* Fond rouge clair au survol */
+    color: rgb(91, 0, 0);
+}
