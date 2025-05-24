@@ -507,6 +507,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 panda.remove();
             }, duration * 1000);
             rainContainer.appendChild(panda);
-        }, 700 + Math.random() * 800); // Beaucoup plus de pandas !
+        }, 600 + Math.random() * 700); // Beaucoup plus de pandas !
     });
 });

@@ -1500,3 +1500,19 @@ body:not(.ballon-active) .map-container:hover {
     will-change: transform;
     z-index: 0;
 }
+
+.banner, .banner1, .banner2, .banner3 {
+    position: relative;
+}
+
+.banner-image,
+.banner-images,
+.banner-text,
+.banner-text h3,
+.banner-text p,
+.banner1 .banner-image,
+.banner2 .banner-image,
+.banner3 .banner-image {
+    position: relative;
+    z-index: 1;
+}
