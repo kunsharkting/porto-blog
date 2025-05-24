@@ -431,3 +431,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Pop-up musique après le loader
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    const popup = document.getElementById('music-popup');
+    const popupClose = document.getElementById('music-popup-close');
+    // Récupère l'audio
+    const music = document.getElementById('bg-music');
+    if (loader) {
+        setTimeout(function() {
+            loader.classList.add('hide');
+            if (popup) popup.style.display = 'flex';
+        }, 1200);
+    } else {
+        if (popup) popup.style.display = 'flex';
+    }
+    // Fermer la pop-up en cliquant sur la croix
+    if (popupClose) {
+        popupClose.addEventListener('click', function(e) {
+            popup.style.display = 'none';
+            if (music) music.play().catch(() => {});
+            e.stopPropagation();
+        });
+    }
+    // Fermer la pop-up en cliquant en dehors du contenu
+    if (popup) {
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+                if (music) music.play().catch(() => {});
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('music-popup');
+    const popupPlay = document.getElementById('popup-play-link');
+    const music = document.getElementById('bg-music');
+    if (popup && popupPlay) {
+        popupPlay.addEventListener('click', function(e) {
+            popup.style.display = 'none';
+            if (music) music.play().catch(() => {});
+            e.stopPropagation();
+        });
+    }
+});
