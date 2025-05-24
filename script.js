@@ -363,3 +363,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Apparition de la carte
+function handleMapAppear() {
+    const mapTitle = document.querySelector('.map-title');
+    const mapContainer = document.querySelector('.map-container');
+    if (!mapTitle || !mapContainer) return;
+    let scrollY = window.scrollY;
+    // Apparition si on est en haut de page (comme le titre principal)
+    if (scrollY < 1100) {
+        mapTitle.classList.add('visible');
+        mapContainer.classList.add('visible');
+    } else {
+        mapTitle.classList.remove('visible');
+        mapContainer.classList.remove('visible');
+    }
+}
+window.addEventListener("scroll", handleMapAppear);
+window.addEventListener("DOMContentLoaded", handleMapAppear);

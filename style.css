@@ -365,7 +365,7 @@ body.index-page .banner3 {
     transform: none;
     opacity: 1;
     margin-top: 25%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     width: 90%;
     text-align: justify;
 }
@@ -987,6 +987,47 @@ body.membres-page .banner3 {
 .fun-btn:hover {
     background: rgb(0, 70, 28);
     color: rgb(155, 255, 101);
+}
+
+.map-container {
+    max-width: 1000px;   /* Choisis la largeur max souhaitée */
+    margin: 0 auto;     /* Centre le conteneur */
+    margin-top: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 4px solid rgb(209, 189, 142); /* Bordure verte, change la couleur si tu veux */
+}
+#map iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+.map-title {
+    font-family: 'Shuttle-x', serif; /* même police que .floating-title */
+    color: rgb(149, 138, 57);                  /* même couleur que .floating-title */
+    font-size: 2rem;                 /* plus petit que le h1 */
+    text-align: left;
+    margin-bottom: -30px;
+    margin-top: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 220px;
+}
+
+/* Apparition/disparition animée pour la map et son titre */
+.map-title,
+.map-container {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.8s, transform 0.8s;
+    will-change: opacity, transform;
+}
+.map-title.visible,
+.map-container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (max-width: 768px) {
