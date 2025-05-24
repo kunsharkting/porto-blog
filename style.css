@@ -33,7 +33,7 @@ body::before {
 
 @font-face {
     font-family: 'KeramiqueScript';
-    src: url('fonts/sous-titres/vintage_king/VintageKing.ttf') format('trutype');
+    src: url('fonts/sous-titres/gecko_lunch/Gecko\ Lunch.ttf') format('trutype');
     font-weight: normal;
     font-style: normal;
 }
