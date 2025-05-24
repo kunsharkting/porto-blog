@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
         music.volume = 0; // Commence en sourdine
         music.play().catch(() => {});
         // Animation du volume progressif
-        let targetVolume = 0.2;
+        let targetVolume = 0.1;
         let step = 0.02;
         let interval = setInterval(() => {
             if (music.volume < targetVolume) {
