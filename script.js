@@ -367,6 +367,88 @@ window.addEventListener('load', function() {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('music-popup');
+    const popupPlay = document.getElementById('popup-play-link');
+    const music = document.getElementById('bg-music');
+    if (popup && popupPlay) {
+        popupPlay.addEventListener('click', function(e) {
+            popup.style.display = 'none';
+            if (music) music.play().catch(() => {});
+            e.stopPropagation();
+        });
+    }
+});
+
+// Mute button in popup
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('music-popup');
+    const popupMute = document.getElementById('popup-mute-btn');
+    const music = document.getElementById('bg-music');
+    if (popup && popupMute) {
+        popupMute.addEventListener('click', function(e) {
+            popup.style.display = 'none';
+            if (music) {
+                music.pause();
+                music.currentTime = 0;
+            }
+            e.stopPropagation();
+        });
+    }
+});
+
+// Pause la musique quand une vidéo démarre, reprend à la fin
+document.addEventListener('DOMContentLoaded', function() {
+    const bgMusic = document.getElementById('bg-music');
+    // Sélectionne toutes les vidéos dans les bannières (hors lightbox)
+    const blogVideos = document.querySelectorAll('.banner-image.enlarge-video, video.banner-image');
+
+    blogVideos.forEach(video => {
+        video.addEventListener('play', function() {
+            if (bgMusic && !bgMusic.paused) {
+                bgMusic.pause();
+            }
+        });
+        video.addEventListener('ended', function() {
+            if (bgMusic && bgMusic.paused) {
+                bgMusic.play().catch(() => {});
+            }
+        });
+    });
+
+    // Pour la vidéo dans la lightbox
+    const lightboxVideo = document.getElementById('lightbox-video');
+    if (lightboxVideo) {
+        lightboxVideo.addEventListener('play', function() {
+            if (bgMusic && !bgMusic.paused) {
+                bgMusic.pause();
+            }
+        });
+        lightboxVideo.addEventListener('ended', function() {
+            if (bgMusic && bgMusic.paused) {
+                bgMusic.play().catch(() => {});
+            }
+        });
+    }
+});
+
+// Apparition de la carte
+function handleMapAppear() {
+    const mapTitle = document.querySelector('.map-title');
+    const mapContainer = document.querySelector('.map-container');
+    if (!mapTitle || !mapContainer) return;
+    let scrollY = window.scrollY;
+    if (scrollY < 1100) {
+        mapTitle.classList.add('visible');
+        mapContainer.classList.add('visible');
+    } else {
+        mapTitle.classList.remove('visible');
+        mapContainer.classList.remove('visible');
+    }
+}
+window.addEventListener("scroll", handleMapAppear);
+window.addEventListener("DOMContentLoaded", handleMapAppear);
+
 // Panda ballon mode
 document.addEventListener('DOMContentLoaded', function() {
     const panda = document.getElementById('panda-cursor');
