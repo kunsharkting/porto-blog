@@ -1,172 +1,198 @@
+// Hamburger menu
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-
-// Ouvrir/fermer le menu hamburger
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('active');
-});
-
-// Fermer le menu si on clique en dehors
-document.addEventListener('click', (event) => {
-  if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
-    if (navLinks.classList.contains('active')) {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-    }
-  }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const banners = document.querySelectorAll(".banner, .banner1, .banner2, .banner3");
-
-  window.addEventListener("scroll", () => {
-    const viewportHeight = window.innerHeight;
-
-    banners.forEach((banner, index) => {
-      const bannerTop = banner.getBoundingClientRect().top;
-      const bannerBottom = banner.getBoundingClientRect().bottom;
-
-      // Affiche la bannière si elle est visible dans le viewport
-      if (bannerTop < viewportHeight * 0.7 && bannerBottom > viewportHeight * 0.3) {
-        if (index % 2 === 0) {
-          banner.classList.add("right"); // Animation pour arriver du côté droit
-          banner.classList.remove("hide-right");
-        } else {
-          banner.classList.add("left"); // Animation pour arriver du côté gauche
-          banner.classList.remove("hide-left");
-        }
-      } else {
-        // Cache la bannière si elle quitte le viewport (plus tôt)
-        if (index % 2 === 0) {
-          banner.classList.add("hide-right");
-          banner.classList.remove("right");
-        } else {
-          banner.classList.add("hide-left");
-          banner.classList.remove("left");
-        }
-      }
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
-  });
+
+    document.addEventListener('click', (event) => {
+        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+            if (navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        }
+    });
+}
+
+// Animation des bannières
+document.addEventListener("DOMContentLoaded", () => {
+    const banners = document.querySelectorAll(".banner, .banner1, .banner2, .banner3");
+    window.addEventListener("scroll", () => {
+        const viewportHeight = window.innerHeight;
+        banners.forEach((banner, index) => {
+            const bannerTop = banner.getBoundingClientRect().top;
+            const bannerBottom = banner.getBoundingClientRect().bottom;
+            if (bannerTop < viewportHeight * 0.7 && bannerBottom > viewportHeight * 0.3) {
+                if (index % 2 === 0) {
+                    banner.classList.add("right");
+                    banner.classList.remove("hide-right");
+                } else {
+                    banner.classList.add("left");
+                    banner.classList.remove("hide-left");
+                }
+            } else {
+                if (index % 2 === 0) {
+                    banner.classList.add("hide-right");
+                    banner.classList.remove("right");
+                } else {
+                    banner.classList.add("hide-left");
+                    banner.classList.remove("left");
+                }
+            }
+        });
+    });
 });
 
 // Animation du titre flottant
 window.addEventListener("scroll", () => {
-  const title = document.querySelector(".floating-title");
-  let scrollY = window.scrollY;
-
-  // Déplace le titre vers le haut en fonction du scroll
-  title.style.transform = `translate(-50%, calc(-50% - ${scrollY * 1}px))`;
-
-  // Effet de disparition progressive
-  let opacity = Math.max(1 - scrollY / 300, 0);
-  title.style.opacity = opacity;
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const car = document.querySelector(".car");
-  const boost = document.querySelector(".boost");
-
-  let lastScrollY = window.scrollY;
-  let isScrolling;
-  let flipped = false;
-
-  window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercentage = scrollY / maxScroll;
-
-      const windowWidth = window.innerWidth;
-      const carPosition = scrollPercentage * (windowWidth - car.offsetWidth);
-      car.style.left = `${carPosition}px`;
-
-      if (scrollY < lastScrollY && !flipped) {
-          car.classList.remove("reset-flip");
-          car.classList.add("half-flip");
-          flipped = true;
-      } else if (scrollY > lastScrollY && flipped) {
-          car.classList.remove("half-flip");
-          car.classList.add("reset-flip");
-          flipped = false;
-      }
-
-      boost.classList.add("active");
-      boost.classList.remove("inactive");
-
-      clearTimeout(isScrolling);
-      isScrolling = setTimeout(() => {
-          boost.classList.add("inactive");
-          boost.classList.remove("active");
-      }, 200);
-
-      lastScrollY = scrollY;
-  });
-});
-
-window.addEventListener('load', function() {
-  setTimeout(function() {
-      document.getElementById('loader').classList.add('hide');
-  }, 1200); // 1200 ms = 1,2 secondes, ajuste à ta convenance
-});
-
-// Pour les images
-document.querySelectorAll('.enlarge-image .banner-image').forEach(img => {
-    img.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.getElementById('lightbox-img').src = this.src;
-        document.getElementById('lightbox-img').style.display = 'block';
-        document.getElementById('lightbox-video').style.display = 'none';
-        document.getElementById('lightbox').style.display = 'block';
-    });
-});
-
-// Pour les vidéos
-document.querySelectorAll('.enlarge-video').forEach(video => {
-    video.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.getElementById('lightbox-img').style.display = 'none';
-        var videoSrc = this.querySelector('source').src || this.src;
-        document.getElementById('lightbox-video-src').src = videoSrc;
-        document.getElementById('lightbox-video').load();
-        document.getElementById('lightbox-video').style.display = 'block';
-        document.getElementById('lightbox').style.display = 'block';
-        document.getElementById('lightbox-video').play(); // Lancement automatique
-    });
-});
-
-// Fermer le lightbox
-document.getElementById('lightbox').addEventListener('click', function(e) {
-    if (e.target.id === 'lightbox' || e.target.id === 'lightbox-close') {
-        this.style.display = 'none';
-        document.getElementById('lightbox-img').src = '';
-        document.getElementById('lightbox-video').pause();
-        document.getElementById('lightbox-video-src').src = '';
-        document.getElementById('lightbox-video').load();
-        document.getElementById('lightbox-video').style.display = 'none';
+    const title = document.querySelector(".floating-title");
+    if (title) {
+        let scrollY = window.scrollY;
+        title.style.transform = `translate(-50%, calc(-50% - ${scrollY * 1}px))`;
+        let opacity = Math.max(1 - scrollY / 300, 0);
+        title.style.opacity = opacity;
     }
 });
 
-document.getElementById('lightbox-x').addEventListener('click', function() {
-    document.getElementById('lightbox').style.display = 'none';
-    document.getElementById('lightbox-img').src = '';
-    document.getElementById('lightbox-video').pause();
-    document.getElementById('lightbox-video-src').src = '';
-    document.getElementById('lightbox-video').load();
-    document.getElementById('lightbox-video').style.display = 'none';
+// Animation de la voiture et du boost
+document.addEventListener("DOMContentLoaded", () => {
+    const car = document.querySelector(".car");
+    const boost = document.querySelector(".boost");
+    if (!car || !boost) return;
+
+    let lastScrollY = window.scrollY;
+    let isScrolling;
+    let flipped = false;
+
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercentage = scrollY / maxScroll;
+        const windowWidth = window.innerWidth;
+        const carPosition = scrollPercentage * (windowWidth - car.offsetWidth);
+        car.style.left = `${carPosition}px`;
+
+        if (scrollY < lastScrollY && !flipped) {
+            car.classList.remove("reset-flip");
+            car.classList.add("half-flip");
+            flipped = true;
+        } else if (scrollY > lastScrollY && flipped) {
+            car.classList.remove("half-flip");
+            car.classList.add("reset-flip");
+            flipped = false;
+        }
+
+        boost.classList.add("active");
+        boost.classList.remove("inactive");
+
+        clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+            boost.classList.add("inactive");
+            boost.classList.remove("active");
+        }, 200);
+
+        lastScrollY = scrollY;
+    });
 });
 
+// Loader
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        setTimeout(function() {
+            loader.classList.add('hide');
+        }, 1200);
+    }
+});
+
+// Lightbox images
+document.querySelectorAll('.enlarge-image .banner-image').forEach(img => {
+    img.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxVideo = document.getElementById('lightbox-video');
+        if (lightboxImg && lightbox && lightboxVideo) {
+            lightboxImg.src = this.src;
+            lightboxImg.style.display = 'block';
+            lightboxVideo.style.display = 'none';
+            lightbox.style.display = 'block';
+        }
+    });
+});
+
+// Lightbox vidéos
+document.querySelectorAll('.enlarge-video').forEach(video => {
+    video.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxVideo = document.getElementById('lightbox-video');
+        const lightboxVideoSrc = document.getElementById('lightbox-video-src');
+        if (lightboxImg && lightbox && lightboxVideo && lightboxVideoSrc) {
+            lightboxImg.style.display = 'none';
+            var videoSrc = this.querySelector('source') ? this.querySelector('source').src : this.src;
+            lightboxVideoSrc.src = videoSrc;
+            lightboxVideo.load();
+            lightboxVideo.style.display = 'block';
+            lightbox.style.display = 'block';
+            lightboxVideo.play();
+        }
+    });
+});
+
+// Fermer le lightbox (fond)
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+    lightbox.addEventListener('click', function(e) {
+        if (e.target.id === 'lightbox' || e.target.id === 'lightbox-close') {
+            this.style.display = 'none';
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxVideo = document.getElementById('lightbox-video');
+            const lightboxVideoSrc = document.getElementById('lightbox-video-src');
+            if (lightboxImg) lightboxImg.src = '';
+            if (lightboxVideo) {
+                lightboxVideo.pause();
+                lightboxVideo.style.display = 'none';
+            }
+            if (lightboxVideoSrc) lightboxVideoSrc.src = '';
+            if (lightboxVideo) lightboxVideo.load();
+        }
+    });
+}
+
+// Fermer le lightbox (croix)
+const lightboxX = document.getElementById('lightbox-x');
+if (lightboxX) {
+    lightboxX.addEventListener('click', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxVideo = document.getElementById('lightbox-video');
+        const lightboxVideoSrc = document.getElementById('lightbox-video-src');
+        if (lightbox) lightbox.style.display = 'none';
+        if (lightboxImg) lightboxImg.src = '';
+        if (lightboxVideo) {
+            lightboxVideo.pause();
+            lightboxVideo.style.display = 'none';
+        }
+        if (lightboxVideoSrc) lightboxVideoSrc.src = '';
+        if (lightboxVideo) lightboxVideo.load();
+    });
+}
+
+// --- MUSIQUE ---
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialisation volume
     var music = document.getElementById('bg-music');
-    const btn = document.getElementById('music-toggle');
-    const prev = document.getElementById('music-prev');
-    const next = document.getElementById('music-next');
-    const label = document.querySelector('.music-label');
+    var btn = document.getElementById('music-toggle');
+    var prev = document.getElementById('music-prev');
+    var next = document.getElementById('music-next');
+    var label = document.querySelector('.music-label');
 
-    // Si un des éléments n'existe pas, on ne fait rien
+    // Si un des éléments n'existe pas, on ne fait rien pour la musique
     if (!music || !btn || !prev || !next || !label) return;
-
-    if(music) music.volume = 0.2;
 
     // Playlist
     const playlist = [
@@ -180,25 +206,33 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     let currentTrack = 0;
 
-    function loadTrack(idx) {
-      currentTrack = (idx + playlist.length) % playlist.length;
-      music.src = playlist[currentTrack].src;
-      label.textContent = playlist[currentTrack].name;
-      music.load();
-      music.volume = 0; // Commence en sourdine
-      music.play().catch(() => {});
-  
-      // Animation du volume progressif
-      let targetVolume = 0.1;
-      let step = 0.02;
-      let interval = setInterval(() => {
-          if (music.volume < targetVolume) {
-              music.volume = Math.min(music.volume + step, targetVolume);
-          } else {
-              clearInterval(interval);
-          }
-      }, 2000); // Augmente le volume toutes les 200ms
+    function getRandomTrackIndex(exclude) {
+        let idx;
+        do {
+            idx = Math.floor(Math.random() * playlist.length);
+        } while (playlist.length > 1 && idx === exclude);
+        return idx;
     }
+
+    function loadTrack(idx) {
+        currentTrack = (idx + playlist.length) % playlist.length;
+        music.src = playlist[currentTrack].src;
+        label.textContent = playlist[currentTrack].name;
+        music.load();
+        music.volume = 0; // Commence en sourdine
+        music.play().catch(() => {});
+        // Animation du volume progressif
+        let targetVolume = 0.2;
+        let step = 0.02;
+        let interval = setInterval(() => {
+            if (music.volume < targetVolume) {
+                music.volume = Math.min(music.volume + step, targetVolume);
+            } else {
+                clearInterval(interval);
+            }
+        }, 200);
+    }
+
     function updateMusicBtn() {
         if (music.paused) {
             btn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M8 6 Q8 12 8 18 Q8 20 10 19 L18 13 Q20 12 18 11 L10 5 Q8 4 8 6 Z" fill="currentColor"/></svg>`;
@@ -208,16 +242,17 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.classList.add('playing');
         }
     }
+
     btn.onclick = function() {
         if (music.paused) { music.play(); } else { music.pause(); }
     };
-    prev.onclick = function() { loadTrack(currentTrack - 1); };
-    next.onclick = function() { loadTrack(currentTrack + 1); };
+    prev.onclick = function() { loadTrack(getRandomTrackIndex(currentTrack)); };
+    next.onclick = function() { loadTrack(getRandomTrackIndex(currentTrack)); };
     music.onplay = updateMusicBtn;
     music.onpause = updateMusicBtn;
-    music.onended = function() { loadTrack(currentTrack + 1); };
+    music.onended = function() { loadTrack(getRandomTrackIndex(currentTrack)); };
 
     // Initialisation
-    loadTrack(0);
+    loadTrack(getRandomTrackIndex(-1));
     updateMusicBtn();
 });
