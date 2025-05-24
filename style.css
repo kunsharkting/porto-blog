@@ -861,7 +861,6 @@ body.membres-page .banner3 {
     pointer-events: none; /* Pour ne pas bloquer les clics */
 }
 
-/* Adaptation mobile */
 @media (max-width: 768px) {
     body {
         font-size: 15px;
@@ -875,19 +874,37 @@ body.membres-page .banner3 {
     }
 
     header {
+        display: flex;
         flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 8px 0 0 0;
+        position: fixed;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        background: rgb(60, 30, 0);
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        padding: 8px;
-        position: static;
+        justify-content: flex-start;
+        margin: 0 0 4px 12px;
     }
 
     .logo img {
         width: 36px;
         height: 36px;
+        margin-right: 8px;
     }
 
     .logo span {
         font-size: 20px;
+        margin-left: 0;
+        text-align: left;
     }
 
     .flag-portugal {
@@ -898,59 +915,89 @@ body.membres-page .banner3 {
 
     nav {
         width: 100vw;
+        display: flex;
+        align-items: center;
         justify-content: flex-start;
+        padding: 0 8px 0 16px;
+        margin: 0;
+        position: static;
+    }
+
+    .hamburger {
+        display: none !important;
     }
 
     .nav-links {
-        width: 100vw;
-        right: 0;
-        left: 0;
-        top: 50px;
-        border-radius: 0;
-        box-shadow: none;
-        padding: 10px 0;
-        background: rgb(60, 30, 0);
-        position: absolute;
-        flex-direction: column;
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
+        display: flex !important;
+        position: static !important;
+        flex-direction: row !important;
+        width: auto !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        z-index: 10;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        margin-top: -4px;
     }
 
     .nav-links li {
-        margin-bottom: 8px;
+        margin: 0 6px 0 0 !important;
+        display: inline-block !important;
     }
 
     .nav-links a {
         font-size: 16px;
-        padding: 10px 0;
-        display: block;
+        padding: 8px 10px;
+        color: #fff;
+        background: rgb(60, 30, 0);
+        border-radius: 8px;
         text-align: center;
+        text-decoration: none;
+        font-family: 'Shuttle-x', serif;
+        transition: background 0.2s, color 0.2s;
+        display: inline-block;
     }
 
-    .hamburger {
-        margin-right: 0;
-        margin-bottom: 10px;
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: #f0c486;
+        color: #3a3a3a;
     }
 
-    .title-container, .floating-title {
+    main {
+        padding-top: 70px;
+    }
+
+    /* Titre flottant */
+    .title-container {
+        position: static !important;
+        transform: none !important;
+        margin: 20px 0 10px 0;
+        text-align: left;
+    }
+    .floating-title {
         position: static !important;
         transform: none !important;
         font-size: 2rem !important;
-        margin: 20px 0 10px 0;
+        margin: 0;
         white-space: normal;
-        text-align: center;
+        text-align: left;
     }
 
-    .banner, .banner1, .banner2, .banner3 {
+    /* Bannière : image sous le texte */
+    .banner, .banner1, .banner2, .banner3,
+    body.blog-page .banner, body.blog-page .banner1, body.blog-page .banner2, body.blog-page .banner3 {
+        flex-direction: column !important;
+        display: flex !important;
+        align-items: stretch !important;
         width: 96vw !important;
         min-width: 0;
         margin: 20px 0 20px 0 !important;
         padding: 10px !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
         border-radius: 10px;
         box-sizing: border-box;
         min-height: unset;
@@ -961,23 +1008,40 @@ body.membres-page .banner3 {
         opacity: 1 !important;
     }
 
-    .banner-image {
+    .banner-text, .banner1 .banner-text, .banner2 .banner-text, .banner3 .banner-text,
+    body.blog-page .banner-text, body.blog-page .banner1 .banner-text, body.blog-page .banner2 .banner-text, body.blog-page .banner3 .banner-text {
+        order: 1 !important;
         width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        max-height: 250px !important;
-        margin: 0 0 10px 0 !important;
-        object-fit: cover;
-        display: block;
-    }
-
-    .banner-text, .banner1 .banner-text, .banner2 .banner-text, .banner3 .banner-text {
         margin: 0 !important;
         padding: 0 !important;
         text-align: left !important;
         font-size: 1rem;
     }
 
+    .banner-image, .banner1 .banner-image, .banner2 .banner-image, .banner3 .banner-image,
+    body.blog-page .banner-image, body.blog-page .banner1 .banner-image, body.blog-page .banner2 .banner-image, body.blog-page .banner3 .banner-image {
+        order: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 250px !important;
+        margin: 10px 0 0 0 !important;
+        object-fit: cover;
+        display: block;
+        float: none !important;
+    }
+
+    /* Pour les bannières avec plusieurs images sur la page blog */
+    body.blog-page .banner-images {
+        order: 2 !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin: 10px 0 0 0 !important;
+    }
+
+    /* Musique */
     .music-controls {
         top: 8px;
         left: 50%;
@@ -1004,6 +1068,7 @@ body.membres-page .banner3 {
         margin-left: 4px;
     }
 
+    /* Footer */
     .footer {
         font-size: 15px;
         padding: 15px 0;
