@@ -158,7 +158,7 @@ nav {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: rgb(209, 189, 142);
+    background-color: rgb(60, 30, 0);
     color: rgb(0, 70, 28);
     width: 150px;
     padding: 20px;
@@ -178,11 +178,11 @@ nav {
     font-family: 'Shuttle-x', serif;
     font-size: 17px;
     text-decoration: none;
-    color: rgb(0, 70, 28);
+    color: rgb(179, 179, 179);
 }
 
 .nav-links a:hover {
-    color: rgb(255, 72, 72); /* Bleu au survol */
+    color: rgb(155, 255, 101); /* Bleu au survol */
 }
 
 .active {
@@ -220,6 +220,11 @@ nav {
 
 .hamburger.active + .nav-links {
     display: flex; /* Afficher les liens lorsque le menu est actif */
+}
+
+.nav-links li a.active {
+    font-weight: bold;
+    color: rgb(255, 72, 72);
 }
 
 main {
@@ -501,11 +506,6 @@ body.blog-page .banner .banner-image {
     display: block;
 }
 
-.nav-links li a.active {
-    font-weight: bold;
-    color: rgb(144, 0, 0);
-}
-
 /* Redimensionne uniquement les images des bannières sur la page membres */
 body.membres-page .banner-image {
     width: 180px;    /* ou la taille que tu veux */
@@ -569,7 +569,7 @@ body.membres-page .banner3 {
     margin-top: 10%;
     width: 100%;
     background-color: rgb(60, 30, 0); /* Couleur de fond */
-    color: rgb(149, 149, 149); /* Couleur du texte */
+    color: rgb(179, 179, 179); /* Couleur du texte */
     text-align: center;
     padding: 20px 0;
     font-family: 'Howdy-bird', sans-serif;
@@ -604,7 +604,7 @@ body.membres-page .banner3 {
     bottom: 0;
     width: 100%;
     height: 60px;
-    background-image: url('images/design/route.png'); /* Remplacez par le chemin de votre image */
+    background-image: url('images/design/route.jpg'); /* Remplacez par le chemin de votre image */
     background-repeat: repeat-x; /* Répète l'image horizontalement */
     z-index: 999;
     perspective: 1000px; /* Permet les effets 3D */
@@ -673,6 +673,63 @@ body.membres-page .banner3 {
     100% {
         transform: rotate(360deg) scaleX(1);
     }
+}
+
+.music-btn {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10001;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+    color: #ff5555; /* Couleur par défaut (rouge YouTube) */
+    font-size: 2.2rem;
+}
+.music-btn.playing {
+    color: #4caf50; /* Couleur quand la musique joue (vert) */
+}
+.music-btn svg {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+/* Conteneur pour centrer le bouton et le label */
+.music-btn,
+.music-label {
+    position: fixed;
+    top: 10px;
+    z-index: 10001;
+}
+
+.music-btn {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.music-label {
+    left: calc(50% + 18px); /* décale le texte à droite du bouton (ajuste si besoin) */
+    top: 5px;
+    transform: translateX(0);
+    font-family: 'RetroCompute', sans-serif;
+    font-size: 0.85rem;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    padding: 4px 12px;
+    border-radius: 8px;
+    pointer-events: none;
+    height: 48px;
+    display: flex;
+    align-items: center;
 }
 
 #loader {

@@ -154,3 +154,49 @@ document.getElementById('lightbox-x').addEventListener('click', function() {
     document.getElementById('lightbox-video').load();
     document.getElementById('lightbox-video').style.display = 'none';
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var music = document.getElementById('bg-music');
+    if(music) music.volume = 0.2;
+});
+
+document.getElementById('music-toggle').onclick = function() {
+    var music = document.getElementById('bg-music');
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+};
+
+const music = document.getElementById('bg-music');
+const btn = document.getElementById('music-toggle');
+
+function updateMusicBtn() {
+    if (music.paused) {
+        // Triangle arrondi (play)
+        btn.innerHTML = `
+        <svg viewBox="0 0 24 24">
+            <path d="M8 6 Q8 12 8 18 Q8 20 10 19 L18 13 Q20 12 18 11 L10 5 Q8 4 8 6 Z" fill="currentColor"/>
+        </svg>`;
+        btn.classList.remove('playing');
+    } else {
+        // Deux barres arrondies (pause)
+        btn.innerHTML = `
+        <svg viewBox="0 0 24 24">
+            <rect x="6" y="4" width="4" height="16" rx="2" fill="currentColor"/>
+            <rect x="14" y="4" width="4" height="16" rx="2" fill="currentColor"/>
+        </svg>`;
+        btn.classList.add('playing');
+    }
+}
+btn.onclick = function() {
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+};
+music.onplay = updateMusicBtn;
+music.onpause = updateMusicBtn;
+document.addEventListener('DOMContentLoaded', updateMusicBtn);
