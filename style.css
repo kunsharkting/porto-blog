@@ -861,27 +861,17 @@ body.membres-page .banner3 {
     pointer-events: none; /* Pour ne pas bloquer les clics */
 }
 
+/* Adaptation mobile */
 @media (max-width: 768px) {
     body {
         font-size: 15px;
         padding: 0;
         margin: 0;
-        padding-left: 2vw; /* Décale tout un peu à gauche */
         background-size: cover;
         background-attachment: scroll;
         overflow-x: hidden;
         max-width: 100vw;
         box-sizing: border-box;
-    }
-
-    main {
-        padding: 10px 0 0 0;
-        margin-top: 0;
-        box-sizing: border-box;
-        width: 100vw;
-        max-width: 100vw;
-        margin-left: 0;
-        margin-right: 0;
     }
 
     header {
@@ -900,6 +890,17 @@ body.membres-page .banner3 {
         font-size: 20px;
     }
 
+    .flag-portugal {
+        width: 36px;
+        height: 24px;
+        margin-right: 8px;
+    }
+
+    nav {
+        width: 100vw;
+        justify-content: flex-start;
+    }
+
     .nav-links {
         width: 100vw;
         right: 0;
@@ -908,8 +909,14 @@ body.membres-page .banner3 {
         border-radius: 0;
         box-shadow: none;
         padding: 10px 0;
-        background: white;
+        background: rgb(60, 30, 0);
         position: absolute;
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .nav-links li {
@@ -934,10 +941,11 @@ body.membres-page .banner3 {
         font-size: 2rem !important;
         margin: 20px 0 10px 0;
         white-space: normal;
+        text-align: center;
     }
 
     .banner, .banner1, .banner2, .banner3 {
-        width: 96vw !important; /* Un peu moins large pour laisser un bord à droite */
+        width: 96vw !important;
         min-width: 0;
         margin: 20px 0 20px 0 !important;
         padding: 10px !important;
@@ -950,6 +958,7 @@ body.membres-page .banner3 {
         right: auto !important;
         margin-left: 0 !important;
         margin-right: auto !important;
+        opacity: 1 !important;
     }
 
     .banner-image {
@@ -966,44 +975,34 @@ body.membres-page .banner3 {
         margin: 0 !important;
         padding: 0 !important;
         text-align: left !important;
-    }
-
-    body.blog-page .banner,
-    body.blog-page .banner1,
-    body.blog-page .banner2,
-    body.blog-page .banner3 {
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 96vw !important;
-        padding: 10px !important;
-        margin: 20px auto !important;
-    }
-    
-    body.blog-page .banner-images {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    
-    body.blog-page .banner-image {
-        width: 100% !important;
-        max-width: 320px !important;
-        height: auto !important;
-        margin: 0 0 10px 0 !important;
-        object-fit: cover;
-        display: block;
-    }
-
-    body.blog-page .banner-text {
-        width: 100%;
-        text-align: left;
-        padding: 0 5vw;
         font-size: 1rem;
     }
 
+    .music-controls {
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 4px;
+    }
 
+    .music-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.6rem;
+    }
+
+    .music-skip {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+
+    .music-label {
+        font-size: 0.8rem;
+        height: 40px;
+        padding: 2px 8px;
+        margin-left: 4px;
+    }
 
     .footer {
         font-size: 15px;
@@ -1020,20 +1019,20 @@ body.membres-page .banner3 {
         box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
         text-align: center;
     }
-    
+
     .footer-flex {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 24px;
-        max-width: 60vw;
+        gap: 16px;
+        max-width: 96vw;
         margin: 0 auto;
         width: 100%;
         padding: 0;
     }
-    
+
     .footer-image {
-        width: 50px;
+        width: 40px;
         height: auto;
         flex-shrink: 0;
     }
@@ -1048,10 +1047,10 @@ body.membres-page .banner3 {
     .banner1:last-of-type,
     .banner2:last-of-type,
     .banner3:last-of-type {
-        margin-bottom: 200px !important; /* Ajuste selon la hauteur de ton footer */
+        margin-bottom: 120px !important;
     }
 
-    /* Adaptation de la route, voiture et boost pour mobile */
+    /* Route, voiture et boost pour mobile */
     .road {
         height: 38px;
         bottom: 0 !important;
@@ -1063,8 +1062,8 @@ body.membres-page .banner3 {
     }
 
     .car {
-        width: 80px;
-        height: 47px;
+        width: 60px;
+        height: 36px;
         bottom: 2px;
         left: 6px;
         background-size: contain;
@@ -1073,10 +1072,22 @@ body.membres-page .banner3 {
     }
 
     .boost {
-        width: 24px;
-        height: 27px;
+        width: 18px;
+        height: 16px;
         bottom: 4px;
         left: -12px;
         background-size: contain;
+    }
+
+    /* Pop-up musique */
+    .music-popup-content {
+        min-width: 180px;
+        font-size: 1rem;
+        padding: 18px 8px 16px 8px;
+    }
+    .music-popup-close {
+        font-size: 1.2rem;
+        top: 4px;
+        right: 8px;
     }
 }
