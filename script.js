@@ -71,7 +71,8 @@ window.addEventListener("DOMContentLoaded", handleFloatingTitle);
 document.addEventListener("DOMContentLoaded", () => {
     const car = document.querySelector(".car");
     const boost = document.querySelector(".boost");
-    if (!car || !boost) return;
+    const road = document.querySelector(".road");
+    if (!car || !boost || !road) return;
 
     let lastScrollY = window.scrollY;
     let isScrolling;
@@ -80,9 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const roadWidth = road.offsetWidth || window.innerWidth;
+        const carWidth = car.offsetWidth;
         const scrollPercentage = scrollY / maxScroll;
-        const windowWidth = window.innerWidth;
-        const carPosition = scrollPercentage * (windowWidth - car.offsetWidth);
+        const carPosition = scrollPercentage * (roadWidth - carWidth);
         car.style.left = `${carPosition}px`;
 
         if (scrollY < lastScrollY && !flipped) {
