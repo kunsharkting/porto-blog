@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.addEventListener('mousemove', function(e) {
             if (pandaActive) {
-                panda.style.transform = `translate(${e.clientX - 30}px, ${e.clientY - 30}px)`;
+                panda.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
             }
         });
     }
