@@ -598,7 +598,7 @@ body.membres-page .banner3 {
 }
 
 .footer-image {
-    width: 15%;
+    width: 80px;
     height: auto;
 }
 
@@ -939,6 +939,7 @@ body.membres-page .banner3 {
     pointer-events: none;
     z-index: 99998;
     transition: transform 0.08s cubic-bezier(.4,2,.6,1);
+    display: none;
 }
 #panda-cursor img {
     width: 40px;
