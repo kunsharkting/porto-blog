@@ -45,20 +45,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     window.addEventListener("scroll", handleBannerVisibility);
-    // Appelle la fonction une fois au chargement pour afficher les bannières visibles
     handleBannerVisibility();
 });
 
 // Animation du titre flottant
-window.addEventListener("scroll", () => {
+function handleFloatingTitle() {
     const title = document.querySelector(".floating-title");
     if (title) {
         let scrollY = window.scrollY;
-        title.style.transform = `translate(-50%, calc(-50% - ${scrollY * 1}px))`;
-        let opacity = Math.max(1 - scrollY / 300, 0);
-        title.style.opacity = opacity;
+        if (scrollY > 300) {
+            title.style.opacity = 0;
+            title.style.pointerEvents = "none";
+        } else {
+            title.style.transform = `translate(-50%, calc(-50% - ${scrollY * 1}px))`;
+            let opacity = Math.max(1 - scrollY / 300, 0);
+            title.style.opacity = opacity;
+            title.style.pointerEvents = "";
+        }
     }
-});
+}
+window.addEventListener("scroll", handleFloatingTitle);
+window.addEventListener("DOMContentLoaded", handleFloatingTitle);
 
 // Animation de la voiture et du boost
 document.addEventListener("DOMContentLoaded", () => {
@@ -240,9 +247,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (music.paused) {
             btn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M8 6 Q8 12 8 18 Q8 20 10 19 L18 13 Q20 12 18 11 L10 5 Q8 4 8 6 Z" fill="currentColor"/></svg>`;
             btn.classList.remove('playing');
+            label.classList.remove('playing');
+            label.classList.add('paused');
         } else {
             btn.innerHTML = `<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="2" fill="currentColor"/><rect x="14" y="4" width="4" height="16" rx="2" fill="currentColor"/></svg>`;
             btn.classList.add('playing');
+            label.classList.remove('paused');
+            label.classList.add('playing');
         }
     }
 
@@ -260,24 +271,26 @@ document.addEventListener('DOMContentLoaded', function() {
     updateMusicBtn();
 });
 
+// Pop-up musique après le loader
 window.addEventListener('load', function() {
     const loader = document.getElementById('loader');
     const popup = document.getElementById('music-popup');
     const popupClose = document.getElementById('music-popup-close');
+    // Récupère l'audio
+    const music = document.getElementById('bg-music');
     if (loader) {
         setTimeout(function() {
             loader.classList.add('hide');
-            // Affiche la pop-up après le loader
             if (popup) popup.style.display = 'flex';
         }, 1200);
     } else {
-        // Si pas de loader, affiche la pop-up directement
         if (popup) popup.style.display = 'flex';
     }
     // Fermer la pop-up en cliquant sur la croix
     if (popupClose) {
         popupClose.addEventListener('click', function(e) {
             popup.style.display = 'none';
+            if (music) music.play().catch(() => {});
             e.stopPropagation();
         });
     }
@@ -286,6 +299,7 @@ window.addEventListener('load', function() {
         popup.addEventListener('click', function(e) {
             if (e.target === popup) {
                 popup.style.display = 'none';
+                if (music) music.play().catch(() => {});
             }
         });
     }

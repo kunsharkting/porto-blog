@@ -715,8 +715,8 @@ body.membres-page .banner3 {
 .music-btn svg { width: 36px; height: 36px; display: block; }
 
 .music-skip {
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     background: none;
     border: none;
     outline: none;
@@ -747,6 +747,12 @@ body.membres-page .banner3 {
     display: flex;
     align-items: center;
     margin-left: 8px;
+}
+.music-label.playing {
+    color: #4caf50; /* Couleur quand la musique joue (vert comme le bouton play/pause) */
+}
+.music-label.paused {
+    color: #ff5555; /* Couleur quand la musique est en pause (rouge comme le bouton play/pause) */
 }
 
 /* Pop-up musique */
