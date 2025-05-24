@@ -420,21 +420,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fonctionnalité plein écran
     const mapSection = document.getElementById('map');
     const mapBtn = document.getElementById('map-fullscreen-btn');
-    if (mapSection && mapBtn) {
+    const mapExitBtn = document.getElementById('map-exit-fullscreen-btn');
+    if (mapSection && mapBtn && mapExitBtn) {
         mapBtn.addEventListener('click', function() {
             mapSection.classList.add('fullscreen');
-            // Ajoute un bouton pour quitter le plein écran
-            if (!document.getElementById('map-fullscreen-exit')) {
-                const exitBtn = document.createElement('button');
-                exitBtn.id = 'map-fullscreen-exit';
-                exitBtn.textContent = 'Quitter le plein écran';
-                exitBtn.onclick = function() {
-                    mapSection.classList.remove('fullscreen');
-                    exitBtn.remove();
-                    window.scrollTo(0, mapSection.offsetTop);
-                };
-                mapSection.appendChild(exitBtn);
-            }
+        });
+        mapExitBtn.addEventListener('click', function() {
+            mapSection.classList.remove('fullscreen');
+            window.scrollTo(0, mapSection.offsetTop);
         });
     }
 });

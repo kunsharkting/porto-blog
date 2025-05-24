@@ -1368,19 +1368,11 @@ body:not(.ballon-active) .map-container:hover {
         display: none !important; /* Masquer le bouton Fun pour mobile */
     }
 
-    .map-fullscreen-btn {
+    button.map-fullscreen-btn {
         display: block !important;
-        margin: 12px auto 0 auto !important;
-        font-size: 1rem !important;
-        padding: 8px 18px !important;
-        border-radius: 12px !important;
-        z-index: 10010 !important;
-        background: rgb(0, 70, 28);
-        color: rgb(179, 179, 179);
-        border: none;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 }
+
 @media (min-width: 769px) {
     .map-fullscreen-btn {
         display: none !important;
@@ -1437,5 +1429,24 @@ body:not(.ballon-active) .map-container:hover {
         visibility: hidden !important;
         position: absolute !important;
         z-index: -9999 !important;
+    }
+}
+
+/* Toujours masquer les deux boutons par défaut */
+#map-fullscreen-btn,
+#map-exit-fullscreen-btn {
+    display: none;
+}
+
+/* Afficher sur mobile uniquement */
+@media (max-width: 768px) {
+    #map-fullscreen-btn {
+        display: block !important;
+    }
+    #map.fullscreen #map-fullscreen-btn {
+        display: none !important;
+    }
+    #map.fullscreen #map-exit-fullscreen-btn {
+        display: block !important;
     }
 }
