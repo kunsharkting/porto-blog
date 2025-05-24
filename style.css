@@ -31,6 +31,20 @@ body::before {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'KeramiqueScript';
+    src: url('fonts/sous-titres/vintage_king/VintageKing.ttf') format('trutype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neosonic';
+    src: url('fonts/sous-titres/neosonic/Neosonic-PersonalUse.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Animation pour l'apparition des bannières */
 @keyframes slideInLeft {
     from {
@@ -1154,4 +1168,14 @@ body.membres-page .banner3 {
         top: 4px;
         right: 8px;
     }
+}
+
+.banner1 h3, .banner3 h3 {
+    font-family: 'KeramiqueScript', sans-serif !important;
+    font-size: 30px; /* Taille de la police */
+}
+
+.banner h3, .banner2 h3 {
+    font-family: 'Neosonic', sans-serif !important;
+    font-size: 30px; /* Taille de la police */
 }
