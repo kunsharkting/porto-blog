@@ -20,7 +20,7 @@ if (hamburger && navLinks) {
 // Animation des bannières
 document.addEventListener("DOMContentLoaded", () => {
     const banners = document.querySelectorAll(".banner, .banner1, .banner2, .banner3");
-    window.addEventListener("scroll", () => {
+    function handleBannerVisibility() {
         const viewportHeight = window.innerHeight;
         banners.forEach((banner, index) => {
             const bannerTop = banner.getBoundingClientRect().top;
@@ -43,7 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
-    });
+    }
+    window.addEventListener("scroll", handleBannerVisibility);
+    // Appelle la fonction une fois au chargement pour afficher les bannières visibles
+    handleBannerVisibility();
 });
 
 // Animation du titre flottant
@@ -255,4 +258,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialisation
     loadTrack(getRandomTrackIndex(-1));
     updateMusicBtn();
+});
+
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    const popup = document.getElementById('music-popup');
+    const popupClose = document.getElementById('music-popup-close');
+    if (loader) {
+        setTimeout(function() {
+            loader.classList.add('hide');
+            // Affiche la pop-up après le loader
+            if (popup) popup.style.display = 'flex';
+        }, 1200);
+    } else {
+        // Si pas de loader, affiche la pop-up directement
+        if (popup) popup.style.display = 'flex';
+    }
+    // Fermer la pop-up en cliquant sur la croix
+    if (popupClose) {
+        popupClose.addEventListener('click', function(e) {
+            popup.style.display = 'none';
+            e.stopPropagation();
+        });
+    }
+    // Fermer la pop-up en cliquant en dehors du contenu
+    if (popup) {
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    }
 });
