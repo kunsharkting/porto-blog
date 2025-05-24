@@ -303,7 +303,10 @@ document.addEventListener('DOMContentLoaded', function() {
     next.onclick = function() { loadTrack(getRandomTrackIndex(currentTrack)); };
     music.onplay = updateMusicBtn;
     music.onpause = updateMusicBtn;
-    music.onended = function() { loadTrack(getRandomTrackIndex(currentTrack)); };
+    music.onended = function() {
+        const nextIdx = getRandomTrackIndex(currentTrack);
+        loadTrack(nextIdx);
+    };
 
     // Initialisation
     loadTrack(getRandomTrackIndex(-1));
@@ -475,6 +478,40 @@ document.addEventListener('DOMContentLoaded', function() {
             popup.style.display = 'none';
             if (music) music.play().catch(() => {});
             e.stopPropagation();
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const bgMusic = document.getElementById('bg-music');
+    // Sélectionne toutes les vidéos dans les bannières (hors lightbox)
+    const blogVideos = document.querySelectorAll('.banner-image.enlarge-video, video.banner-image');
+
+    blogVideos.forEach(video => {
+        video.addEventListener('play', function() {
+            if (bgMusic && !bgMusic.paused) {
+                bgMusic.pause();
+            }
+        });
+        video.addEventListener('ended', function() {
+            if (bgMusic && bgMusic.paused) {
+                bgMusic.play().catch(() => {});
+            }
+        });
+    });
+
+    // Pour la vidéo dans la lightbox
+    const lightboxVideo = document.getElementById('lightbox-video');
+    if (lightboxVideo) {
+        lightboxVideo.addEventListener('play', function() {
+            if (bgMusic && !bgMusic.paused) {
+                bgMusic.pause();
+            }
+        });
+        lightboxVideo.addEventListener('ended', function() {
+            if (bgMusic && bgMusic.paused) {
+                bgMusic.play().catch(() => {});
+            }
         });
     }
 });
