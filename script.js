@@ -408,3 +408,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Plein écran carte
+document.addEventListener('DOMContentLoaded', function() {
+    // Affiche le bouton plein écran sur mobile seulement
+    if (window.innerWidth <= 768) {
+        const btn = document.getElementById('map-fullscreen-btn');
+        if (btn) btn.style.display = 'block';
+    }
+
+    // Fonctionnalité plein écran
+    const mapSection = document.getElementById('map');
+    const mapBtn = document.getElementById('map-fullscreen-btn');
+    if (mapSection && mapBtn) {
+        mapBtn.addEventListener('click', function() {
+            mapSection.classList.add('fullscreen');
+            // Ajoute un bouton pour quitter le plein écran
+            if (!document.getElementById('map-fullscreen-exit')) {
+                const exitBtn = document.createElement('button');
+                exitBtn.id = 'map-fullscreen-exit';
+                exitBtn.textContent = 'Quitter le plein écran';
+                exitBtn.onclick = function() {
+                    mapSection.classList.remove('fullscreen');
+                    exitBtn.remove();
+                    window.scrollTo(0, mapSection.offsetTop);
+                };
+                mapSection.appendChild(exitBtn);
+            }
+        });
+    }
+});

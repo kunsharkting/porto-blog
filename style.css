@@ -1362,14 +1362,80 @@ body:not(.ballon-active) .map-container:hover {
     #toggle-panda,
     #panda-cursor {
         display: none !important;
+    }
+
+    .fun-btn {
+        display: none !important; /* Masquer le bouton Fun pour mobile */
+    }
+
+    .map-fullscreen-btn {
+        display: block !important;
+        margin: 12px auto 0 auto !important;
+        font-size: 1rem !important;
+        padding: 8px 18px !important;
+        border-radius: 12px !important;
+        z-index: 10010 !important;
+        background: rgb(0, 70, 28);
+        color: rgb(179, 179, 179);
+        border: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+}
+@media (min-width: 769px) {
+    .map-fullscreen-btn {
+        display: none !important;
+    }
+}
+/* Plein écran pour la carte */
+#map.fullscreen {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #111;
+    z-index: 99999;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#map.fullscreen .map-container {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    height: 80vh !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border-width: 0 !important;
+}
+#map.fullscreen iframe {
+    width: 100vw !important;
+    height: 80vh !important;
+    min-height: 0 !important;
+    border-radius: 0 !important;
+}
+#map-fullscreen-exit {
+    display: block;
+    margin: 12px auto 0 auto;
+    font-size: 1rem;
+    padding: 8px 18px;
+    border-radius: 12px;
+    background: rgb(91, 0, 0);
+    color: rgb(179, 179, 179);
+    border: none;
+    z-index: 10011;
+}
+
+@media (max-width: 900px) {
+    #toggle-panda,
+    #panda-cursor {
+        display: none !important;
         opacity: 0 !important;
         pointer-events: none !important;
         visibility: hidden !important;
         position: absolute !important;
         z-index: -9999 !important;
-    }
-
-    .fun-btn {
-        display: none !important; /* Masquer le bouton Fun pour mobile */
     }
 }
