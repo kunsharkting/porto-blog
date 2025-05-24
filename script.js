@@ -343,3 +343,23 @@ window.addEventListener('load', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const panda = document.getElementById('panda-cursor');
+    const toggleBtn = document.getElementById('toggle-panda');
+    let pandaActive = false;
+
+    if (toggleBtn && panda) {
+        toggleBtn.addEventListener('click', function() {
+            pandaActive = !pandaActive;
+            panda.style.display = pandaActive ? 'block' : 'none';
+            toggleBtn.textContent = pandaActive ? 'Désactiver le ballon ⚽' : 'Mode ballon ⚽';
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (pandaActive) {
+                panda.style.transform = `translate(${e.clientX - 30}px, ${e.clientY - 30}px)`;
+            }
+        });
+    }
+});

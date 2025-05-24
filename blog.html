@@ -467,15 +467,20 @@
         </div>
     </div>
 
-   <div id="lightbox" style="display:none;">
-    <span id="lightbox-close" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9998;"></span>
-    <button id="lightbox-x" aria-label="Fermer" style="position:fixed;top:24px;right:48px;z-index:10000;background:none;border:none;font-size:2.5rem;color:white;cursor:pointer;line-height:1;">&times;</button>
-    <img id="lightbox-img" src="" alt="Agrandissement" style="max-width:90vw;max-height:90vh;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:9999;border-radius:12px;box-shadow:0 0 30px #000a;">
-    <video id="lightbox-video" controls style="max-width:90vw;max-height:90vh;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:9999;border-radius:12px;box-shadow:0 0 30px #000a;display:none;">
-        <source id="lightbox-video-src" src="" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo HTML5.
-    </video>
-</div>
+    <div id="lightbox" style="display:none;">
+        <span id="lightbox-close"></span>
+        <button id="lightbox-x" aria-label="Fermer">&times;</button>
+        <img id="lightbox-img" src="" alt="Agrandissement">
+        <video id="lightbox-video" controls>
+            <source id="lightbox-video-src" src="" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+    </div>
+
+    <div id="panda-cursor" style="display:none;">
+        <img src="images/design/ballon.png" alt="Panda" />
+    </div>
+    <button id="toggle-panda" class="fun-btn">Mode ballon ⚽</button>
 
     <script src="script.js"></script>
 </body>
