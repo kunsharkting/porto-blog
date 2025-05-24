@@ -738,12 +738,11 @@ body.membres-page .banner3 {
 .music-label {
     font-family: 'RetroCompute', sans-serif;
     font-size: 0.85rem;
-    color: #fff;
     background: rgba(0,0,0,0.3);
     padding: 4px 12px;
     border-radius: 8px;
     pointer-events: none;
-    height: 48px;
+    height: 30px;
     display: flex;
     align-items: center;
     margin-left: 8px;
