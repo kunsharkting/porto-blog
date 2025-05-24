@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Initialisation
-    loadTrack(getRandomTrackIndex(-1), false);
+    loadTrack(getRandomTrackIndex(-1), true);
     updateMusicBtn();
 
     // Optionnel : coupe la musique si muted au chargement
