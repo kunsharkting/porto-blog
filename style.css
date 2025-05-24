@@ -688,11 +688,13 @@ body.membres-page .banner3 {
     position: fixed;
     top: 24px;
     left: 50%;
+    right: auto;
     transform: translateX(-50%);
     z-index: 10001;
     display: flex;
     align-items: center;
     gap: 8px;
+    justify-content: center;
 }
 
 .music-btn {
@@ -789,6 +791,60 @@ body.membres-page .banner3 {
 }
 .music-popup-close:hover {
     color: #ff5555;
+}
+
+.track-list {
+    position: absolute;
+    right: 0;         /* Ajoute cette ligne */
+    left: auto;       /* Ajoute cette ligne */
+    top: 100%;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 35%;
+    z-index: 10010;
+    font-family: 'RetroCompute', sans-serif;
+    overflow: hidden;
+}
+.track-list li {
+    padding: 4px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    background: rgba(0,0,0,0.3);
+    transition: background 0.15s, color 0.15s;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+}
+.track-list li:last-child {
+    border-bottom: none;
+}
+.track-list li.active {
+    color: #4caf50;
+    font-weight: bold;
+}
+.track-list li:hover {
+    background: rgba(255,255,255,0.08);
+    color: rgb(209, 189, 142);
+}
+.music-label {
+    position: relative;
+    z-index: 10011;
+    cursor: pointer;
+    font-family: 'RetroCompute', sans-serif;
+    font-size: 0.85rem;
+    background: rgba(0,0,0,0.3);
+    padding: 4px 12px;
+    border-radius: 8px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    pointer-events: auto;
 }
 
 #loader {

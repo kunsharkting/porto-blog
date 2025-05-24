@@ -199,10 +199,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var btn = document.getElementById('music-toggle');
     var prev = document.getElementById('music-prev');
     var next = document.getElementById('music-next');
-    var label = document.querySelector('.music-label');
+    var label = document.getElementById('music-label');
+    var trackList = document.getElementById('track-list');
 
-    // Si un des éléments n'existe pas, on ne fait rien pour la musique
-    if (!music || !btn || !prev || !next || !label) return;
+    if (!music || !btn || !prev || !next || !label || !trackList) return;
 
     // Playlist
     const playlist = [
@@ -216,6 +216,44 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     let currentTrack = 0;
 
+    function renderTrackList() {
+        // Affiche le morceau en cours en premier, puis les autres
+        trackList.innerHTML = "";
+        // Ajoute la track en cours
+        const currentLi = document.createElement('li');
+        currentLi.textContent = playlist[currentTrack].name;
+        currentLi.classList.add('active');
+        currentLi.onclick = function(e) {
+            e.stopPropagation();
+            trackList.style.display = 'none';
+        };
+        trackList.appendChild(currentLi);
+        // Ajoute les autres tracks
+        playlist.forEach((track, idx) => {
+            if (idx === currentTrack) return;
+            const li = document.createElement('li');
+            li.textContent = track.name;
+            li.onclick = function(e) {
+                e.stopPropagation();
+                loadTrack(idx);
+                trackList.style.display = 'none';
+            };
+            trackList.appendChild(li);
+        });
+    }
+
+    // Affiche/masque la liste au clic sur le nom de la piste
+    label.onclick = function(e) {
+        e.stopPropagation();
+        renderTrackList();
+        trackList.style.display = (trackList.style.display === 'block') ? 'none' : 'block';
+    };
+
+    // Ferme la liste si on clique ailleurs
+    document.addEventListener('click', function() {
+        trackList.style.display = 'none';
+    });
+
     function getRandomTrackIndex(exclude) {
         let idx;
         do {
@@ -228,8 +266,9 @@ document.addEventListener('DOMContentLoaded', function() {
         currentTrack = (idx + playlist.length) % playlist.length;
         music.src = playlist[currentTrack].src;
         label.textContent = playlist[currentTrack].name;
+        renderTrackList();
         music.load();
-        music.volume = 0; // Commence en sourdine
+        music.volume = 0.08;
         music.play().catch(() => {});
         // Animation du volume progressif
         let targetVolume = 0.1;
