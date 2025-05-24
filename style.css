@@ -1225,13 +1225,12 @@ body.membres-page .banner3 {
     }
     .music-label {
         font-size: 0.8rem !important;
-        height: 40px !important;
+        height: 30px !important;
         padding: 2px 8px !important;
         margin-left: 4px !important;
     }
     .track-list {
-        width: 60vw !important;
-        min-width: 120px !important;
+        width: 10vw !important;
         font-size: 0.9rem !important;
     }
 
