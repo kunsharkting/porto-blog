@@ -310,6 +310,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialisation
     loadTrack(getRandomTrackIndex(-1), false);
     updateMusicBtn();
+
+    // Optionnel : coupe la musique si muted au chargement
+    if (localStorage.getItem('musicMuted') === 'true') {
+        music.pause();
+        music.currentTime = 0;
+    }
 });
 
 // Pop-up musique après le loader
@@ -318,7 +324,8 @@ window.addEventListener('load', function() {
     const popup = document.getElementById('music-popup');
     const popupClose = document.getElementById('music-popup-close');
     const music = document.getElementById('bg-music');
-    let muted = false;
+    let muted = localStorage.getItem('musicMuted') === 'true';
+
     if (loader) {
         setTimeout(function() {
             loader.classList.add('hide');
@@ -348,6 +355,7 @@ window.addEventListener('load', function() {
         popupMute.addEventListener('click', function(e) {
             popup.style.display = 'none';
             muted = true;
+            localStorage.setItem('musicMuted', 'true');
             if (music) {
                 music.pause();
                 music.currentTime = 0;
@@ -361,6 +369,7 @@ window.addEventListener('load', function() {
         popupPlay.addEventListener('click', function(e) {
             popup.style.display = 'none';
             muted = false;
+            localStorage.setItem('musicMuted', 'false');
             if (music) music.play().catch(() => {});
             e.stopPropagation();
         });
@@ -374,6 +383,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (popup && popupPlay) {
         popupPlay.addEventListener('click', function(e) {
             popup.style.display = 'none';
+            localStorage.setItem('musicMuted', 'false');
             if (music) music.play().catch(() => {});
             e.stopPropagation();
         });
@@ -388,6 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (popup && popupMute) {
         popupMute.addEventListener('click', function(e) {
             popup.style.display = 'none';
+            localStorage.setItem('musicMuted', 'true');
             if (music) {
                 music.pause();
                 music.currentTime = 0;
@@ -410,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         video.addEventListener('ended', function() {
-            if (bgMusic && bgMusic.paused) {
+            if (bgMusic && bgMusic.paused && localStorage.getItem('musicMuted') !== 'true') {
                 bgMusic.play().catch(() => {});
             }
         });
@@ -425,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         lightboxVideo.addEventListener('ended', function() {
-            if (bgMusic && bgMusic.paused) {
+            if (bgMusic && bgMusic.paused && localStorage.getItem('musicMuted') !== 'true') {
                 bgMusic.play().catch(() => {});
             }
         });
@@ -552,6 +563,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 columns[col] = false; // Libère la colonne
             }, duration * 1000);
             rainContainer.appendChild(panda);
-        }, 600 + Math.random() * 700); // Beaucoup de pandas, mais jamais superposés
+        }, 1200 + Math.random() * 900); // Pluie moins dense
     });
 });
