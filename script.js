@@ -155,48 +155,69 @@ document.getElementById('lightbox-x').addEventListener('click', function() {
     document.getElementById('lightbox-video').style.display = 'none';
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialisation volume
     var music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-toggle');
+    const prev = document.getElementById('music-prev');
+    const next = document.getElementById('music-next');
+    const label = document.querySelector('.music-label');
+
+    // Si un des éléments n'existe pas, on ne fait rien
+    if (!music || !btn || !prev || !next || !label) return;
+
     if(music) music.volume = 0.2;
+
+    // Playlist
+    const playlist = [
+        {src: "musique/girl.mp3", name: "Track 1"},
+        {src: "musique/miss.mp3", name: "Track 2"},
+        {src: "musique/mornings.mp3", name: "Track 3"},
+        {src: "musique/remember.mp3", name: "Track 4"},
+        {src: "musique/sakura.mp3", name: "Track 5"},
+        {src: "musique/stupid.mp3", name: "Track 6"},
+        {src: "musique/upbeat.mp3", name: "Track 7"}
+    ];
+    let currentTrack = 0;
+
+    function loadTrack(idx) {
+      currentTrack = (idx + playlist.length) % playlist.length;
+      music.src = playlist[currentTrack].src;
+      label.textContent = playlist[currentTrack].name;
+      music.load();
+      music.volume = 0; // Commence en sourdine
+      music.play().catch(() => {});
+  
+      // Animation du volume progressif
+      let targetVolume = 0.1;
+      let step = 0.02;
+      let interval = setInterval(() => {
+          if (music.volume < targetVolume) {
+              music.volume = Math.min(music.volume + step, targetVolume);
+          } else {
+              clearInterval(interval);
+          }
+      }, 2000); // Augmente le volume toutes les 200ms
+    }
+    function updateMusicBtn() {
+        if (music.paused) {
+            btn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M8 6 Q8 12 8 18 Q8 20 10 19 L18 13 Q20 12 18 11 L10 5 Q8 4 8 6 Z" fill="currentColor"/></svg>`;
+            btn.classList.remove('playing');
+        } else {
+            btn.innerHTML = `<svg viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="2" fill="currentColor"/><rect x="14" y="4" width="4" height="16" rx="2" fill="currentColor"/></svg>`;
+            btn.classList.add('playing');
+        }
+    }
+    btn.onclick = function() {
+        if (music.paused) { music.play(); } else { music.pause(); }
+    };
+    prev.onclick = function() { loadTrack(currentTrack - 1); };
+    next.onclick = function() { loadTrack(currentTrack + 1); };
+    music.onplay = updateMusicBtn;
+    music.onpause = updateMusicBtn;
+    music.onended = function() { loadTrack(currentTrack + 1); };
+
+    // Initialisation
+    loadTrack(0);
+    updateMusicBtn();
 });
-
-document.getElementById('music-toggle').onclick = function() {
-    var music = document.getElementById('bg-music');
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
-};
-
-const music = document.getElementById('bg-music');
-const btn = document.getElementById('music-toggle');
-
-function updateMusicBtn() {
-    if (music.paused) {
-        // Triangle arrondi (play)
-        btn.innerHTML = `
-        <svg viewBox="0 0 24 24">
-            <path d="M8 6 Q8 12 8 18 Q8 20 10 19 L18 13 Q20 12 18 11 L10 5 Q8 4 8 6 Z" fill="currentColor"/>
-        </svg>`;
-        btn.classList.remove('playing');
-    } else {
-        // Deux barres arrondies (pause)
-        btn.innerHTML = `
-        <svg viewBox="0 0 24 24">
-            <rect x="6" y="4" width="4" height="16" rx="2" fill="currentColor"/>
-            <rect x="14" y="4" width="4" height="16" rx="2" fill="currentColor"/>
-        </svg>`;
-        btn.classList.add('playing');
-    }
-}
-btn.onclick = function() {
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
-};
-music.onplay = updateMusicBtn;
-music.onpause = updateMusicBtn;
-document.addEventListener('DOMContentLoaded', updateMusicBtn);

@@ -675,12 +675,18 @@ body.membres-page .banner3 {
     }
 }
 
-.music-btn {
+.music-controls {
     position: fixed;
     top: 24px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.music-btn {
     width: 48px;
     height: 48px;
     background: none;
@@ -690,36 +696,36 @@ body.membres-page .banner3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.2s;
-    color: #ff5555; /* Couleur par défaut (rouge YouTube) */
+    color: #ff5555;
     font-size: 2.2rem;
+    transition: color 0.2s, transform 0.15s;
+    border-radius: 50%;
 }
-.music-btn.playing {
-    color: #4caf50; /* Couleur quand la musique joue (vert) */
+.music-btn.playing { color: #4caf50; }
+.music-btn svg { width: 36px; height: 36px; display: block; }
+
+.music-skip {
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    transition: color 0.2s, transform 0.15s, background 0.2s;
 }
-.music-btn svg {
-    width: 36px;
-    height: 36px;
-    display: block;
+.music-skip:hover,
+.music-btn:hover {
+    transform: scale(1.18);
+    background: rgba(255,255,255,0.12);
 }
 
-/* Conteneur pour centrer le bouton et le label */
-.music-btn,
 .music-label {
-    position: fixed;
-    top: 10px;
-    z-index: 10001;
-}
-
-.music-btn {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.music-label {
-    left: calc(50% + 18px); /* décale le texte à droite du bouton (ajuste si besoin) */
-    top: 5px;
-    transform: translateX(0);
     font-family: 'RetroCompute', sans-serif;
     font-size: 0.85rem;
     color: #fff;
@@ -730,6 +736,7 @@ body.membres-page .banner3 {
     height: 48px;
     display: flex;
     align-items: center;
+    margin-left: 8px;
 }
 
 #loader {

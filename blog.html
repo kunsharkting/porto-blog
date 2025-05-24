@@ -7,25 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/design/icone.png">
 </head>
+
 <body class="blog-page">
     <video id="bg-video" autoplay loop muted playsinline>
         <source src="images/design/bg.mov" type="video/mp4">
         Votre navigateur ne supporte pas la vidéo HTML5.
     </video>
 
-    <audio id="bg-music" src="musique/" autoplay loop>
-        Votre navigateur ne supporte pas la balise audio.
-    </audio>
-    <button id="music-toggle" class="music-btn" aria-label="Play/Pause Music">
-        Play/Pause Music
-    </button>
-    <span class="music-label">
-        Play/Pause Music
-    </span>
+    <audio id="bg-music" src="" autoplay loop></audio>
+    <div class="music-controls">
+        <button id="music-prev" class="music-skip" aria-label="Musique précédente">&#9664;&#9664;</button>
+        <button id="music-toggle" class="music-btn" aria-label="Play/Pause Music"></button>
+        <button id="music-next" class="music-skip" aria-label="Musique suivante">&#9654;&#9654;</button>
+        <span class="music-label">music</span>
+    </div>
 
     <header>
         <div class="logo">
-            <a href="describe_IPI.html">
+            <a href="https://www.ipi-ecoles.com/" target="_blank">
                 <img src="images/design/PandaIPI.gif" alt="Panda">
             </a>
             <span><strong>Rocket League</strong></span>
