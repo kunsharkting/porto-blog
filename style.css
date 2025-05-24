@@ -992,7 +992,7 @@ body.membres-page .banner3 {
 .map-container {
     max-width: 1000px;   /* Choisis la largeur max souhaitée */
     margin: 0 auto;     /* Centre le conteneur */
-    margin-top: 600px;
+    margin-top: 650px;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0,0,0,0.10);
@@ -1009,7 +1009,7 @@ body.membres-page .banner3 {
     color: rgb(149, 138, 57);                  /* même couleur que .floating-title */
     font-size: 2rem;                 /* plus petit que le h1 */
     text-align: left;
-    margin-bottom: -30px;
+    margin-bottom: -90px;
     margin-top: 30px;
     font-weight: bold;
     letter-spacing: 1px;
