@@ -471,3 +471,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Panda pluie sur toutes les pages (version emoji)
+document.addEventListener("DOMContentLoaded", function() {
+    const banners = document.querySelectorAll('.banner, .banner1, .banner2, .banner3');
+    banners.forEach(banner => {
+        const rainContainer = banner.querySelector('.panda-rain');
+        if (!rainContainer) return;
+        setInterval(() => {
+            const panda = document.createElement('span');
+            panda.className = 'panda-fall';
+            panda.textContent = '🐼';
+            // Position de départ aléatoire
+            const startLeft = Math.random() * 90; // %
+            panda.style.left = `${startLeft}%`;
+            panda.style.top = `-40px`;
+            // Taille aléatoire
+            const scale = 0.7 + Math.random() * 0.8;
+            panda.style.fontSize = `${24 * scale}px`;
+            // Animation
+            const duration = 3 + Math.random() * 3; // 3 à 6 secondes
+            const rotate = (Math.random() > 0.5 ? 1 : -1) * (360 + Math.random() * 360);
+            panda.animate([
+                { transform: `translateY(0) rotate(0deg)`, opacity: 0.25 },
+                { transform: `translateY(${banner.offsetHeight + 60}px) rotate(${rotate}deg)`, opacity: 0.25 }
+            ], {
+                duration: duration * 1000,
+                easing: 'linear'
+            });
+            panda.style.transition = `transform ${duration}s linear`;
+            setTimeout(() => {
+                panda.style.transform = `translateY(${banner.offsetHeight + 60}px) rotate(${rotate}deg)`;
+            }, 10);
+            setTimeout(() => {
+                panda.remove();
+            }, duration * 1000);
+            rainContainer.appendChild(panda);
+        }, 700 + Math.random() * 800); // Beaucoup plus de pandas !
+    });
+});

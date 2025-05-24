@@ -1480,3 +1480,23 @@ body:not(.ballon-active) .map-container:hover {
 #popup-mute-btn {
     border: 2px solid rgb(179, 179, 179); /* Choisis la couleur que tu veux */
 }
+
+.panda-rain {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.panda-fall {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    opacity: 0.25;
+    pointer-events: none;
+    will-change: transform;
+    z-index: 0;
+}
