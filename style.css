@@ -1054,12 +1054,15 @@ body.membres-page .banner3 {
         margin: 10px 0 0 0 !important;
     }
 
-    /* Musique */
+    /* Musique : en haut à droite */
     .music-controls {
         top: 8px;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 12px;
+        left: auto;
+        transform: none;
         gap: 4px;
+        position: fixed;
+        justify-content: flex-end;
     }
 
     .music-btn {
