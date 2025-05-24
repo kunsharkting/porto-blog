@@ -19,28 +19,14 @@ body::before {
 
 @font-face {
     font-family: 'RetroCompute';
-    src: url('fonts/paragraphes/retro-compute/Retrocompute.ttf') format('truetype');
+    src: url('fonts/paragraphes/olney/olney_light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'NothamDemo';
-    src: url('fonts/sous-titres/nothan/NOTHANDEMORegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'KeramiqueScript';
-    src: url('fonts/sous-titres/gecko_lunch/Gecko\ Lunch.ttf') format('trutype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Neosonic';
-    src: url('fonts/sous-titres/neosonic/Neosonic-PersonalUse.otf') format('opentype');
+    font-family: 'Bitshow';
+    src: url('fonts/sous-titres/bitshow/Bitshow.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -282,12 +268,12 @@ main {
 }
 
 .banner h3, .banner2 h3 {
-    font-family: 'NothamDemo', sans-serif !important;
-    font-size: 30px; /* Taille de la police */
+    font-family: 'Bitshow', sans-serif !important;
+    font-size: 40px; /* Taille de la police */
 }
 
 .banner p, .banner2 p {
-    font-size: 140%; /* Taille de la police */
+    font-size: 125%; /* Taille de la police */
 }
 
 /* Masquer le bandeau initialement */
@@ -330,12 +316,12 @@ main {
 }
 
 .banner1 h3, .banner3 h3 {
-    font-family: 'NothamDemo', sans-serif !important;
-    font-size: 30px; /* Taille de la police */
+    font-family: 'Bitshow', sans-serif !important;
+    font-size: 40px; /* Taille de la police */
 }
 
 .banner1 p, .banner3 p {
-    font-size: 140%; /* Taille de la police */
+    font-size: 125%; /* Taille de la police */
 }
 
 /* Masquer le bandeau initialement */
@@ -596,7 +582,6 @@ body.membres-page .banner3 {
     color: rgb(179, 179, 179); /* Couleur du texte */
     text-align: center;
     padding: 20px 0;
-    font-family: 'Howdy-bird', sans-serif;
     font-size: 16px;
     z-index: 998;
 }
@@ -1169,14 +1154,4 @@ body.membres-page .banner3 {
         top: 4px;
         right: 8px;
     }
-}
-
-.banner1 h3, .banner3 h3 {
-    font-family: 'KeramiqueScript', sans-serif !important;
-    font-size: 30px; /* Taille de la police */
-}
-
-.banner h3, .banner2 h3 {
-    font-family: 'Neosonic', sans-serif !important;
-    font-size: 30px; /* Taille de la police */
 }
