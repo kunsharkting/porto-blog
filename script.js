@@ -381,3 +381,30 @@ function handleMapAppear() {
 }
 window.addEventListener("scroll", handleMapAppear);
 window.addEventListener("DOMContentLoaded", handleMapAppear);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const panda = document.getElementById('panda-cursor');
+    const toggleBtn = document.getElementById('toggle-panda');
+    const mapIframe = document.querySelector('#map iframe');
+    let pandaActive = false;
+
+    if (toggleBtn && panda) {
+        toggleBtn.addEventListener('click', function() {
+            pandaActive = !pandaActive;
+            panda.style.display = pandaActive ? 'block' : 'none';
+            toggleBtn.textContent = pandaActive ? 'Désactiver le ballon ⚽' : 'Mode ballon ⚽';
+            // Ajout dynamique du pointer-events sur la carte
+            if (mapIframe) {
+                mapIframe.style.pointerEvents = pandaActive ? 'none' : 'auto';
+            }
+            // Ajoute ou retire la classe sur le body
+            document.body.classList.toggle('ballon-active', pandaActive);
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (pandaActive) {
+                panda.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
+            }
+        });
+    }
+});

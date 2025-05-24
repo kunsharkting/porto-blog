@@ -661,7 +661,6 @@ body.membres-page .banner3 {
     animation: halfFlip 0.8s forwards;
 }
   
-  
 .car.reset-flip {
     animation: resetFlip 0.8s forwards;
 }
@@ -1028,6 +1027,16 @@ body.membres-page .banner3 {
 .map-container.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Effet grossissement sur la carte au survol, sauf si mode ballon actif */
+body:not(.ballon-active) .map-container:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 18px 4px #b9a84a;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.map-container {
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 @media (max-width: 768px) {
