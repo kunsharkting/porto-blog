@@ -1239,7 +1239,7 @@ body:not(.ballon-active) .map-container:hover {
         margin-left: 4px !important;
     }
     .track-list {
-        width: 11vw !important;
+        width: 20vw !important;
         font-size: 0.9rem !important;
     }
 
