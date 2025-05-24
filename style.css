@@ -879,8 +879,6 @@ body.membres-page .banner3 {
         font-size: 15px;
         padding: 0;
         margin: 0;
-        background-size: cover;
-        background-attachment: scroll;
         overflow-x: hidden;
         max-width: 100vw;
         box-sizing: border-box;
