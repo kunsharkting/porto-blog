@@ -515,3 +515,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('music-popup');
+    const popupMute = document.getElementById('popup-mute-btn');
+    const music = document.getElementById('bg-music');
+    if (popup && popupMute) {
+        popupMute.addEventListener('click', function(e) {
+            popup.style.display = 'none';
+            if (music) {
+                music.pause();
+                music.currentTime = 0;
+            }
+            e.stopPropagation();
+        });
+    }
+});
