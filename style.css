@@ -1032,7 +1032,7 @@ body.membres-page .banner3 {
 /* Effet grossissement sur la carte au survol, sauf si mode ballon actif */
 body:not(.ballon-active) .map-container:hover {
     transform: scale(1.04);
-    box-shadow: 0 0 18px 4px #b9a84a;
+    box-shadow: 0 0 18px 4px rgb(149, 138, 57);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 .map-container {
