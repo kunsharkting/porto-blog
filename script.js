@@ -528,6 +528,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 columns[col] = false; // Libère la colonne
             }, duration * 1000);
             rainContainer.appendChild(panda);
-        }, 200 + Math.random() * 250); // Beaucoup de pandas, mais jamais superposés
+        }, 600 + Math.random() * 700); // Beaucoup de pandas, mais jamais superposés
     });
 });
