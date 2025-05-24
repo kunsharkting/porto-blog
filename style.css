@@ -1495,7 +1495,7 @@ body:not(.ballon-active) .map-container:hover {
     position: absolute;
     width: 38px;
     height: 38px;
-    opacity: 0.25;
+    opacity: 0.4;
     pointer-events: none;
     will-change: transform;
     z-index: 0;

@@ -475,26 +475,46 @@ document.addEventListener('DOMContentLoaded', function() {
 // Panda pluie sur toutes les pages (version emoji)
 document.addEventListener("DOMContentLoaded", function() {
     const banners = document.querySelectorAll('.banner, .banner1, .banner2, .banner3');
+    const columnsCount = 20; // Nombre de colonnes virtuelles
+
     banners.forEach(banner => {
         const rainContainer = banner.querySelector('.panda-rain');
         if (!rainContainer) return;
+
+        // Tableau pour suivre les colonnes occupées
+        const columns = new Array(columnsCount).fill(false);
+
         setInterval(() => {
+            // Cherche les colonnes libres
+            const freeColumns = [];
+            for (let i = 0; i < columnsCount; i++) {
+                if (!columns[i]) freeColumns.push(i);
+            }
+            if (freeColumns.length === 0) return; // Toutes occupées, on attend
+
+            // Choisit une colonne libre au hasard
+            const col = freeColumns[Math.floor(Math.random() * freeColumns.length)];
+            columns[col] = true;
+
             const panda = document.createElement('span');
             panda.className = 'panda-fall';
             panda.textContent = '🐼';
-            // Position de départ aléatoire
-            const startLeft = Math.random() * 90; // %
-            panda.style.left = `${startLeft}%`;
+
+            // Position horizontale selon la colonne
+            const leftPercent = (col + 0.5) * (100 / columnsCount);
+            panda.style.left = `calc(${leftPercent}% - 16px)`; // centré sur la colonne
             panda.style.top = `-40px`;
+
             // Taille aléatoire
             const scale = 0.7 + Math.random() * 0.8;
             panda.style.fontSize = `${24 * scale}px`;
+
             // Animation
-            const duration = 3 + Math.random() * 3; // 3 à 6 secondes
+            const duration = 6 + Math.random() * 4; // 6 à 10 secondes
             const rotate = (Math.random() > 0.5 ? 1 : -1) * (360 + Math.random() * 360);
             panda.animate([
-                { transform: `translateY(0) rotate(0deg)`, opacity: 0.25 },
-                { transform: `translateY(${banner.offsetHeight + 60}px) rotate(${rotate}deg)`, opacity: 0.25 }
+                { transform: `translateY(0) rotate(0deg)`, opacity: 0.4 },
+                { transform: `translateY(${banner.offsetHeight + 60}px) rotate(${rotate}deg)`, opacity: 0.4 }
             ], {
                 duration: duration * 1000,
                 easing: 'linear'
@@ -505,8 +525,9 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 10);
             setTimeout(() => {
                 panda.remove();
+                columns[col] = false; // Libère la colonne
             }, duration * 1000);
             rainContainer.appendChild(panda);
-        }, 600 + Math.random() * 700); // Beaucoup plus de pandas !
+        }, 200 + Math.random() * 250); // Beaucoup de pandas, mais jamais superposés
     });
 });
