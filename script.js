@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleBtn.addEventListener('click', function() {
             pandaActive = !pandaActive;
             panda.style.display = pandaActive ? 'block' : 'none';
-            toggleBtn.textContent = pandaActive ? 'Désactiver le ballon ⚽' : 'Mode ballon ⚽';
+            toggleBtn.textContent = pandaActive ? 'Disable ball mode ⚽' : 'Fun ball mode ⚽';
             if (mapIframe) {
                 mapIframe.style.pointerEvents = pandaActive ? 'none' : 'auto';
             }
