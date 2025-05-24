@@ -227,6 +227,16 @@ nav {
     color: rgb(255, 72, 72);
 }
 
+.flag-portugal {
+    width: 56px;
+    height: 38px;
+    object-fit: cover;
+    margin-right: 16px;
+    vertical-align: middle;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
 main {
     padding: 20px;
     margin-top: 60px; /* Espace pour le header */
