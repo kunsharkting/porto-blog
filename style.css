@@ -1,5 +1,5 @@
 body {
-    font-family: 'RetroCompute', sans-serif !important;
+    font-family: 'Olney', sans-serif !important;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Empêche le défilement horizontal */
@@ -18,7 +18,7 @@ body::before {
 }
 
 @font-face {
-    font-family: 'RetroCompute';
+    font-family: 'Olney';
     src: url('fonts/paragraphes/olney/olney_light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
