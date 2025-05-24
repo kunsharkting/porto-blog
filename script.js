@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Initialisation
-    loadTrack(getRandomTrackIndex(-1), true);
+    loadTrack(getRandomTrackIndex(-1), false);
     updateMusicBtn();
 });
 
