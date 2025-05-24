@@ -217,9 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentTrack = 0;
 
     function renderTrackList() {
-        // Affiche le morceau en cours en premier, puis les autres
         trackList.innerHTML = "";
-        // Ajoute la track en cours
         const currentLi = document.createElement('li');
         currentLi.textContent = playlist[currentTrack].name;
         currentLi.classList.add('active');
@@ -228,28 +226,25 @@ document.addEventListener('DOMContentLoaded', function() {
             trackList.style.display = 'none';
         };
         trackList.appendChild(currentLi);
-        // Ajoute les autres tracks
         playlist.forEach((track, idx) => {
             if (idx === currentTrack) return;
             const li = document.createElement('li');
             li.textContent = track.name;
             li.onclick = function(e) {
                 e.stopPropagation();
-                loadTrack(idx);
+                loadTrack(idx, true);
                 trackList.style.display = 'none';
             };
             trackList.appendChild(li);
         });
     }
 
-    // Affiche/masque la liste au clic sur le nom de la piste
     label.onclick = function(e) {
         e.stopPropagation();
         renderTrackList();
         trackList.style.display = (trackList.style.display === 'block') ? 'none' : 'block';
     };
 
-    // Ferme la liste si on clique ailleurs
     document.addEventListener('click', function() {
         trackList.style.display = 'none';
     });
@@ -262,14 +257,16 @@ document.addEventListener('DOMContentLoaded', function() {
         return idx;
     }
 
-    function loadTrack(idx) {
+    function loadTrack(idx, autoPlay = false) {
         currentTrack = (idx + playlist.length) % playlist.length;
         music.src = playlist[currentTrack].src;
         label.textContent = playlist[currentTrack].name;
         renderTrackList();
         music.load();
         music.volume = 0.08;
-        music.play().catch(() => {});
+        if (autoPlay) {
+            music.play().catch(() => {});
+        }
         // Animation du volume progressif
         let targetVolume = 0.1;
         let step = 0.02;
@@ -299,17 +296,17 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.onclick = function() {
         if (music.paused) { music.play(); } else { music.pause(); }
     };
-    prev.onclick = function() { loadTrack(getRandomTrackIndex(currentTrack)); };
-    next.onclick = function() { loadTrack(getRandomTrackIndex(currentTrack)); };
+    prev.onclick = function() { loadTrack(getRandomTrackIndex(currentTrack), true); };
+    next.onclick = function() { loadTrack(getRandomTrackIndex(currentTrack), true); };
     music.onplay = updateMusicBtn;
     music.onpause = updateMusicBtn;
     music.onended = function() {
         const nextIdx = getRandomTrackIndex(currentTrack);
-        loadTrack(nextIdx);
+        loadTrack(nextIdx, true);
     };
 
     // Initialisation
-    loadTrack(getRandomTrackIndex(-1));
+    loadTrack(getRandomTrackIndex(-1), true);
     updateMusicBtn();
 });
 
@@ -318,7 +315,6 @@ window.addEventListener('load', function() {
     const loader = document.getElementById('loader');
     const popup = document.getElementById('music-popup');
     const popupClose = document.getElementById('music-popup-close');
-    // Récupère l'audio
     const music = document.getElementById('bg-music');
     if (loader) {
         setTimeout(function() {
@@ -328,7 +324,6 @@ window.addEventListener('load', function() {
     } else {
         if (popup) popup.style.display = 'flex';
     }
-    // Fermer la pop-up en cliquant sur la croix
     if (popupClose) {
         popupClose.addEventListener('click', function(e) {
             popup.style.display = 'none';
@@ -336,129 +331,6 @@ window.addEventListener('load', function() {
             e.stopPropagation();
         });
     }
-    // Fermer la pop-up en cliquant en dehors du contenu
-    if (popup) {
-        popup.addEventListener('click', function(e) {
-            if (e.target === popup) {
-                popup.style.display = 'none';
-                if (music) music.play().catch(() => {});
-            }
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const panda = document.getElementById('panda-cursor');
-    const toggleBtn = document.getElementById('toggle-panda');
-    let pandaActive = false;
-
-    if (toggleBtn && panda) {
-        toggleBtn.addEventListener('click', function() {
-            pandaActive = !pandaActive;
-            panda.style.display = pandaActive ? 'block' : 'none';
-            toggleBtn.textContent = pandaActive ? 'Désactiver le ballon ⚽' : 'Mode ballon ⚽';
-        });
-
-        document.addEventListener('mousemove', function(e) {
-            if (pandaActive) {
-                panda.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
-            }
-        });
-    }
-});
-
-// Apparition de la carte
-function handleMapAppear() {
-    const mapTitle = document.querySelector('.map-title');
-    const mapContainer = document.querySelector('.map-container');
-    if (!mapTitle || !mapContainer) return;
-    let scrollY = window.scrollY;
-    // Apparition si on est en haut de page (comme le titre principal)
-    if (scrollY < 1100) {
-        mapTitle.classList.add('visible');
-        mapContainer.classList.add('visible');
-    } else {
-        mapTitle.classList.remove('visible');
-        mapContainer.classList.remove('visible');
-    }
-}
-window.addEventListener("scroll", handleMapAppear);
-window.addEventListener("DOMContentLoaded", handleMapAppear);
-
-document.addEventListener('DOMContentLoaded', function() {
-    const panda = document.getElementById('panda-cursor');
-    const toggleBtn = document.getElementById('toggle-panda');
-    const mapIframe = document.querySelector('#map iframe');
-    let pandaActive = false;
-
-    if (toggleBtn && panda) {
-        toggleBtn.addEventListener('click', function() {
-            pandaActive = !pandaActive;
-            panda.style.display = pandaActive ? 'block' : 'none';
-            toggleBtn.textContent = pandaActive ? 'Désactiver le ballon ⚽' : 'Mode ballon ⚽';
-            // Ajout dynamique du pointer-events sur la carte
-            if (mapIframe) {
-                mapIframe.style.pointerEvents = pandaActive ? 'none' : 'auto';
-            }
-            // Ajoute ou retire la classe sur le body
-            document.body.classList.toggle('ballon-active', pandaActive);
-        });
-
-        document.addEventListener('mousemove', function(e) {
-            if (pandaActive) {
-                panda.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
-            }
-        });
-    }
-});
-
-// Plein écran carte
-document.addEventListener('DOMContentLoaded', function() {
-    // Affiche le bouton plein écran sur mobile seulement
-    if (window.innerWidth <= 768) {
-        const btn = document.getElementById('map-fullscreen-btn');
-        if (btn) btn.style.display = 'block';
-    }
-
-    // Fonctionnalité plein écran
-    const mapSection = document.getElementById('map');
-    const mapBtn = document.getElementById('map-fullscreen-btn');
-    const mapExitBtn = document.getElementById('map-exit-fullscreen-btn');
-    if (mapSection && mapBtn && mapExitBtn) {
-        mapBtn.addEventListener('click', function() {
-            mapSection.classList.add('fullscreen');
-        });
-        mapExitBtn.addEventListener('click', function() {
-            mapSection.classList.remove('fullscreen');
-            window.scrollTo(0, mapSection.offsetTop);
-        });
-    }
-});
-
-// Pop-up musique après le loader
-window.addEventListener('load', function() {
-    const loader = document.getElementById('loader');
-    const popup = document.getElementById('music-popup');
-    const popupClose = document.getElementById('music-popup-close');
-    // Récupère l'audio
-    const music = document.getElementById('bg-music');
-    if (loader) {
-        setTimeout(function() {
-            loader.classList.add('hide');
-            if (popup) popup.style.display = 'flex';
-        }, 1200);
-    } else {
-        if (popup) popup.style.display = 'flex';
-    }
-    // Fermer la pop-up en cliquant sur la croix
-    if (popupClose) {
-        popupClose.addEventListener('click', function(e) {
-            popup.style.display = 'none';
-            if (music) music.play().catch(() => {});
-            e.stopPropagation();
-        });
-    }
-    // Fermer la pop-up en cliquant en dehors du contenu
     if (popup) {
         popup.addEventListener('click', function(e) {
             if (e.target === popup) {
@@ -482,6 +354,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Mute button in popup
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('music-popup');
+    const popupMute = document.getElementById('popup-mute-btn');
+    const music = document.getElementById('bg-music');
+    if (popup && popupMute) {
+        popupMute.addEventListener('click', function(e) {
+            popup.style.display = 'none';
+            if (music) {
+                music.pause();
+                music.currentTime = 0;
+            }
+            e.stopPropagation();
+        });
+    }
+});
+
+// Pause la musique quand une vidéo démarre, reprend à la fin
 document.addEventListener('DOMContentLoaded', function() {
     const bgMusic = document.getElementById('bg-music');
     // Sélectionne toutes les vidéos dans les bannières (hors lightbox)
@@ -516,18 +406,66 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Apparition de la carte
+function handleMapAppear() {
+    const mapTitle = document.querySelector('.map-title');
+    const mapContainer = document.querySelector('.map-container');
+    if (!mapTitle || !mapContainer) return;
+    let scrollY = window.scrollY;
+    if (scrollY < 1100) {
+        mapTitle.classList.add('visible');
+        mapContainer.classList.add('visible');
+    } else {
+        mapTitle.classList.remove('visible');
+        mapContainer.classList.remove('visible');
+    }
+}
+window.addEventListener("scroll", handleMapAppear);
+window.addEventListener("DOMContentLoaded", handleMapAppear);
+
+// Panda ballon mode
 document.addEventListener('DOMContentLoaded', function() {
-    const popup = document.getElementById('music-popup');
-    const popupMute = document.getElementById('popup-mute-btn');
-    const music = document.getElementById('bg-music');
-    if (popup && popupMute) {
-        popupMute.addEventListener('click', function(e) {
-            popup.style.display = 'none';
-            if (music) {
-                music.pause();
-                music.currentTime = 0;
+    const panda = document.getElementById('panda-cursor');
+    const toggleBtn = document.getElementById('toggle-panda');
+    const mapIframe = document.querySelector('#map iframe');
+    let pandaActive = false;
+
+    if (toggleBtn && panda) {
+        toggleBtn.addEventListener('click', function() {
+            pandaActive = !pandaActive;
+            panda.style.display = pandaActive ? 'block' : 'none';
+            toggleBtn.textContent = pandaActive ? 'Désactiver le ballon ⚽' : 'Mode ballon ⚽';
+            if (mapIframe) {
+                mapIframe.style.pointerEvents = pandaActive ? 'none' : 'auto';
             }
-            e.stopPropagation();
+            document.body.classList.toggle('ballon-active', pandaActive);
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (pandaActive) {
+                panda.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
+            }
+        });
+    }
+});
+
+// Plein écran carte mobile
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth <= 768) {
+        const btn = document.getElementById('map-fullscreen-btn');
+        if (btn) btn.style.display = 'block';
+    }
+
+    const mapSection = document.getElementById('map');
+    const mapBtn = document.getElementById('map-fullscreen-btn');
+    const mapExitBtn = document.getElementById('map-exit-fullscreen-btn');
+    if (mapSection && mapBtn && mapExitBtn) {
+        mapBtn.addEventListener('click', function() {
+            mapSection.classList.add('fullscreen');
+        });
+        mapExitBtn.addEventListener('click', function() {
+            mapSection.classList.remove('fullscreen');
+            window.scrollTo(0, mapSection.offsetTop);
         });
     }
 });
