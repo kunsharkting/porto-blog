@@ -1362,6 +1362,11 @@ body:not(.ballon-active) .map-container:hover {
     #toggle-panda,
     #panda-cursor {
         display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        visibility: hidden !important;
+        position: absolute !important;
+        z-index: -9999 !important;
     }
 
     .fun-btn {
