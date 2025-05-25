@@ -1516,3 +1516,7 @@ body:not(.ballon-active) .map-container:hover {
     position: relative;
     z-index: 1;
 }
+
+body, #bg-video {
+    background: #001d02; /* couleur proche du fond de ta vidéo */
+}
