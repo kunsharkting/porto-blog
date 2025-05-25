@@ -153,7 +153,11 @@ nav {
 }
 
 .nav-links li {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 .nav-links a {
@@ -165,6 +169,11 @@ nav {
 
 .nav-links a:hover {
     color: rgb(155, 255, 101); /* Bleu au survol */
+}
+
+/* Couleur différente au survol pour la page active */
+.nav-links a.active:hover {
+    color: rgb(255, 85, 85); /* Orange clair, choisis la couleur que tu veux */
 }
 
 .active {
@@ -181,12 +190,13 @@ nav {
     top: 80px;
     right: 50px;
     background-color: rgb(149, 138, 57);
+    border: 3.5px solid rgb(60, 30, 0);
     width: 125px;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    height: auto; /* Définit la hauteur du carré en fonction du contenu */
-    text-align: left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    height: 100px; /* Définit la hauteur du carré en fonction du contenu */
+    text-align: left; /* Aligne le texte à gauche */
     z-index: 11; /* Assure que le menu est au-dessus des autres éléments */
 }
 
@@ -236,14 +246,15 @@ nav {
 
 .hamburger-bg {
     position: absolute;
-    top: -11px;
-    left: -11px;
+    top: -13px;
+    left: -14px;
     width: 55px;
-    height: 55px;
+    height: 53px;
     background: rgb(149, 138, 57);
-    border: 4px solid rgb(179, 179, 179);
+    border: 3.5px solid rgb(60, 30, 0);
     border-radius: 16px;
     z-index: 10;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     pointer-events: none;
 }
 
@@ -825,7 +836,7 @@ body.membres-page .banner3 {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 35%;
+    width: 40%;
     z-index: 10010;
     font-family: 'Olney', sans-serif;
     overflow: hidden;
