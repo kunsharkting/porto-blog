@@ -13,22 +13,58 @@ function fadeInMusic(audio, duration = 2000, targetVolume = 0.1) {
     }, duration * step / targetVolume);
 }
 
-// Hamburger menu
+// Hamburger menu animé avec slide/fade du menu
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+
 if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+        if (!hamburger.classList.contains('active')) {
+            // Ouvre le menu avec animation slide-in
+            hamburger.classList.add('active');
+            navLinks.classList.remove('menu-slide-out');
+            navLinks.classList.add('menu-slide-in');
+            navLinks.style.display = 'flex';
+        } else {
+            // Ferme le menu avec animation slide-out
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('menu-slide-in');
+            navLinks.classList.add('menu-slide-out');
+            setTimeout(() => {
+                navLinks.style.display = 'none';
+                navLinks.classList.remove('menu-slide-out');
+            }, 350);
+        }
     });
 
+    // Ferme le menu si on clique en dehors
     document.addEventListener('click', (event) => {
-        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
-            if (navLinks.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            }
+        if (
+            navLinks.classList.contains('menu-slide-in') &&
+            !navLinks.contains(event.target) &&
+            !hamburger.contains(event.target)
+        ) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('menu-slide-in');
+            navLinks.classList.add('menu-slide-out');
+            setTimeout(() => {
+                navLinks.style.display = 'none';
+                navLinks.classList.remove('menu-slide-out');
+            }, 350);
         }
+    });
+
+    // Ferme le menu quand on clique sur un lien du menu
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('menu-slide-in');
+            navLinks.classList.add('menu-slide-out');
+            setTimeout(() => {
+                navLinks.style.display = 'none';
+                navLinks.classList.remove('menu-slide-out');
+            }, 350);
+        });
     });
 }
 
