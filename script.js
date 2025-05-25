@@ -223,13 +223,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Playlist
     const playlist = [
+        {src: "musique/Water Resistant.mp3", name: "RL 1"}, // Ajoute ici ta nouvelle musique
+        {src: "musique/All I Need.mp3", name: "RL 2"},  // Ajoute ici ta nouvelle musique
         {src: "musique/girl.mp3", name: "Track 1"},
         {src: "musique/miss.mp3", name: "Track 2"},
         {src: "musique/mornings.mp3", name: "Track 3"},
         {src: "musique/remember.mp3", name: "Track 4"},
         {src: "musique/sakura.mp3", name: "Track 5"},
         {src: "musique/stupid.mp3", name: "Track 6"},
-        {src: "musique/upbeat.mp3", name: "Track 7"}
+        {src: "musique/upbeat.mp3", name: "Track 7"},
     ];
     let currentTrack = 0;
 
@@ -323,7 +325,8 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Initialisation
-    loadTrack(getRandomTrackIndex(-1), false);
+    //loadTrack(getRandomTrackIndex(-1), false); (pour charger une piste aléatoire au démarrage)
+    loadTrack(0, false); // Toujours RL 1 au démarrage
     updateMusicBtn();
 
     // Optionnel : coupe la musique si muted au chargement
