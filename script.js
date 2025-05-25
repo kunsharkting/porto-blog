@@ -1,3 +1,18 @@
+// --- FONCTION FADE IN MUSIQUE (accessible partout) ---
+function fadeInMusic(audio, duration = 2000, targetVolume = 0.1) {
+    audio.volume = 0;
+    audio.play().catch(() => {});
+    const step = 0.01;
+    let current = 0;
+    const interval = setInterval(() => {
+        current += step;
+        audio.volume = Math.min(current, targetVolume);
+        if (audio.volume >= targetVolume) {
+            clearInterval(interval);
+        }
+    }, duration * step / targetVolume);
+}
+
 // Hamburger menu
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -267,9 +282,9 @@ document.addEventListener('DOMContentLoaded', function() {
         music.load();
         music.volume = 0.08;
         if (autoPlay) {
-            music.play().catch(() => {});
+            fadeInMusic(music, 2000, 0.1);
         }
-        // Animation du volume progressif
+        // Animation du volume progressif (pour compatibilité)
         let targetVolume = 0.1;
         let step = 0.02;
         let interval = setInterval(() => {
@@ -296,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     btn.onclick = function() {
-        if (music.paused) { music.play(); } else { music.pause(); }
+        if (music.paused) { fadeInMusic(music, 2000, 0.1); } else { music.pause(); }
     };
     prev.onclick = function() { loadTrack(getRandomTrackIndex(currentTrack), true); };
     next.onclick = function() { loadTrack(getRandomTrackIndex(currentTrack), true); };
@@ -318,96 +333,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Pop-up musique après le loader
-window.addEventListener('load', function() {
-    const loader = document.getElementById('loader');
-    const popup = document.getElementById('music-popup');
-    const popupClose = document.getElementById('music-popup-close');
-    const music = document.getElementById('bg-music');
-    let muted = localStorage.getItem('musicMuted') === 'true';
-
-    if (loader) {
-        setTimeout(function() {
-            loader.classList.add('hide');
-            if (popup) popup.style.display = 'flex';
-        }, 1200);
-    } else {
-        if (popup) popup.style.display = 'flex';
-    }
-    if (popupClose) {
-        popupClose.addEventListener('click', function(e) {
-            popup.style.display = 'none';
-            if (music && !muted) music.play().catch(() => {});
-            e.stopPropagation();
-        });
-    }
-    if (popup) {
-        popup.addEventListener('click', function(e) {
-            if (e.target === popup) {
-                popup.style.display = 'none';
-                if (music && !muted) music.play().catch(() => {});
-            }
-        });
-    }
-    // Gestion du bouton mute
-    const popupMute = document.getElementById('popup-mute-btn');
-    if (popupMute) {
-        popupMute.addEventListener('click', function(e) {
-            popup.style.display = 'none';
-            muted = true;
-            localStorage.setItem('musicMuted', 'true');
-            if (music) {
-                music.pause();
-                music.currentTime = 0;
-            }
-            e.stopPropagation();
-        });
-    }
-    // Gestion du bouton play dans la popup
-    const popupPlay = document.getElementById('popup-play-link');
-    if (popupPlay) {
-        popupPlay.addEventListener('click', function(e) {
-            popup.style.display = 'none';
-            muted = false;
-            localStorage.setItem('musicMuted', 'false');
-            if (music) music.play().catch(() => {});
-            e.stopPropagation();
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const popup = document.getElementById('music-popup');
-    const popupPlay = document.getElementById('popup-play-link');
-    const music = document.getElementById('bg-music');
-    if (popup && popupPlay) {
-        popupPlay.addEventListener('click', function(e) {
-            popup.style.display = 'none';
-            localStorage.setItem('musicMuted', 'false');
-            if (music) music.play().catch(() => {});
-            e.stopPropagation();
-        });
-    }
-});
-
-// Mute button in popup
-document.addEventListener('DOMContentLoaded', function() {
-    const popup = document.getElementById('music-popup');
-    const popupMute = document.getElementById('popup-mute-btn');
-    const music = document.getElementById('bg-music');
-    if (popup && popupMute) {
-        popupMute.addEventListener('click', function(e) {
-            popup.style.display = 'none';
-            localStorage.setItem('musicMuted', 'true');
-            if (music) {
-                music.pause();
-                music.currentTime = 0;
-            }
-            e.stopPropagation();
-        });
-    }
-});
-
 // Pause la musique quand une vidéo démarre, reprend à la fin
 document.addEventListener('DOMContentLoaded', function() {
     const bgMusic = document.getElementById('bg-music');
@@ -422,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         video.addEventListener('ended', function() {
             if (bgMusic && bgMusic.paused && localStorage.getItem('musicMuted') !== 'true') {
-                bgMusic.play().catch(() => {});
+                fadeInMusic(bgMusic, 2000, 0.1);
             }
         });
     });
@@ -437,8 +362,86 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         lightboxVideo.addEventListener('ended', function() {
             if (bgMusic && bgMusic.paused && localStorage.getItem('musicMuted') !== 'true') {
-                bgMusic.play().catch(() => {});
+                fadeInMusic(bgMusic, 2000, 0.1);
             }
+        });
+    }
+});
+
+// Pop-up musique après le loader (version améliorée avec fade-in)
+window.addEventListener('load', function() {
+    const popup = document.getElementById('music-popup');
+    const popupContent = document.querySelector('.music-popup-content');
+    const popupClose = document.getElementById('music-popup-close');
+    const popupPlay = document.getElementById('popup-play-link');
+    const popupMute = document.getElementById('popup-mute-btn');
+    const music = document.getElementById('bg-music');
+    let muted = localStorage.getItem('musicMuted') === 'true';
+
+    // Affiche la pop-up au chargement
+    if (popup) popup.style.display = 'flex';
+
+    // Fermer la pop-up et lancer la musique si non muté
+    function closePopupAndMaybePlayMusic() {
+        popup.style.display = 'none';
+        if (music && !muted) fadeInMusic(music, 2000, 0.1);
+    }
+
+    // Fermer la pop-up sans lancer la musique
+    function closePopupMute() {
+        popup.style.display = 'none';
+        muted = true;
+        localStorage.setItem('musicMuted', 'true');
+        if (music) {
+            music.pause();
+            music.currentTime = 0;
+        }
+    }
+
+    // Clic sur la croix
+    if (popupClose) {
+        popupClose.addEventListener('click', function(e) {
+            closePopupAndMaybePlayMusic();
+            e.stopPropagation();
+        });
+    }
+
+    // Clic sur "Play"
+    if (popupPlay) {
+        popupPlay.addEventListener('click', function(e) {
+            muted = false;
+            localStorage.setItem('musicMuted', 'false');
+            closePopupAndMaybePlayMusic();
+            e.stopPropagation();
+        });
+    }
+
+    // Clic sur "Mute"
+    if (popupMute) {
+        popupMute.addEventListener('click', function(e) {
+            closePopupMute();
+            e.stopPropagation();
+        });
+    }
+
+    // Clic en dehors du rectangle (fond de la pop-up)
+    if (popup) {
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                // Si l'utilisateur n'a pas explicitement choisi "Mute", on considère qu'il veut la musique
+                muted = false;
+                localStorage.setItem('musicMuted', 'false');
+                closePopupAndMaybePlayMusic();
+            }
+        });
+    }
+
+    // Empêche la fermeture si on clique à l'intérieur du rectangle (hors boutons)
+    if (popupContent) {
+        popupContent.addEventListener('click', function(e) {
+            // Ne rien faire sauf si c'est un bouton déjà géré (croix, play, mute)
+            // (Le stopPropagation dans les handlers ci-dessus suffit)
+            e.stopPropagation();
         });
     }
 });
