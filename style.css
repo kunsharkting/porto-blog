@@ -1772,11 +1772,6 @@ body, #bg-video {
     overflow: hidden;
     will-change: transform, box-shadow;
 }
-.overview-card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 32px rgba(255,85,85,0.18);
-    z-index: 0;
-}
 .overview-day {
     font-family: 'Bitshow', sans-serif;
     font-size: 3.4rem;
@@ -1895,4 +1890,13 @@ body, #bg-video {
 .overview-card.in-top.out-bottom {
     animation: overviewOutTopToBottom 0.7s cubic-bezier(.7,0,.3,1) forwards;
     opacity: 0 !important;
+}
+
+body.overview-page .overview-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+body.overview-page .overview-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 10px 2px white;
+    z-index: 2;
 }
