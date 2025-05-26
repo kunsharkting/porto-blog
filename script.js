@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const bgMusic = document.getElementById('bg-music');
     // Sélectionne toutes les vidéos dans les bannières (hors lightbox)
-    const blogVideos = document.querySelectorAll('.banner-image.enlarge-video, video.banner-image');
+    const blogVideos = document.querySelectorAll('.blog-page video.banner-image, .blog-page .banner-image.enlarge-video, .blog-page video.enlarge-video');
 
     blogVideos.forEach(video => {
         video.addEventListener('play', function() {
