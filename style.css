@@ -1723,3 +1723,23 @@ body, #bg-video {
         text-decoration: underline;
     }
 }
+
+.hamburger:hover span {
+    background-color: rgb(0, 70, 28) !important; /* Rouge clair pour les barres */
+    transition: background-color 0.2s;
+}
+.hamburger:hover .hamburger-bg {
+    background: rgb(155, 255, 101) !important; /* Fond du hamburger en rouge très clair */
+    transition: background 0.2s, border-color 0.2s;
+}
+
+/* Fond rouge clair quand menu ouvert (croix affichée) */
+.hamburger.active:hover .hamburger-bg {
+    background-color: rgb(255, 85, 85) !important;
+}
+
+/* Optionnel : barres blanches quand menu ouvert pour bien contraster */
+.hamburger.active:hover span {
+    background-color: rgb(91, 0, 0) !important;
+    transition: background-color 0.2s;
+}
