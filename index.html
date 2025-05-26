@@ -6,6 +6,9 @@
     <title>Porto trip website by Rocket League</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/design/icone.png">
+    <!-- Ajoute Leaflet CSS et JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <!-- À placer dans le <head> de chaque page -->
     <meta property="og:image" content="https://github.com/kunsharkting/porto-blog/blob/main/images/design/icone.png">
     <meta property="og:title" content="Porto trip website by Rocket League">
@@ -57,7 +60,7 @@
             <h1 class="floating-title">Trip to Porto</h1>
         </div>
         
-        <section id="map">
+        <!-- <section id="map">
             <h2 class="map-title">Trip overview : Visited places</h2>
             <div class="map-container">
                 <iframe 
@@ -75,7 +78,9 @@
             <button id="map-exit-fullscreen-btn" class="fun-btn btn-map-exit-fullscreen" style="display:none;">
                 Exit full screen
             </button>
-        </section>
+        </section> -->
+
+        <div id="map-leaflet"></div>
 
 
         <div class="banner2">

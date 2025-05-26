@@ -1,0 +1,3453 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6806638,
+          41.2473992,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Aéroport Francisco Sá Carneiro",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U4NDI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.36449,
+          43.6313458,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Aéroport Toulouse-Blagnac",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "UyODA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6182487,
+          41.1411449,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Alfândega Car Park",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "A2MzM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4293422,
+          41.5502644,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Arc de la Porta Nova",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "I5Mzg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4264201,
+          41.5509529,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Archbishops Court",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "YyMTI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4286663,
+          40.2088497,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Arco de Almedina",
+        "styleUrl": "#icon-1899-DB4436-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#db4436",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "MzNzQ"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6554965,
+          40.641099,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Aveiro com Paixão - Cais 2",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U0MTA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4227771,
+          40.2058961,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bamboo Forest",
+        "styleUrl": "#icon-1899-DB4436-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#db4436",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "QwMTY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.421341,
+          41.5510974,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Basilique des Congregados",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Y4OTM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.612067,
+          41.144444,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Best Guest Porto Hostel",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "k5NTU"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.43464,
+          41.54787,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Braga",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "YyMTM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6111858,
+          41.1406471,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cais da Ribeira",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c1MzE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5854509,
+          41.1488193,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Campanha",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Y1MTk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4193225,
+          41.5513559,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Capela de Nossa Senhora da Penha de França",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "A5Njc"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4230931,
+          40.2058917,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Capela de São Bento",
+        "styleUrl": "#icon-1899-DB4436-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#db4436",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "MxMTQ"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4370467,
+          40.219158,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Casa do Sal",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U0NzE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6449133,
+          41.008619,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Casino Espinho",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "g1MDI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6899213,
+          41.1685772,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Castelo do Queijo",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "QxNzk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4245228,
+          40.2093919,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cathédrale de Coimbra",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "A5NjI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6111165,
+          41.1428531,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cathédrale de Porto",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "QzNjY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4269012,
+          41.5499885,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cathédrale Santa Maria de Braga",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "M0NjI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4270474,
+          40.2087884,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Cathédrale Velha de Coimbra",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "M3MDY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4230942,
+          41.551394,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Chafariz da Praça da República",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "A4MDc"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.428937,
+          40.2112437,
+          0
+        ]
+      },
+      "properties": {
+        "name": "COIMBRA TOWN HALL",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "gyNTk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.44047,
+          40.22436,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Coimbra-B",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "YyODk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4305134,
+          40.2128171,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Colégio e Igreja de Nossa Senhora do Carmo",
+        "styleUrl": "#icon-1899-DB4436-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#db4436",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "AwODI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6149305,
+          41.1512863,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Coronel Pacheco's Square",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "AwMzI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4231552,
+          40.2080209,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Dom Dinis",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "g5MzI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -8.425156,
+          40.20909
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Eglise de Sao Joao de Almedina",
+        "styleUrl": "#icon-1899-DB4436-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#db4436",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Q0ODA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6139451,
+          41.1458838,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Église des Clercs",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c4MDI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4292605,
+          40.2094883,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Eglise Saint-Jacques",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "cwMzE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.616031,
+          41.1410065,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Église Sao Francisco",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "M2Njk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6048077,
+          41.125628,
+          0
+        ]
+      },
+      "properties": {
+        "name": "El Corte Inglés Gaia Porto",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "AxODU"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6457702,
+          40.6383344,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Escadaria \"I Love Aveiro\"",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "YyNTk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -8.422431,
+          40.208082
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Escadas Monumentais da Universidade de Coimbra",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "YyNTg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.644485,
+          41.006195,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Espinho",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "MxNjg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6386261,
+          41.004549,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Feira Semanal de Espinho",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c1NjE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6123295,
+          41.1381032,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Flags Portwine Producers",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "I2OTA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4241879,
+          40.2043869,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Fonte dos Três Bicos",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "QwMDg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4236697,
+          41.5493343,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Fonte Seiscentista do Largo Carlos Amarante",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "k3MzI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6518787,
+          40.6409327,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Forum Aveiro",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Y4NzY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6162122,
+          41.1373375,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Gaia cable car - Cais de Gaia station",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "k5ODM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6095865,
+          41.138002,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Gaia Cable Car - Jardim do Morro station",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "UyODA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.639479,
+          41.008571,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Heitor Alves Ramos",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "I0NzA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4241573,
+          41.5493253,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Holy Cross Church, Braga",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "cwOTc"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6107023,
+          41.1499084,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Hôtel de Ville de Porto",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "gyODA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4285789,
+          41.5519909,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Igreja e Convento de Santa Maria del Popolo",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U3MTQ"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4270328,
+          41.5504114,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Igreja Misericórdia",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U0NTk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4314853,
+          40.2137287,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Imobiliária Patrocínio Tavares",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "MwMzI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6531216,
+          40.6364238,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Infante Dom Pedro City Park",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "gxNTI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4255403,
+          40.2078174,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Iron Gate",
+        "styleUrl": "#icon-1899-DB4436-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#db4436",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "g4MjE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6144382,
+          41.1242044,
+          0
+        ]
+      },
+      "properties": {
+        "name": "ISLA Gaia",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "IxNDU"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4227914,
+          41.5509738,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Jardim da Av. da Liberdade",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "E4MDk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6167116,
+          41.1458015,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Jardim da Cordoaria",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "EyMzk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.645218,
+          40.6403821,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Jardim da Fonte Nova",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Q2NDA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6126631,
+          41.1544302,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Jardim de Teófilo Braga",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "E2NTM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4259038,
+          41.5513604,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Jardin de Santa Barbara",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c3NzA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6255165,
+          41.1482682,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Jardins du Palais de Cristal",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "k0NTg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6393353,
+          41.0077679,
+          0
+        ]
+      },
+      "properties": {
+        "name": "João de Deus Public Park",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "MxNTg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3972331,
+          41.1878079,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kartodromo de Baltar",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "ExNzk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4234774,
+          41.5514826,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Lapa Church",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U5NTI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4295352,
+          40.2073206,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Largo da Portagem",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "A5NzI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4238409,
+          41.5495371,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Letreiro Braga",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "AwNTA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6123179,
+          41.1439578,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Magnata barbershop",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "QyNzg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6123656,
+          41.1379278,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Marginal de Gaia",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "UxODA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -8.610932,
+          41.146608
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "McDonald's",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Q1NTk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.421948,
+          41.551267,
+          0
+        ]
+      },
+      "properties": {
+        "name": "McDonald's",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "IxMzk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.615783,
+          41.140322,
+          0
+        ]
+      },
+      "properties": {
+        "name": "McDonald's - Ribeira Porto",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "k2MzQ"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4206011,
+          41.5513948,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Memorial aos Irmãos Roby",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c2NTI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.426304,
+          40.206988,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Minerva Stairs",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c1MzM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6856637,
+          41.1617449,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Miradouro da Praia do Homem do Leme",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "gyOTE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6023601,
+          41.1395699,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Miradouro do Infante",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U1ODQ"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6487159,
+          41.0092302,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mole",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "EzNjg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6291475,
+          41.1579768,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Monumento aos Heróis da Guerra Peninsular",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c4NjI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6522397,
+          40.6420035,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Monumento aos Mortos da Grande Guerra",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "gwNTg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4193575,
+          41.551447,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Monumento aos Mortos da Grande Guerra",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "E3NTc"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6158676,
+          41.1486663,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Monumento aos Mortos da Grande Guerra",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "M1NjY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4287188,
+          40.2109418,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Mosteiro de Santa Cruz",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U0MDI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6145338,
+          41.1484345,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Neonia Porto",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U4OTE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6539101,
+          40.6417184,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Obelisco da Liberdade",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "MzMjg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4260218,
+          40.2074934,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Palace of Schools",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "E1Nzk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4225933,
+          41.5483836,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Palais de Raio",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "g1NDk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4216509,
+          41.551536,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Park Avenida Central",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "QwODM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4272002,
+          40.2046891,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Parque da Cidade Manuel Braga",
+        "styleUrl": "#icon-1899-DB4436-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#db4436",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "gzNjI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.414022,
+          41.5377688,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Parque do Monte do Picoto",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c3Mzg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4110839,
+          41.5360538,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Parque do Picoto - Porta Sudeste",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "ExNTU"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6850439,
+          41.1598391,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Parque Infantil da Praia do Homem do Leme",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "g5NzA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.688227,
+          41.164601,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Passadiço das Ondas",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "cwOTE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6063005,
+          41.1390987,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pedra dos Gatinhos",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "cwMDQ"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6830183,
+          41.1577804,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pérgola da Nevogilde",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "M5NTU"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.414189,
+          41.537306,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Picoto",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "cwMzY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6099013,
+          41.1406892,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pilares Ponte Pênsil",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "EwNzE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6094485,
+          41.1399589,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Pont Dom-Luís",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "AwMTE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6500073,
+          40.6415837,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ponte dos Laços de Amizade",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Y4NTI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4292183,
+          40.2108733,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praça 8 de maio",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "g0NjE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4230084,
+          41.5513815,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praça da Republica",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "I5MzQ"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6145409,
+          41.1403243,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praça da Ribeira",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "M5MjM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6129411,
+          41.1404838,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praça da Ribeira",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "gyMDE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.615876,
+          41.1485557,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praça de Carlos Alberto",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Y4NjM"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6535942,
+          40.6385269,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praça do Marquês de Pombal",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c3MDg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4277629,
+          41.5511712,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praça do Município",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "A0Mzk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6469346,
+          41.0085511,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praia da Baía",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "EwNjg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6759133,
+          41.1486625,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praia do Carneiro",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "c5NjA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.688684,
+          41.1713143,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Praia Internacional",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "k4MjY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4290306,
+          40.2094553,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Prédio do Triângulo Rosa",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "EyODE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4214335,
+          40.2057468,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Quadrado Central / Fontanário",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "cxNzQ"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.612659,
+          41.1378842,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ribeira de Gaia",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "QwOTY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6125664,
+          41.1404099,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Ribera de Oporto",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "k1NjY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4233544,
+          41.5489241,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Saint Marcus Church",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "ExMjk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4316731,
+          40.2141184,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Saint Peter Church",
+        "styleUrl": "#icon-1899-DB4436-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#db4436",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "ExOTg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6103747,
+          41.1456094,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Sao Bento station",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "I0NTA"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6501911,
+          40.639627,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Sé Catedral de Aveiro / Igreja de Nossa Senhora da Glória",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "U5NzE"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4289025,
+          41.5516695,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Silo da Memória",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "g4ODY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6121339,
+          41.1228285,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Soares dos Reis Garden",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "QzNjI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4253635,
+          40.2105947,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Terraço Da Alta",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "gyNDk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4223874,
+          41.5497678,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Theatro Circo",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "A5Mjg"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4320059,
+          40.2143439,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tribunal da Relação de Coimbra",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Q5MDk"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.425713,
+          40.2089388,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Viewpoint",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "kwNDY"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4306318,
+          41.5497728,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Трг башта",
+        "styleUrl": "#icon-1899-A52714-nodesc",
+        "label-scale": 0,
+        "icon-opacity": 1,
+        "icon-color": "#a52714",
+        "icon-scale": 1,
+        "icon-offset": [
+          32,
+          64
+        ],
+        "icon-offset-units": [
+          "pixels",
+          "insetPixels"
+        ],
+        "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png"
+      },
+      "id": "Q2NTY"
+    }
+  ]
+}
