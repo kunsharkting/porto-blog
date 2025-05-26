@@ -277,8 +277,8 @@ main {
 .banner, .banner2 {
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
-    margin-top: 25%;
-    margin-bottom: 30px;
+    margin-top: 17%;
+    margin-bottom: 0px;
     height: auto;
     padding: 20px;
     border-radius: 20px;
@@ -325,8 +325,8 @@ main {
 .banner1, .banner3 {
     width: 90%; /* Largeur du bandeau */
     margin: 0 auto;
-    margin-top: 25%;
-    margin-bottom: 30px;
+    margin-top: 17%;
+    margin-bottom: 0px;
     height: auto;
     padding: 20px;
     border-radius: 20px;
@@ -394,7 +394,6 @@ body.index-page .banner3 {
     margin-left: auto !important;
     margin-right: auto !important;
     transform: none;
-    opacity: 1;
     margin-top: 17%;
     margin-bottom: 0px;
     width: 90%;
@@ -448,7 +447,7 @@ body.blog-page .banner3 {
     display: flex;
     align-items: stretch;
     width: 90%;
-    margin: 0 auto 30px auto;
+    margin: 17% auto 0px auto;
     padding: 20px;
     border-radius: 20px;
     background-color: rgb(209, 189, 142);
@@ -560,6 +559,32 @@ body.membres-page .banner1,
 body.membres-page .banner2,
 body.membres-page .banner3 {
     min-height: 300px; /* Ajuste la valeur selon la hauteur désirée */
+}
+
+/* Rendez les bannières visibles quand elles sont animées */
+.banner.left,
+.banner.right,
+.banner1.left,
+.banner1.right,
+.banner2.left,
+.banner2.right,
+.banner3.left,
+.banner3.right {
+    opacity: 1 !important;
+}
+
+/* Ajoute ces lignes pour que toutes les bannières aient l'animation de glissement */
+.banner.left, .banner2.left {
+    animation: slideInLeft 1s forwards;
+}
+.banner.hide-left, .banner2.hide-left {
+    animation: slideOutLeft 1s forwards;
+}
+.banner1.right, .banner3.right {
+    animation: slideInRight 1s forwards;
+}
+.banner1.hide-right, .banner3.hide-right {
+    animation: slideOutRight 1s forwards;
 }
 
 .members-link a {
@@ -1331,7 +1356,6 @@ body:not(.ballon-active) .map-container:hover {
         right: auto !important;
         margin-left: 0 !important;
         margin-right: auto !important;
-        opacity: 1 !important;
     }
     .banner-text, .banner1 .banner-text, .banner2 .banner-text, .banner3 .banner-text,
     body.blog-page .banner-text, body.blog-page .banner1 .banner-text, body.blog-page .banner2 .banner-text, body.blog-page .banner3 .banner-text {

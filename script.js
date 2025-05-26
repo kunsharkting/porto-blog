@@ -70,33 +70,116 @@ if (hamburger && navLinks) {
 
 // Animation des bannières
 document.addEventListener("DOMContentLoaded", () => {
-    const banners = document.querySelectorAll(".banner, .banner1, .banner2, .banner3");
-    function handleBannerVisibility() {
-        const viewportHeight = window.innerHeight;
-        banners.forEach((banner, index) => {
-            const bannerTop = banner.getBoundingClientRect().top;
-            const bannerBottom = banner.getBoundingClientRect().bottom;
-            if (bannerTop < viewportHeight * 0.7 && bannerBottom > viewportHeight * 0.3) {
-                if (index % 2 === 0) {
+    // 1. Animation pour toutes les bannières sur la page index
+    if (document.body.classList.contains("index-page")) {
+        const homeBanners = document.querySelectorAll(".banner, .banner1, .banner2, .banner3");
+        function handleHomeBannerVisibility() {
+            const viewportHeight = window.innerHeight;
+            homeBanners.forEach((banner, index) => {
+                const bannerTop = banner.getBoundingClientRect().top;
+                const bannerBottom = banner.getBoundingClientRect().bottom;
+                if (bannerTop < viewportHeight * 0.7 && bannerBottom > viewportHeight * 0.3) {
+                    if (index % 2 === 0) {
+                        banner.classList.add("left");
+                        banner.classList.remove("hide-left", "right", "hide-right");
+                    } else {
+                        banner.classList.add("right");
+                        banner.classList.remove("hide-right", "left", "hide-left");
+                    }
+                } else {
+                    if (index % 2 === 0) {
+                        banner.classList.add("hide-left");
+                        banner.classList.remove("left", "right", "hide-right");
+                    } else {
+                        banner.classList.add("hide-right");
+                        banner.classList.remove("right", "left", "hide-left");
+                    }
+                }
+            });
+        }
+        window.addEventListener("scroll", handleHomeBannerVisibility);
+        setTimeout(handleHomeBannerVisibility, 100);
+    } else if (
+        document.body.classList.contains("blog-page") ||
+        document.body.classList.contains("membres-page")
+    ) {
+        // 2. Animation SEULEMENT pour .banner sur blog et membres
+        const banners = document.querySelectorAll(".banner");
+        function handleBannerVisibility() {
+            const viewportHeight = window.innerHeight;
+            banners.forEach((banner) => {
+                const bannerTop = banner.getBoundingClientRect().top;
+                const bannerBottom = banner.getBoundingClientRect().bottom;
+                if (bannerTop < viewportHeight * 0.85 && bannerBottom > viewportHeight * 0.3) {
                     banner.classList.add("right");
                     banner.classList.remove("hide-right");
                 } else {
-                    banner.classList.add("left");
-                    banner.classList.remove("hide-left");
-                }
-            } else {
-                if (index % 2 === 0) {
                     banner.classList.add("hide-right");
                     banner.classList.remove("right");
-                } else {
-                    banner.classList.add("hide-left");
-                    banner.classList.remove("left");
                 }
-            }
-        });
+            });
+        }
+        window.addEventListener("scroll", handleBannerVisibility);
+        setTimeout(handleBannerVisibility, 100);
+
+        // 3. Animation NORMALE pour .banner1, .banner2, .banner3 sur blog/membres
+        const otherBanners = document.querySelectorAll(".banner1, .banner2, .banner3");
+        function handleOtherBannerVisibility() {
+            const viewportHeight = window.innerHeight;
+            otherBanners.forEach((banner, index) => {
+                const bannerTop = banner.getBoundingClientRect().top;
+                const bannerBottom = banner.getBoundingClientRect().bottom;
+                if (bannerTop < viewportHeight * 0.7 && bannerBottom > viewportHeight * 0.3) {
+                    if (index % 2 === 0) {
+                        banner.classList.add("left");
+                        banner.classList.remove("hide-left");
+                    } else {
+                        banner.classList.add("right");
+                        banner.classList.remove("hide-right");
+                    }
+                } else {
+                    if (index % 2 === 0) {
+                        banner.classList.add("hide-left");
+                        banner.classList.remove("left");
+                    } else {
+                        banner.classList.add("hide-right");
+                        banner.classList.remove("right");
+                    }
+                }
+            });
+        }
+        window.addEventListener("scroll", handleOtherBannerVisibility);
+        setTimeout(handleOtherBannerVisibility, 100);
+    } else {
+        // 4. Animation NORMALE pour .banner1, .banner2, .banner3 sur toutes les autres pages
+        const otherBanners = document.querySelectorAll(".banner1, .banner2, .banner3");
+        function handleOtherBannerVisibility() {
+            const viewportHeight = window.innerHeight;
+            otherBanners.forEach((banner, index) => {
+                const bannerTop = banner.getBoundingClientRect().top;
+                const bannerBottom = banner.getBoundingClientRect().bottom;
+                if (bannerTop < viewportHeight * 0.7 && bannerBottom > viewportHeight * 0.3) {
+                    if (index % 2 === 0) {
+                        banner.classList.add("left");
+                        banner.classList.remove("hide-left");
+                    } else {
+                        banner.classList.add("right");
+                        banner.classList.remove("hide-right");
+                    }
+                } else {
+                    if (index % 2 === 0) {
+                        banner.classList.add("hide-left");
+                        banner.classList.remove("left");
+                    } else {
+                        banner.classList.add("hide-right");
+                        banner.classList.remove("right");
+                    }
+                }
+            });
+        }
+        window.addEventListener("scroll", handleOtherBannerVisibility);
+        setTimeout(handleOtherBannerVisibility, 100);
     }
-    window.addEventListener("scroll", handleBannerVisibility);
-    handleBannerVisibility();
 });
 
 // Animation du titre flottant
@@ -304,12 +387,8 @@ document.addEventListener('DOMContentLoaded', function() {
         trackList.style.display = 'none';
     });
 
-    function getRandomTrackIndex(exclude) {
-        let idx;
-        do {
-            idx = Math.floor(Math.random() * playlist.length);
-        } while (playlist.length > 1 && idx === exclude);
-        return idx;
+    function getRandomTrackIndex(current) {
+        return (current + 1) % playlist.length;
     }
 
     function loadTrack(idx, autoPlay = false) {
@@ -356,7 +435,7 @@ document.addEventListener('DOMContentLoaded', function() {
     music.onplay = updateMusicBtn;
     music.onpause = updateMusicBtn;
     music.onended = function() {
-        const nextIdx = getRandomTrackIndex(currentTrack);
+        const nextIdx = getNextTrackIndex(currentTrack);
         loadTrack(nextIdx, true);
     };
 
