@@ -1659,3 +1659,37 @@ body, #bg-video {
         background-size: contain !important;
     }
 }
+
+#popup-mute-btn {
+    background: rgb(91, 0, 0);
+    color: rgb(179, 179, 179);
+    border-radius: 8px;
+    padding: 8px 22px;
+    font-weight: bold;
+    font-family: Olney, sans-serif;
+    font-size: 17px;
+    border: 2.5px solid rgb(179, 179, 179);
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+#popup-mute-btn:hover {
+    background: rgb(255, 85, 85);      /* Couleur de fond au survol */
+    color: rgb(91, 0, 0);                       /* Couleur du texte au survol */
+    border: 2.5px solid rgb(179, 179, 179);            /* Bordure au survol */
+}
+
+#popup-play-link {
+    color: rgb(255, 85, 85);
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+}
+
+#popup-play-link:hover {
+    color: rgb(155, 255, 101); /* Couleur au survol */
+    text-decoration: underline;
+}
