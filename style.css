@@ -1621,3 +1621,41 @@ body, #bg-video {
         height: 36px !important;
     }
 }
+
+/* Overlay pour bloquer la map tant qu'on n'a pas cliqué */
+.map-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: transparent;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.map-container {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .road {
+        height: 32px !important;
+        min-height: 0 !important;
+        max-width: 100vw !important;
+        margin: 6px auto 0 auto !important;
+        background-size: auto 32px !important;
+    }
+    .car {
+        width: 50px !important;
+        height: 45px !important;
+        bottom: 2px !important;
+        background-size: contain !important;
+    }
+    .boost {
+        width: 25px !important;
+        height: 15px !important;
+        bottom: 18px !important;
+        left: -22px !important;
+        background-size: contain !important;
+    }
+}

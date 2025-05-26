@@ -705,3 +705,24 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1200 + Math.random() * 900); // Pluie moins dense
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Seulement sur la page index
+    if (document.body.classList.contains('index-page')) {
+        const mapContainer = document.querySelector('.map-container');
+        if (mapContainer && !mapContainer.querySelector('.map-overlay')) {
+            const overlay = document.createElement('div');
+            overlay.className = 'map-overlay';
+            mapContainer.appendChild(overlay);
+
+            overlay.addEventListener('click', function() {
+                overlay.style.display = 'none';
+            });
+
+            // Pour desktop : remet l'overlay si la souris quitte la carte
+            mapContainer.addEventListener('mouseleave', function() {
+                overlay.style.display = '';
+            });
+        }
+    }
+});
