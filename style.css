@@ -1274,7 +1274,7 @@ body:not(.ballon-active) .map-container:hover {
         margin-left: 2px;
     }
     .track-list {
-        min-width: 60px;
+        min-width: 80px;
         font-size: 0.7rem;
         right: 0;
         left: auto;
