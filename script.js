@@ -188,14 +188,19 @@ function handleFloatingTitle() {
     if (title) {
         let scrollY = window.scrollY;
         if (scrollY > 300) {
-            title.style.opacity = 0;
+            if (!title.classList.contains('fade-out')) {
+                title.classList.add('fade-out');
+            }
             title.style.pointerEvents = "none";
         } else {
-            title.style.transform = `translate(-50%, calc(-50% - ${scrollY * 1}px))`;
-            let opacity = Math.max(1 - scrollY / 300, 0);
-            title.style.opacity = opacity;
+            title.classList.remove('fade-out');
             title.style.pointerEvents = "";
+            title.style.opacity = "";
         }
+        // Garde le déplacement vertical si tu veux l'effet flottant :
+        title.style.transform = scrollY > 300
+            ? "translate(-50%, -50%)"
+            : `translate(-50%, calc(-50% - ${scrollY * 1}px))`;
     }
 }
 window.addEventListener("scroll", handleFloatingTitle);
