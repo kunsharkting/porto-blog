@@ -1712,19 +1712,14 @@ body, #bg-video {
     }
 
     #popup-play-link {
-        font-size: 15px !important;
-        padding: 3px 10px !important;
-        border-radius: 6px !important;
         color: rgb(255, 85, 85) !important;
         background: none !important;
         text-decoration: underline !important;
         transition: color 0.2s, background 0.2s;
         cursor: pointer;
-        display: inline-block;
     }
     #popup-play-link:hover {
-        color: #fff !important;
-        background: rgb(255, 85, 85) !important;
-        text-decoration: none !important;
+        color: rgb(155, 255, 101) !important;
+        text-decoration: underline;
     }
 }
