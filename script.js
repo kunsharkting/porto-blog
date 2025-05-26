@@ -726,3 +726,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (document.body.classList.contains("overview-page")) {
+        const cards = document.querySelectorAll('.overview-card');
+        // Détermine la position du card dans la ligne (gauche, milieu, droite)
+        cards.forEach((card, i) => {
+            const pos = i % 3;
+            if (pos === 0) card.classList.add('in-left');
+            else if (pos === 2) card.classList.add('in-right');
+            else card.classList.add('in-top');
+        });
+
+        function handleOverviewCards() {
+            const windowHeight = window.innerHeight;
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                // Animation d'entrée uniquement
+                if (rect.top < windowHeight * 0.85 && rect.bottom > windowHeight * 0.15) {
+                    card.classList.add('visible');
+                } else {
+                    card.classList.remove('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', handleOverviewCards);
+        window.addEventListener('resize', handleOverviewCards);
+        setTimeout(handleOverviewCards, 100);
+    }
+});

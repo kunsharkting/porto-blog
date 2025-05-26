@@ -1752,14 +1752,16 @@ body, #bg-video {
     justify-content: center;
     margin: 650px auto 40px auto;
     max-width: 1100px;
+    overflow: hidden;
 }
 .overview-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 180px;
-    height: 220px;
+    width: 270px;
+    height: 340px;
+    font-size: 1.4rem;
     background: rgb(209, 189, 142);
     border-radius: 18px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.13);
@@ -1777,37 +1779,120 @@ body, #bg-video {
 }
 .overview-day {
     font-family: 'Bitshow', sans-serif;
-    font-size: 2.6rem;
+    font-size: 3.4rem;
     color: rgb(91, 0, 0);
-    margin: 18px 0 10px 0;
+    margin: 28px 0 18px 0;
     font-weight: bold;
     text-shadow: 1px 1px 8px #fff8;
 }
 .overview-card img {
     width: 90%;
-    height: 120px;
+    height: 190px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: block;
 }
 @media (max-width: 900px) {
     .overview-grid {
         gap: 16px;
     }
     .overview-card {
-        width: 120px;
-        height: 150px;
+        width: 160px;
+        height: 180px;
     }
     .overview-day {
-        font-size: 1.5rem;
-        margin: 10px 0 6px 0;
+        font-size: 2rem;
+        margin: 10px 0 8px 0;
     }
     .overview-card img {
-        height: 60px;
+        height: 80px;
     }
 }
 
 .banner, .banner1, .banner2, .banner3 {
     will-change: opacity, transform;
+}
+
+@keyframes overviewInLeft {
+    from { transform: translateX(-60px) scale(0.9); opacity: 0.2; }
+    to   { transform: translateX(0) scale(1); opacity: 1; }
+}
+@keyframes overviewInRight {
+    from { transform: translateX(60px) scale(0.9); opacity: 0.2; }
+    to   { transform: translateX(0) scale(1); opacity: 1; }
+}
+@keyframes overviewInTop {
+    from { transform: translateY(-60px) scale(0.9); opacity: 0.2; }
+    to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes overviewOutBottom {
+    from { transform: translateY(0) scale(1); opacity: 1; }
+    to   { transform: translateY(60px) scale(0.9); opacity: 0.2; }
+}
+@keyframes overviewOutTop {
+    from { transform: translateY(0) scale(1); opacity: 1; }
+    to   { transform: translateY(-60px) scale(0.9); opacity: 0.2; }
+}
+
+.overview-card {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s, transform 0.3s;
+    will-change: transform, opacity;
+}
+
+.overview-card.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.overview-card.in-left.visible {
+    animation: overviewInLeft 0.7s cubic-bezier(.7,0,.3,1) forwards;
+}
+.overview-card.in-right.visible {
+    animation: overviewInRight 0.7s cubic-bezier(.7,0,.3,1) forwards;
+}
+.overview-card.in-top.visible {
+    animation: overviewInTop 0.7s cubic-bezier(.7,0,.3,1) forwards;
+}
+.overview-card.out-bottom {
+    animation: overviewOutBottom 0.7s cubic-bezier(.7,0,.3,1) forwards;
+    opacity: 0 !important;
+}
+
+.overview-card.out-top {
+    animation: overviewOutTop 0.7s cubic-bezier(.7,0,.3,1) forwards;
+    opacity: 0 !important;
+}
+
+@keyframes overviewOutLeftToRight {
+    from { transform: translateX(0) scale(1); opacity: 1; }
+    to   { transform: translateX(60px) scale(0.9); opacity: 0.2; }
+}
+@keyframes overviewOutRightToLeft {
+    from { transform: translateX(0) scale(1); opacity: 1; }
+    to   { transform: translateX(-60px) scale(0.9); opacity: 0.2; }
+}
+@keyframes overviewOutTopToBottom {
+    from { transform: translateY(0) scale(1); opacity: 1; }
+    to   { transform: translateY(60px) scale(0.9); opacity: 0.2; }
+}
+
+/* Animation de sortie selon la position */
+.overview-card.in-left.out-top,
+.overview-card.in-left.out-bottom {
+    animation: overviewOutLeftToRight 0.7s cubic-bezier(.7,0,.3,1) forwards;
+    opacity: 0 !important;
+}
+.overview-card.in-right.out-top,
+.overview-card.in-right.out-bottom {
+    animation: overviewOutRightToLeft 0.7s cubic-bezier(.7,0,.3,1) forwards;
+    opacity: 0 !important;
+}
+.overview-card.in-top.out-top,
+.overview-card.in-top.out-bottom {
+    animation: overviewOutTopToBottom 0.7s cubic-bezier(.7,0,.3,1) forwards;
+    opacity: 0 !important;
 }
