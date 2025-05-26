@@ -486,21 +486,39 @@ window.addEventListener('load', function() {
 });
 
 // Apparition de la carte
-function handleMapAppear() {
-    const mapTitle = document.querySelector('.map-title');
-    const mapContainer = document.querySelector('.map-container');
-    if (!mapTitle || !mapContainer) return;
+function handleFloatingTitleAndMap() {
+    const floatingTitle = document.querySelector(".floating-title");
+    const mapTitle = document.querySelector(".map-title");
+    const mapContainer = document.querySelector(".map-container");
     let scrollY = window.scrollY;
-    if (scrollY < 1100) {
-        mapTitle.classList.add('visible');
-        mapContainer.classList.add('visible');
-    } else {
-        mapTitle.classList.remove('visible');
-        mapContainer.classList.remove('visible');
+    const threshold = 1200; // même valeur pour tous
+
+    // Floating title
+    if (floatingTitle) {
+        if (scrollY > threshold) {
+            floatingTitle.style.opacity = 0;
+            floatingTitle.style.pointerEvents = "none";
+        } else {
+            floatingTitle.style.transform = `translate(-50%, calc(-50% - ${scrollY * 1}px))`;
+            let opacity = Math.max(1 - scrollY / threshold, 0);
+            floatingTitle.style.opacity = opacity;
+            floatingTitle.style.pointerEvents = "";
+        }
+    }
+
+    // Map title et map container : même logique que le floating title
+    if (mapTitle && mapContainer) {
+        if (scrollY > threshold) {
+            mapTitle.classList.remove('visible');
+            mapContainer.classList.remove('visible');
+        } else {
+            mapTitle.classList.add('visible');
+            mapContainer.classList.add('visible');
+        }
     }
 }
-window.addEventListener("scroll", handleMapAppear);
-window.addEventListener("DOMContentLoaded", handleMapAppear);
+window.addEventListener("scroll", handleFloatingTitleAndMap);
+window.addEventListener("DOMContentLoaded", handleFloatingTitleAndMap);
 
 // Panda ballon mode
 document.addEventListener('DOMContentLoaded', function() {

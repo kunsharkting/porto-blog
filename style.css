@@ -395,8 +395,8 @@ body.index-page .banner3 {
     margin-right: auto !important;
     transform: none;
     opacity: 1;
-    margin-top: 25%;
-    margin-bottom: 25px;
+    margin-top: 17%;
+    margin-bottom: 0px;
     width: 90%;
     text-align: justify;
 }
@@ -1042,6 +1042,7 @@ body.membres-page .banner3 {
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0,0,0,0.10);
     border: 4px solid rgb(209, 189, 142); /* Bordure verte, change la couleur si tu veux */
+    margin-bottom: 25px; /* Espace en bas */
 }
 #map iframe {
     display: block;
@@ -1079,9 +1080,6 @@ body.membres-page .banner3 {
 body:not(.ballon-active) .map-container:hover {
     transform: scale(1.04);
     box-shadow: 0 0 18px 4px rgb(149, 138, 57);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.map-container {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
